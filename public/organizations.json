@@ -3,7 +3,8 @@
     "organizers": [ 
       {
         "name":"Ben Eckel",
-        "link":{
+        "pfp": "./organizersPfp/ben.webp",
+        "links":{
           "linkedin": "https://www.linkedin.com/in/benjamin-eckel-b025831a3/",
           "email": "benjamin.eckel@gmail.com"
         }
@@ -15,6 +16,7 @@
     "organizers": [ 
       {
         "name":"Colin Williams",
+        "pfp": "./organizersPfp/colin.webp",
         "links":{
             "github": "https://github.com/colinwilliams91",
             "linkedin": "https://www.linkedin.com/in/colin-williams-dev",
@@ -24,7 +26,8 @@
       },
       {
         "name":"Jorge Carvajal",
-        "link":{
+        "pfp": "./organizersPfp/jorge.webp",
+        "links":{
           "github": "https://github.com/codingMustache",
           "linkedin": "https://github.com/codingMustache",
           "website": "https://codingmustache.dev",
@@ -38,10 +41,13 @@
     "organizers": [ 
       {
         "name":"Dustin Gaspard",
-        "twitter": "https://twitter.com/dgaspard",
-        "linkedin": "https://www.linkedin.com/in/dustin-gaspard",
-        "website": "http://www.diamonddata.com/",
-        "email": "dgaspard@gmail.com"
+        "pfp": "./organizersPfp/dustin.webp",
+        "links":{
+          "twitter": "https://twitter.com/dgaspard",
+          "linkedin": "https://www.linkedin.com/in/dustin-gaspard",
+          "website": "http://www.diamonddata.com/",
+          "email": "dgaspard@gmail.com"
+        },
       }
     ],
     "about": "aslaksdj;laksj;laksdjf;lkajsd;flkjas"
@@ -50,7 +56,8 @@
     "organizers": [ 
       {
         "name":"Ben Eckel",
-        "link":{
+        "pfp": "./organizersPfp/ben.webp",
+        "links":{
           "linkedin": "https://www.linkedin.com/in/benjamin-eckel-b025831a3/",
           "email": "benjamin.eckel@gmail.com"
         }
