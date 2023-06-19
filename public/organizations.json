@@ -1,0 +1,68 @@
+{
+  "below-c":{ 
+    "organizers": [ 
+      {
+        "name":"Ben Eckel",
+        "pfp": "./organizersPfp/ben.webp",
+        "links":{
+          "linkedin": "https://www.linkedin.com/in/benjamin-eckel-b025831a3/",
+          "email": "benjamin.eckel@gmail.com"
+        }
+      }
+    ],
+    "about": "We are a group of programmers residing in New Orleans, Louisiana, who gather on a monthly basis for presentations and discussions focused on systems programming. Our aim is to create an open and inclusive environment for individuals eager to delve deeper into the world of systems programming, going beyond surface-level abstractions. While our talks cater to programmers with a few years of professional experience, we encourage participation from all who are interested. In case any concepts or ideas appear perplexing or unclear, we allocate time for group discussions and collaborative learning."
+  },
+  "frontEnd-party":{
+    "organizers": [ 
+      {
+        "name":"Colin Williams",
+        "pfp": "./organizersPfp/colin.webp",
+        "links":{
+            "github": "https://github.com/colinwilliams91",
+            "linkedin": "https://www.linkedin.com/in/colin-williams-dev",
+            "website": "https://www.colin-williams.dev/",
+            "email": "colin.williams.dev@gmail.com"
+          }
+      },
+      {
+        "name":"Jorge Carvajal",
+        "pfp": "./organizersPfp/jorge.webp",
+        "links":{
+          "github": "https://github.com/codingMustache",
+          "linkedin": "https://github.com/codingMustache",
+          "website": "https://codingmustache.dev",
+          "email": "contact@codingmustache.dev"
+        }
+      }
+    ],
+    "about": "We are a vibrant community of front-end web developers known as the 'Front-End Party' located in New Orleans, Louisiana. Our group gathers once a month for engaging presentations and insightful discussions centered around front-end web development. Our primary focus is to provide a platform for like-minded individuals interested in exploring the intricacies of front-end development beyond the surface level."
+  },
+  "agile":{
+    "organizers": [ 
+      {
+        "name":"Dustin Gaspard",
+        "pfp": "./organizersPfp/dustin.webp",
+        "links":{
+          "twitter": "https://twitter.com/dgaspard",
+          "linkedin": "https://www.linkedin.com/in/dustin-gaspard",
+          "website": "http://www.diamonddata.com/",
+          "email": "dgaspard@gmail.com"
+        }
+      }
+    ],
+    "about": "aslaksdj;laksj;laksdjf;lkajsd;flkjas"
+  },
+  "hacknight":{
+    "organizers": [ 
+      {
+        "name":"Ben Eckel",
+        "pfp": "./organizersPfp/ben.webp",
+        "links":{
+          "linkedin": "https://www.linkedin.com/in/benjamin-eckel-b025831a3/",
+          "email": "benjamin.eckel@gmail.com"
+        }
+      }
+    ],
+    "about": "aslaksdj;laksj;laksdjf;lkajsd;flkjas"
+  }
+}
