@@ -1,6 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-
+import styles from './layout.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <nav className='relative select-none bg-grey lg:flex lg:items-stretch w-full'>
         <a href="/" className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark">
-          <img  src='logo.png' alt='logo' width={100} height={100}/>
+          <img  className={styles.logo} src='logo.png' alt='logo' width={100} height={100}/>
         </a>
           <div className="lg:flex lg:items-stretch lg:justify-end ml-auto">
             <a href="/front-end-party" className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark">Front-End Party</a>
