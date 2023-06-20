@@ -6,8 +6,7 @@ export default async function Home() {
   const data = await getData();
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Page</h1>
-      <h1>{data.summary}</h1>
+      <h1></h1>
     </main>
   );
 }
