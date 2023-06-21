@@ -1,5 +1,25 @@
+#navbar{
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: var(--bg-color);
+padding: 5px;
+}
+
 .logo{
- filter: drop-shadow(0rem 0rem 5px rgb(92, 252, 0));
- height: 60px;
- width: 60px;
+ filter: drop-shadow(0rem 0rem 5px var(--text-color));
+ height: 50px;
+ width: 50px;
+ background-color: black;
+ padding: 3px;
+ border-radius: 100%;
+}
+
+.links a {
+  font-family: var(--font-detail);
+  margin: 0 10px;
+  text-shadow: 0 0 5px var(--text-color);
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: small;
 }
