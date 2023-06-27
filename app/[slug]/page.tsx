@@ -1,6 +1,7 @@
 "use client";
 import { usePathname } from "next/navigation";
 import org from "../organizations.json";
+import { Organizations } from "../types/Organizations";
 export default function Group() {
   const location: any = usePathname().slice(1);
   console.log(org[location]);
