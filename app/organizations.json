@@ -13,7 +13,7 @@
     "calendar_id":"4a4247e11b25fdce675a32da7252fba0ce728f6ae0ec47616f2de033592e85c9@group.calendar.google.com",
     "about": "We are a group of programmers residing in New Orleans, Louisiana, who gather on a monthly basis for presentations and discussions focused on systems programming. Our aim is to create an open and inclusive environment for individuals eager to delve deeper into the world of systems programming, going beyond surface-level abstractions. While our talks cater to programmers with a few years of professional experience, we encourage participation from all who are interested. In case any concepts or ideas appear perplexing or unclear, we allocate time for group discussions and collaborative learning."
   },
-  "frontEnd-party":{
+  "FrontEndParty":{
     "organizers": [ 
       {
         "name":"Colin Williams",

@@ -7,14 +7,14 @@ export default function Group() {
   return (
     <>
       <h1>{location}</h1>
-      <h1>About</h1>
+      <h2>About</h2>
       <p>{org[location].about}</p>
 
-      <h1>Organizers</h1>
+      <h2>Organizers</h2>
       <p>
         {org[location].organizers.map((e) => (
           <div>
-            
+            <img src={e.pfp} width={100} />
             <p>{e.name}</p>
           </div>
         ))}
