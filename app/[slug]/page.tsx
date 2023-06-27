@@ -1,7 +1,8 @@
 "use client";
 import { usePathname } from "next/navigation";
-import org from "../organizations.json";
+import Image from "next/image";
 import { Organizations } from "../types/Organizations";
+import org from "../organizations.json";
 
 const organizations: Organizations = org;
 
@@ -18,8 +19,11 @@ export default function Group() {
       <p>
         {organizations[location].organizers.map((e, i) => (
           <div key={i}>
-            <img src={e.pfp} width={100} />
+            <Image src={e.pfp} alt="organizer profile picture" width={100} />
             <p>{e.name}</p>
+            {Object.keys(e.links).map(e =>
+              e
+              )}
           </div>
         ))}
       </p>
