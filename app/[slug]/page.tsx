@@ -20,6 +20,9 @@ export default function Group() {
           <div key={i}>
             <img src={e.pfp} width={100} />
             <p>{e.name}</p>
+            {Object.keys(e.links).map(e =>
+              e
+              )}
           </div>
         ))}
       </p>
