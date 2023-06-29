@@ -21,9 +21,7 @@ export default function Group() {
           <div key={i}>
             <Image src={e.pfp} alt="organizer profile picture" width={100} />
             <p>{e.name}</p>
-            {Object.keys(e.links).map(e =>
-              e
-              )}
+            {Object.keys(e.links).map((e) => e)}
           </div>
         ))}
       </p>
