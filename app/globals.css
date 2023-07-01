@@ -9,7 +9,7 @@
   src: url(/whitrabt.ttf);
 }
 
-:root {  
+:root {
   --bg-color: rgb(198, 196, 196);
   --text-color: rgb(31, 46, 130);
   --font-detail: 'neuro', monospace, arial;
@@ -33,7 +33,7 @@ html{
 
 body{
   margin: 0px;
-  height: 100%;
+  height: 100vh;
  }
 
 *, *:before, *:after {
