@@ -16,7 +16,7 @@ const organizations: Organizations = organizationsStore;
 
 export default function Group() {
   const location: string = usePathname().slice(1);
-  console.log(organizations[location]);
+
   return (
     <>
       <h1>{location}</h1>
@@ -38,35 +38,55 @@ export default function Group() {
             switch (linked) {
               case "linkedin":
                 icon = (
-                  <a href={Object.values(e)[0]} target='_blank'>
+                  <a
+                    href={Object.values(e)[0]}
+                    target='_blank'
+                    key={Object.values(e)[0]}
+                  >
                     <LinkedinOutlined />
                   </a>
                 );
                 break;
               case "github":
                 icon = (
-                  <a href={Object.values(e)[0]} target='_blank'>
+                  <a
+                    href={Object.values(e)[0]}
+                    target='_blank'
+                    key={Object.values(e)[0]}
+                  >
                     <GithubOutlined />
                   </a>
                 );
                 break;
               case "email":
                 icon = (
-                  <a href={Object.values(e)[0]} target='_blank'>
+                  <a
+                    href={Object.values(e)[0]}
+                    target='_blank'
+                    key={Object.values(e)[0]}
+                  >
                     <MailOutlined />
                   </a>
                 );
                 break;
               case "portfolio":
                 icon = (
-                  <a href={Object.values(e)[0]} target='_blank'>
+                  <a
+                    href={Object.values(e)[0]}
+                    target='_blank'
+                    key={Object.values(e)[0]}
+                  >
                     <GlobalOutlined />
                   </a>
                 );
                 break;
               default:
                 icon = (
-                  <a href={Object.values(e)[0]} target='_blank'>
+                  <a
+                    href={Object.values(e)[0]}
+                    target='_blank'
+                    key={Object.values(e)[0]}
+                  >
                     <LinkOutlined />
                   </a>
                 );
