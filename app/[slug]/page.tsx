@@ -10,8 +10,11 @@ import {
   GlobalOutlined,
   LinkOutlined,
 } from "@ant-design/icons";
-
 const organizations: any = org;
+import { organizationsStore } from "../organizations";
+import { Organizer } from "../types/Organizer";
+
+const organizations: Organizations = organizationsStore;
 
 export default function Group() {
   const location: string = usePathname().slice(1);
@@ -23,7 +26,7 @@ export default function Group() {
       <p>{organizations[location].about}</p>
       <h2>Organizers</h2>
       <p>
-        {organizations[location].organizers.map((e: any, i: number) => (
+        {organizations[location].organizers.map((e: Organizer, i: number) => (
           <div key={i}>
             <Image
               src={e.pfp}
@@ -32,6 +35,7 @@ export default function Group() {
               width={100}
             />
             <p>{e.name}</p>
+
             {e.links.map((e: any) => {
               const linked = Object.keys(e)[0];
               let icon;

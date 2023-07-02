@@ -1,7 +1,7 @@
-import { LinkUrl } from "./LinkUrl";
+import { urlDTO } from "./Links";
 
 export interface Organizer {
     name: string;
     pfp: string;
-    links: LinkUrl[];
+    links?: urlDTO[];
 };
