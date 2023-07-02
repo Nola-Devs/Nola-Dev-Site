@@ -20,8 +20,6 @@
   :root {
     --bg-color: black;
     --text-color:  rgb(92, 252, 0);
-    --font-detail: 'neuro', monospace, arial;
-    --font-p: 'white-rabbit', monospace, arial;
   }
 }
 
@@ -34,7 +32,7 @@ html{
 body{
   margin: 0px;
   height: 100%;
- }
+}
 
 *, *:before, *:after {
   box-sizing: inherit;
