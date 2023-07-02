@@ -1,0 +1,10 @@
+## Allow all user agents.
+#User-agent: *
+#Allow: /
+#Disallow: /private/
+
+#Sitemap: https://noladevs.com/sitemap.xml
+
+## Bots should not crawl the `http://example.com/private/` folder or any of its subdirectories.
+
+
