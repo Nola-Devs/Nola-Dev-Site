@@ -2,11 +2,11 @@
   "Below-C":{
     "organizers": [
       {
-        "name": "Ben Eckel",
-        "pfp": "./organizersPfp/ben.webp",
+        "name":"Ben Eckel",
+        "pfp": "/organizersPfp/ben.webp",
         "links":[
           {"linkedin": "https://www.linkedin.com/in/benjamin-eckel-b025831a3/"},
-          {"email": "benjamin.eckel@gmail.com"}
+          {"email": "mailto:benjamin.eckel@gmail.com"}
         ]
       }
     ],
@@ -16,8 +16,8 @@
   "FrontEndParty":{
     "organizers": [
       {
-        "name": "Colin Williams",
-        "pfp": "./organizersPfp/colin.webp",
+        "name":"Colin Williams",
+        "pfp": "/organizersPfp/colin.webp",
         "links":[
           {"github": "https://github.com/colinwilliams91"},
           {"linkedin": "https://www.linkedin.com/in/colin-williams-dev"},
@@ -26,8 +26,8 @@
         ]
       },
       {
-        "name": "Jorge Carvajal",
-        "pfp": "./organizersPfp/jorge.webp",
+        "name":"Jorge Carvajal",
+        "pfp": "/organizersPfp/jorge.webp",
         "links":[
           {"github": "https://github.com/codingMustache"},
           {"linkedin": "https://github.com/codingMustache"},
@@ -42,8 +42,8 @@
   "Agile":{
     "organizers": [
       {
-        "name": "Dustin Gaspard",
-        "pfp": "./organizersPfp/dustin.webp",
+        "name":"Dustin Gaspard",
+        "pfp": "/organizersPfp/dustin.webp",
         "links":[
           {"twitter": "https://twitter.com/dgaspard"},
           {"linkedin": "https://www.linkedin.com/in/dustin-gaspard"},
@@ -58,8 +58,8 @@
   "Hacknight":{
     "organizers": [
       {
-        "name": "Ben Eckel",
-        "pfp": "./organizersPfp/ben.webp",
+        "name":"Ben Eckel",
+        "pfp": "/organizersPfp/ben.webp",
         "links":[
           {"linkedin": "https://www.linkedin.com/in/benjamin-eckel-b025831a3/"},
           {"email": "benjamin.eckel@gmail.com"}
@@ -72,8 +72,8 @@
   "Nola-AI":{
     "organizers": [
       {
-        "name": "Blake",
-        "pfp": "./organizersPfp/ben.webp",
+        "name":"Blake",
+        "pfp": "/organizersPfp/ben.webp",
         "links":{
           "linkedin": "https://www.linkedin.com/in/benjamin-eckel-b025831a3/",
           "email": "benjamin.eckel@gmail.com"
@@ -86,8 +86,8 @@
   "Nola-Game-Dev":{
     "organizers": [
       {
-        "name": "Some Guy McPlaceholder",
-        "pfp": "./organizersPfp/ben.webp",
+        "name":"Some Guy McPlaceholder",
+        "pfp": "/organizersPfp/ben.webp",
         "links":{
           "linkedin": "https://www.linkedin.com/in/benjamin-eckel-b025831a3/",
           "email": "benjamin.eckel@gmail.com"
