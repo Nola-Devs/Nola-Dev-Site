@@ -37,26 +37,42 @@ export default function Group() {
               let icon;
               switch (linked) {
                 case "linkedin":
-                  icon = <LinkedinOutlined />;
+                  icon = (
+                    <a href={Object.values(e)[0]} target='_blank'>
+                      <LinkedinOutlined />
+                    </a>
+                  );
                   break;
                 case "github":
-                  icon = <GithubOutlined />;
+                  icon = (
+                    <a href={Object.values(e)[0]} target='_blank'>
+                      <GithubOutlined />
+                    </a>
+                  );
                   break;
                 case "email":
-                  icon = <MailOutlined />;
+                  icon = (
+                    <a href={Object.values(e)[0]} target='_blank'>
+                      <MailOutlined />
+                    </a>
+                  );
                   break;
-                case "porfolio":
-                  icon = <GlobalOutlined />;
+                case "portfolio":
+                  icon = (
+                    <a href={Object.values(e)[0]} target='_blank'>
+                      <GlobalOutlined />
+                    </a>
+                  );
                   break;
                 default:
-                  icon = <LinkOutlined />;
+                  icon = (
+                    <a href={Object.values(e)[0]} target='_blank'>
+                      <LinkOutlined />
+                    </a>
+                  );
+                  break;
               }
-              return (
-                <>
-                  <p>{Object.values(e)}</p>
-                  {icon}
-                </>
-              );
+              return icon;
             })}
           </div>
         ))}
