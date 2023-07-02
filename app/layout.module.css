@@ -7,12 +7,11 @@ padding: 5px;
 }
 
 .logo{
- filter: drop-shadow(0rem 0rem 5px var(--text-color));
- height: 50px;
- width: 50px;
- background-color: black;
- padding: 3px;
- border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  padding: 3px;
+  border-radius: 100%;
 }
 
 .links a {

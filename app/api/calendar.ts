@@ -6,6 +6,7 @@ const calendarid = process.env.calendarid;
 // 2) Generate a Simple API Access key
 // 3) Ensure Calendar API is activated under services.
 export default async function getData() {
+  console.log('test')
   const res = await fetch(
     "https://www.googleapis.com/calendar/v3/calendars/" +
       calendarid +
