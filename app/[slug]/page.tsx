@@ -2,9 +2,10 @@
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Organizations } from "../types/Organizations";
-import org from "../organizations.json";
+import { organizationsStore } from "../organizations";
+import { Organizer } from "../types/Organizer";
 
-const organizations: Organizations = org;
+const organizations: Organizations = organizationsStore;
 
 export default function Group() {
   const location: string = usePathname().slice(1);
@@ -17,11 +18,11 @@ export default function Group() {
 
       <h2>Organizers</h2>
       <p>
-        {organizations[location].organizers.map((e, i) => (
+        {organizations[location].organizers.map((e: Organizer, i: number) => (
           <div key={i}>
             <Image src={e.pfp} alt="organizer profile picture" width={100} />
             <p>{e.name}</p>
-            {Object.keys(e.links).map((e) => e)}
+            {e.links?.map((e: any) => e)}
           </div>
         ))}
       </p>
