@@ -6,7 +6,7 @@
 export NVM_DIR=$HOME/.nvm && source $NVM_DIR/nvm.sh && nvm use v18.16.0
 
 ### If node_modules is not present, then install dependencies
-if [ ! -d "node_modules" ]; then
+if [ ! -d "node_modules" ] || git diff --quiet --exit-code -- package.json ; then
     npm i
 fi
 
