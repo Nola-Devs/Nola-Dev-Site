@@ -5,7 +5,7 @@ export const organizationsStore: Organizations = {
     "organizers": [
       {
         "name":"Ben Eckel",
-        "pfp": "./organizersPfp/ben.webp",
+        "pfp": "/organizersPfp/ben.webp",
         "links":[
           {"linkedin": "https://www.linkedin.com/in/benjamin-eckel-b025831a3/"},
           {"email": "benjamin.eckel@gmail.com"}
@@ -19,7 +19,7 @@ export const organizationsStore: Organizations = {
     "organizers": [
       {
         "name":"Colin Williams",
-        "pfp": "./organizersPfp/colin.webp",
+        "pfp": "/organizersPfp/colin.webp",
         "links":[
           {"github": "https://github.com/colinwilliams91"},
           {"linkedin": "https://www.linkedin.com/in/colin-williams-dev"},
@@ -29,7 +29,7 @@ export const organizationsStore: Organizations = {
       },
       {
         "name":"Jorge Carvajal",
-        "pfp": "./organizersPfp/jorge.webp",
+        "pfp": "/organizersPfp/jorge.webp",
         "links":[
           {"github": "https://github.com/codingMustache"},
           {"linkedin": "https://github.com/codingMustache"},
@@ -45,7 +45,7 @@ export const organizationsStore: Organizations = {
     "organizers": [
       {
         "name":"Dustin Gaspard",
-        "pfp": "./organizersPfp/dustin.webp",
+        "pfp": "/organizersPfp/dustin.webp",
         "links":[
           {"twitter": "https://twitter.com/dgaspard"},
           {"linkedin": "https://www.linkedin.com/in/dustin-gaspard"},
@@ -61,7 +61,7 @@ export const organizationsStore: Organizations = {
     "organizers": [
       {
         "name":"Ben Eckel",
-        "pfp": "./organizersPfp/ben.webp",
+        "pfp": "/organizersPfp/ben.webp",
         "links":[
           {"linkedin": "https://www.linkedin.com/in/benjamin-eckel-b025831a3/"},
           {"email": "benjamin.eckel@gmail.com"}
@@ -75,7 +75,7 @@ export const organizationsStore: Organizations = {
     "organizers": [
       {
         "name":"Blake",
-        "pfp": "./organizersPfp/ben.webp",
+        "pfp": "/organizersPfp/ben.webp",
         "links":[
           {"linkedin": "https://www.linkedin.com/in/benjamin-eckel-b025831a3/"},
           {"email": "benjamin.eckel@gmail.com"}
@@ -89,7 +89,7 @@ export const organizationsStore: Organizations = {
     "organizers": [
       {
         "name":"Some Guy McPlaceholder",
-        "pfp": "./organizersPfp/ben.webp",
+        "pfp": "/organizersPfp/ben.webp",
         "links": [
           {"linkedin": "https://www.linkedin.com/in/benjamin-eckel-b025831a3/"},
           {"email": "benjamin.eckel@gmail.com"}

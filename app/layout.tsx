@@ -1,7 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import styles from "./layout.module.css";
-import orgs from "./organizations.json";
+import { organizationsStore } from "./organizations";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,7 +29,7 @@ export default function RootLayout({
             />
           </a>
           <div className={styles.links}>
-            {Object.keys(orgs).map((e) => (
+            {Object.keys(organizationsStore).map((e) => (
               <a href={`/${e}`}>{e}</a>
             ))}
           </div>
