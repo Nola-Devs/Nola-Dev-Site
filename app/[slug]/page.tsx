@@ -18,19 +18,18 @@ const organizations: Organizations = organizationsStore;
 export default function Group() {
   const group: string = usePathname().slice(1);
 
-  // const getCalData = async () => {
-  //   let calData = await fetch("/api");
-  //   console.log(calData);
-  // };
+  const getCalData = () => {
+    fetch("/api").then((data) => console.log(data));
+  };
 
-  // useEffect(() => getCalData(), []);
+  useEffect(() => getCalData(), []);
   return (
     <>
       <h1>{group}</h1>
       <h2>About</h2>
       <p>{organizations[group]?.about}</p>
       <h2>Organizers</h2>
-      {organizations[group].organizers.map((e: Organizer, i: number) => (
+      {organizations[group]?.organizers.map((e: Organizer, i: number) => (
         <div key={i}>
           <Image
             src={e.pfp}
