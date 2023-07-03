@@ -20,12 +20,11 @@ const organizations: Organizations = organizationsStore;
 export default function Group() {
   const group: string = usePathname().slice(1);
 
-  // const getCalData = async () => {
-  //   let calData = await fetch("/api");
-  //   console.log(calData);
-  // };
+  const getCalData = () => {
+    fetch("/api").then((data) => console.log(data));
+  };
 
-  // useEffect(() => getCalData(), []);
+  useEffect(() => getCalData(), []);
   return (
     <div className={styles.content}>
       <h1>{group}</h1>
