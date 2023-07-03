@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import styles from "./layout.module.css";
 import { organizationsStore } from "./organizations";
 import Image from "next/image";
-
+import { Navbar, Link } from 'nextui-org/react'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -19,11 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav id={styles.navbar}>
+        <Navbar isBordered variant='floating'>
           <a href="/">
             <Image
               className={styles.logo}
-              src="logo.png"
+              src="/logo.png"
               alt="logo"
               width={50}
               height={50}
@@ -31,12 +31,12 @@ export default function RootLayout({
           </a>
           <div className={styles.links}>
             {Object.keys(organizationsStore).map((e, i) => (
-              <a key={i} href={`/${e}`}>
+              <Navbar.Link key={i} href={`/${e}`}>
                 {e}
-              </a>
+              </Navbar.Link>
             ))}
           </div>
-        </nav>
+        </Navbar>
         {children}
       </body>
     </html>
