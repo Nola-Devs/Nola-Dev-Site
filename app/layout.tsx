@@ -23,7 +23,7 @@ export default function RootLayout({
           <a href="/">
             <Image
               className={styles.logo}
-              src="logo.png"
+              src="/logo.png"
               alt="logo"
               width={50}
               height={50}
