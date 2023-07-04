@@ -35,7 +35,7 @@ export default function Group() {
       </Card>
       <h2>Organizers</h2>
       {organizations[group]?.organizers.map((e: Organizer, i: number) => (
-        <div key={i} className={styles.organizers}>
+        <div key={i}>
           <Image
             src={e.pfp}
             alt="organizer profile picture"
