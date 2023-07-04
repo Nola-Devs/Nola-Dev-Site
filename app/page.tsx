@@ -1,5 +1,6 @@
+"use client";
 import City from "./components/city";
-import styles from './page.module.css';
+import styles from "./page.module.css";
 
 export default async function Home() {
   //call getData from the api to fetch
