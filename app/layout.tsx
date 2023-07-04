@@ -1,15 +1,19 @@
+"use client";
+import * as React from "react";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import styles from "./layout.module.css";
 import { organizationsStore } from "./organizations";
 import Image from "next/image";
 
+// import { NextUIProvider } from "@nextui-org/react";
+
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Nola Devs",
-  description: "The Gathering place for New Orleans' Developers",
-};
+// export const metadata = {
+//   title: "Nola Devs",
+//   description: "The Gathering place for New Orleans' Developers",
+// };
 
 export default function RootLayout({
   children,
@@ -18,6 +22,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>Nola Devs</title>
+        <meta
+          name="description"
+          content="The Gathering place for New Orleans' Developers"
+        ></meta>
+      </head>
+      {/* <NextUIProvider> */}
       <body className={inter.className}>
         <nav id={styles.navbar}>
           <a href="/">
@@ -39,6 +51,7 @@ export default function RootLayout({
         </nav>
         {children}
       </body>
+      {/* </NextUIProvider> */}
     </html>
   );
 }
