@@ -17,18 +17,11 @@ import {
 import { organizationsStore } from "../organizations";
 import { Organizer } from "../types/Organizer";
 
-import styles from "./page.module.css";
-
 const organizations: Organizations = organizationsStore;
 
 export default function Group() {
   const group: string = usePathname().slice(1);
 
-  const getCalData = () => {
-    fetch("/api").then((data) => console.log(data));
-  };
-
-  useEffect(() => getCalData(), []);
   return (
     <div>
       <Text h1>{group}</Text>
@@ -50,7 +43,7 @@ export default function Group() {
             width={100}
           />
           <p>{e.name}</p>
-          <div className={styles.links}>
+          <div>
             {e.links?.map((e: urlDTO, i: number) => {
               const linked = Object.keys(e)[0];
               let icon;
