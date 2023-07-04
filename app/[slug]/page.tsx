@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 import Image from "next/image";
-import { Card, Text } from "@nextui-org/react";
+import { Container, Card, Text } from "@nextui-org/react";
 
 import { Organizations, urlDTO } from "../types/index";
 import {
@@ -23,12 +23,26 @@ export default function Group() {
   const group: string = usePathname().slice(1);
 
   return (
-    <div>
-      <Text h1>{group}</Text>
+    <Container
+      display="flex"
+      justify="center"
+      css={{
+        alignItems: "center",
+        flexDirection: "column",
+        mx: "auto",
+        mw: "41rem",
+        // "@xl": { mw: "41rem" },
+        // "@lg": { mw: "41rem" },
+        // "@md": { mw: "41rem" },
+        "@sm": { mw: "unset" },
+      }}
+    >
+      <Text h1 weight="extrabold" css={{ mt: "4rem" }}>
+        {group.replace(/-/g, " ")}
+      </Text>
       <Card
-        isHoverable
         variant="bordered"
-        css={{ mw: "50rem", p: "1rem", margin: "5rem auto" }}
+        css={{ mw: "50rem", p: "1rem", margin: "2rem auto" }}
       >
         <Text h2>About</Text>
         <Text>{organizations[group]?.about}</Text>
@@ -109,6 +123,6 @@ export default function Group() {
           </div>
         </div>
       ))}
-    </div>
+    </Container>
   );
 }

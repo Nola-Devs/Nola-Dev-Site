@@ -53,7 +53,7 @@ const darkTheme = createTheme({
       primaryShadow: "$green500",
       gradient:
         "linear-gradient(112deg, $blue100 -25%, $pink500 -10%, $purple500 80%)",
-      link: "#5E1DAD",
+      link: "#742bcd",
     },
   },
 });
@@ -102,7 +102,7 @@ export default function RootLayout({
                 <Dropdown.Menu aria-label="Static Actions">
                   {Object.keys(organizationsStore).map((e, i) => (
                     <Dropdown.Item key={i}>
-                      <Link href={`/${e}`}>{e}</Link>
+                      <Link href={`/${e}`}>{e.replace(/-/g, " ")}</Link>
                     </Dropdown.Item>
                   ))}
                 </Dropdown.Menu>
