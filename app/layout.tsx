@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 import styles from "./layout.module.css";
 import { organizationsStore } from "./organizations";
 import Image from "next/image";
-
+import { Navbar, Link } from "@nextui-org/react";
 // import { NextUIProvider } from "@nextui-org/react";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -31,7 +31,7 @@ export default function RootLayout({
       </head>
       {/* <NextUIProvider> */}
       <body className={inter.className}>
-        <nav id={styles.navbar}>
+        <Navbar isBordered variant="floating">
           <a href="/">
             <Image
               className={styles.logo}
@@ -43,12 +43,12 @@ export default function RootLayout({
           </a>
           <div className={styles.links}>
             {Object.keys(organizationsStore).map((e, i) => (
-              <a key={i} href={`/${e}`}>
+              <Navbar.Link key={i} href={`/${e}`}>
                 {e}
-              </a>
+              </Navbar.Link>
             ))}
           </div>
-        </nav>
+        </Navbar>
         {children}
       </body>
       {/* </NextUIProvider> */}
