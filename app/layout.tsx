@@ -6,7 +6,7 @@ import styles from "./layout.module.css";
 import { organizationsStore } from "./organizations";
 import Image from "next/image";
 import { Navbar, Link } from "@nextui-org/react";
-// import { NextUIProvider } from "@nextui-org/react";
+import { NextUIProvider } from "@nextui-org/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,29 +29,29 @@ export default function RootLayout({
           content="The Gathering place for New Orleans' Developers"
         ></meta>
       </head>
-      {/* <NextUIProvider> */}
       <body className={inter.className}>
-        <Navbar isBordered variant="floating">
-          <a href="/">
-            <Image
-              className={styles.logo}
-              src="/logo.png"
-              alt="logo"
-              width={50}
-              height={50}
-            />
-          </a>
-          <div className={styles.links}>
-            {Object.keys(organizationsStore).map((e, i) => (
-              <Navbar.Link key={i} href={`/${e}`}>
-                {e}
-              </Navbar.Link>
-            ))}
-          </div>
-        </Navbar>
-        {children}
+        <NextUIProvider>
+          <Navbar isBordered variant="floating">
+            <a href="/">
+              <Image
+                className={styles.logo}
+                src="/logo.png"
+                alt="logo"
+                width={50}
+                height={50}
+              />
+            </a>
+            <div className={styles.links}>
+              {Object.keys(organizationsStore).map((e, i) => (
+                <Link key={i} href={`/${e}`}>
+                  {e}
+                </Link>
+              ))}
+            </div>
+          </Navbar>
+          {children}
+        </NextUIProvider>
       </body>
-      {/* </NextUIProvider> */}
     </html>
   );
 }

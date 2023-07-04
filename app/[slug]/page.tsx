@@ -1,7 +1,10 @@
 "use client";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
+
 import Image from "next/image";
+import { Card, Text } from "@nextui-org/react";
+
 import { Organizations, urlDTO } from "../types/index";
 import {
   LinkedinOutlined,
@@ -10,6 +13,7 @@ import {
   GlobalOutlined,
   LinkOutlined,
 } from "@ant-design/icons";
+
 import { organizationsStore } from "../organizations";
 import { Organizer } from "../types/Organizer";
 
@@ -26,12 +30,18 @@ export default function Group() {
 
   useEffect(() => getCalData(), []);
   return (
-    <div className={styles.content}>
-      <h1>{group}</h1>
-      <h2>About</h2>
-      <p className={styles.text}>{organizations[group]?.about}</p>
+    <div>
+      <Text h1>{group}</Text>
+      <Card
+        isHoverable
+        variant="bordered"
+        css={{ mw: "50rem", p: "1rem", margin: "5rem auto" }}
+      >
+        <Text h2>About</Text>
+        <Text>{organizations[group]?.about}</Text>
+      </Card>
       <h2>Organizers</h2>
-      {organizations[group].organizers.map((e: Organizer, i: number) => (
+      {organizations[group]?.organizers.map((e: Organizer, i: number) => (
         <div key={i} className={styles.organizers}>
           <Image
             src={e.pfp}
