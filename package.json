@@ -1,7 +1,21 @@
 {
   "name": "nola-dev-site",
-  "version": "0.1.0",
+  "version": "0.2.0",
+  "description": "Central Application for all six New Orleans Developer Communities",
   "private": true,
+  "keywords": [
+    "New Orleans",
+    "NOLA",
+    "React",
+    "Next.js",
+    "developer",
+    "community",
+    "open-source",
+    "open source",
+    "open",
+    "source",
+    "semantic"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
