@@ -53,11 +53,10 @@ const darkTheme = createTheme({
       primaryShadow: "$green500",
       gradient:
         "linear-gradient(112deg, $blue100 -25%, $pink500 -10%, $purple500 80%)",
-      link: "#5E1DAD",
+      link: "#742bcd",
     },
   },
 });
-
 
 export default function RootLayout({
   children,
@@ -68,7 +67,7 @@ export default function RootLayout({
 
   const handleChange = () => {
     const nextTheme = isDark ? "light" : "dark";
-    window.localStorage.setItem("data-theme", nextTheme); 
+    window.localStorage.setItem("data-theme", nextTheme);
     changeTheme(nextTheme);
   };
 
@@ -87,30 +86,30 @@ export default function RootLayout({
   }, []);
 
   return (
-    <html lang='en'>
+    <html lang="en">
       <body className={inter.className}>
         <NextUIProvider theme={isDark ? darkTheme : lightTheme}>
-          <Navbar isBordered variant='floating'>
-            <Link href='/'>
-              <Text size={"20pt"} color='primary'>
+          <Navbar isBordered variant="floating">
+            <Link href="/">
+              <Text size={"20pt"} color="primary">
                 Nola Devs
               </Text>
             </Link>
             <Navbar.Content>
-              <Link href='/calendar'>Calendar</Link>
+              <Link href="/calendar">Calendar</Link>
               <Dropdown>
                 <Dropdown.Button flat>Groups</Dropdown.Button>
-                <Dropdown.Menu aria-label='Static Actions'>
+                <Dropdown.Menu aria-label="Static Actions">
                   {Object.keys(organizationsStore).map((e, i) => (
                     <Dropdown.Item key={i}>
-                      <Link href={`/${e}`}>{e}</Link>
+                      <Link href={`/${e}`}>{e.replace(/-/g, " ")}</Link>
                     </Dropdown.Item>
                   ))}
                 </Dropdown.Menu>
               </Dropdown>
               <Switch
                 checked={isDark}
-                size='sm'
+                size="sm"
                 onChange={handleChange}
                 iconOff={"🌞"}
                 iconOn={"🌘"}
