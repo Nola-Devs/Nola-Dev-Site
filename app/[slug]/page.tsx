@@ -1,6 +1,18 @@
 "use client";
 import { usePathname } from "next/navigation";
+
 import Image from "next/image";
+import {
+  Container,
+  Grid,
+  Card,
+  Text,
+  Link,
+  Avatar,
+  Row,
+  Col,
+} from "@nextui-org/react";
+
 import { Organizations, urlDTO } from "../types/index";
 import {
   LinkedinOutlined,
@@ -9,7 +21,6 @@ import {
   GlobalOutlined,
   LinkOutlined,
 } from "@ant-design/icons";
-import { Link, Card, Text } from "@nextui-org/react";
 import { organizationsStore } from "../organizations";
 import { Organizer } from "../types/Organizer";
 
@@ -30,7 +41,6 @@ export default function Group() {
         <Card.Header>
           <Text>
           Organizers
-
           </Text>
         </Card.Header>
         <Card.Body>
