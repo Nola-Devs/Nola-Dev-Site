@@ -1,7 +1,5 @@
 "use client";
 import { usePathname } from "next/navigation";
-
-import Image from "next/image";
 import {
   Container,
   Grid,
@@ -12,7 +10,6 @@ import {
   Row,
   Col,
 } from "@nextui-org/react";
-
 import { Organizations, urlDTO } from "../types/index";
 import {
   LinkedinOutlined,
@@ -44,79 +41,113 @@ export default function Group() {
           </Text>
         </Card.Header>
         <Card.Body>
-          {organizations[group]?.organizers.map((e: Organizer, i: number) => (
-            <Text key={i}>
-              <Image
-                src={e.pfp}
-                alt='organizer profile picture'
-                height={100}
-                width={100}
-              />
-              <p>{e.name}</p>
-              {e.links?.map((e: urlDTO, i: number) => {
-                const linked = Object.keys(e)[0];
-                let icon;
-                switch (linked) {
-                  case "linkedin":
-                    icon = (
-                      <Link
-                        href={Object.values(e)[0]}
-                        target='_blank'
-                        key={Object.values(e)[0] + i}
-                      >
-                        <LinkedinOutlined />
-                      </Link>
-                    );
-                    break;
-                  case "github":
-                    icon = (
-                      <Link
-                        href={Object.values(e)[0]}
-                        target='_blank'
-                        key={Object.values(e)[0] + i}
-                      >
-                        <GithubOutlined />
-                      </Link>
-                    );
-                    break;
-                  case "email":
-                    icon = (
-                      <Link
-                        href={Object.values(e)[0]}
-                        target='_blank'
-                        key={Object.values(e)[0] + i}
-                      >
-                        <MailOutlined />
-                      </Link>
-                    );
-                    break;
-                  case "portfolio":
-                    icon = (
-                      <Link
-                        href={Object.values(e)[0]}
-                        target='_blank'
-                        key={Object.values(e)[0] + i}
-                      >
-                        <GlobalOutlined />
-                      </Link>
-                    );
-                    break;
-                  default:
-                    icon = (
-                      <Link
-                        href={Object.values(e)[0]}
-                        target='_blank'
-                        key={Object.values(e)[0] + i}
-                      >
-                        <LinkOutlined />
-                      </Link>
-                    );
-                    break;
-                }
-                return icon;
-              })}
-            </Text>
-          ))}
+          <Container
+            display="flex"
+            wrap="nowrap"
+            css={{ justifyContent: "center" }}
+          >
+            {organizations[group]?.organizers.map((e: Organizer, i: number) => (
+              <Container
+                key={i}
+                display="flex"
+                justify="center"
+                alignContent="center"
+                alignItems="center"
+              >
+                <Row>
+                  <Col css={{ display: "flex", justifyContent: "center" }}>
+                    <Text>{e.name}</Text>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col css={{ display: "flex", justifyContent: "center" }}>
+                    <Avatar
+                      squared
+                      bordered
+                      zoomed
+                      css={{ size: "$36" }}
+                      src={e.pfp}
+                      alt="organizer profile picture"
+                    />
+                  </Col>
+                </Row>
+                <Grid.Container gap={1} justify="center">
+                  {e.links?.map((e: urlDTO, i: number) => {
+                    const linked = Object.keys(e)[0];
+                    let icon;
+                    switch (linked) {
+                      case "linkedin":
+                        icon = (
+                          <Grid>
+                            <a
+                              href={Object.values(e)[0]}
+                              target="_blank"
+                              key={Object.values(e)[0] + i}
+                            >
+                              <LinkedinOutlined />
+                            </a>
+                          </Grid>
+                        );
+                        break;
+                      case "github":
+                        icon = (
+                          <Grid>
+                            <a
+                              href={Object.values(e)[0]}
+                              target="_blank"
+                              key={Object.values(e)[0] + i}
+                            >
+                              <GithubOutlined />
+                            </a>
+                          </Grid>
+                        );
+                        break;
+                      case "email":
+                        icon = (
+                          <Grid>
+                            <a
+                              href={Object.values(e)[0]}
+                              target="_blank"
+                              key={Object.values(e)[0] + i}
+                            >
+                              <MailOutlined />
+                            </a>
+                          </Grid>
+                        );
+                        break;
+                      case "portfolio":
+                        icon = (
+                          <Grid>
+                            <a
+                              href={Object.values(e)[0]}
+                              target="_blank"
+                              key={Object.values(e)[0] + i}
+                            >
+                              <GlobalOutlined />
+                            </a>
+                          </Grid>
+                        );
+                        break;
+                      default:
+                        icon = (
+                          <Grid>
+                            <a
+                              href={Object.values(e)[0]}
+                              target="_blank"
+                              key={Object.values(e)[0] + i}
+                            >
+                              <LinkOutlined />
+                            </a>
+                          </Grid>
+                        );
+                        break;
+                    }
+                    return icon;
+                  })}
+                </Grid.Container>
+              </Container>
+            ))}
+          </Container>
         </Card.Body>
       </Card>
     </div>
