@@ -64,7 +64,11 @@ export default function Group() {
           <Text h2>Organizers</Text>
         </Card.Header>
         <Card.Body>
-          <Container display="flex" wrap="nowrap">
+          <Container
+            display="flex"
+            wrap="nowrap"
+            css={{ justifyContent: "center" }}
+          >
             {organizations[group]?.organizers.map((e: Organizer, i: number) => (
               <Container
                 key={i}
@@ -74,7 +78,12 @@ export default function Group() {
                 alignItems="center"
               >
                 <Row>
-                  <Col>
+                  <Col css={{ display: "flex", justifyContent: "center" }}>
+                    <Text>{e.name}</Text>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col css={{ display: "flex", justifyContent: "center" }}>
                     <Avatar
                       squared
                       bordered
@@ -85,12 +94,7 @@ export default function Group() {
                     />
                   </Col>
                 </Row>
-                <Row>
-                  <Col>
-                    <Text>{e.name}</Text>
-                  </Col>
-                </Row>
-                <Grid.Container gap={1}>
+                <Grid.Container gap={1} justify="center">
                   {e.links?.map((e: urlDTO, i: number) => {
                     const linked = Object.keys(e)[0];
                     let icon;
