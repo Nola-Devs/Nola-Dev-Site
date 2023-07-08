@@ -149,7 +149,7 @@ export default function Group() {
                         icon = (
                           <Grid>
                             <a
-                              href={Object.values(e)[0]}
+                              href={`mailto:${Object.values(e)[0]}`}
                               target="_blank"
                               key={Object.values(e)[0] + i}
                             >
