@@ -57,7 +57,7 @@ export const organizationsStore: Organizations = {
       }
     ],
     "calendar_id":"d8aef47c1895abb3176ad34577de3c97f1adea91da2169a65e1e1b1c28c56e1c@group.calendar.google.com",
-    "about": "aslaksdj;laksj;laksdjf;lkajsd;flkjas",
+    "about": "Agile Nola is a group for connecting the New Orleans software development community, marrying modern Agile methodologies with trends of the tech ecosystem at large. Many esteemed, national speakers gather monthly to provide unique insights into many different avenues in the software world. All are welcome and encouraged to come to the events with beer and food provided! Come network, learn, and laugh with the Agile User Group.",
     "org_url": "https://www.eventbrite.com/o/agile-nola-59051586693",
   },
   "Hacknight":{
@@ -72,7 +72,7 @@ export const organizationsStore: Organizations = {
       }
     ],
     "calendar_id": "d2ce13d5608aebe0ff7d3bcec5ea581fea8ca24d66e5f65c112e8cc3dabdbec1@group.calendar.google.com",
-    "about": "aslaksdj;laksj;laksdjf;lkajsd;flkjas",
+    "about": "Hacknight is the end destination for the defacto 'Tech-Night' events hosted at 7pm every Tuesday at the Rusty Nail. Dozens of developers and designers alike come to unwind in the casual atmosphere of the bar and exchange fun thoughts regarding tech or otherwise. If you see a group of nerds arguing in the street just ask 'Is this Hack Night?' and they will greet you and introduce you to people.",
     "org_url": "https://www.meetup.com/nolahacknight/"
   },
   "AI-Hacking-in-Nola":{
@@ -87,7 +87,7 @@ export const organizationsStore: Organizations = {
       }
     ],
     "calendar_id": "d2ce13d5608aebe0ff7d3bcec5ea581fea8ca24d66e5f65c112e8cc3dabdbec1@group.calendar.google.com",
-    "about": "this will be the Nola AI group about section and organizer"
+    "about": "AI hackers hang at 'The Prototype House' - 3110 Royal Street. Starting at 4:44PM and going till around 7:30 or whenever we wonder to Markey's. It's a chance to just keep engaging with the wild west of LLMs/image models/... feel free to bring your laptops if you wanna demo anything."
   },
   "Nola-Game-Dev":{
     "organizers": [
@@ -101,7 +101,7 @@ export const organizationsStore: Organizations = {
       }
     ],
     "calendar_id": "d2ce13d5608aebe0ff7d3bcec5ea581fea8ca24d66e5f65c112e8cc3dabdbec1@group.calendar.google.com",
-    "about": "this will be the Nola Game Dev group about section and organizer",
+    "about": "We are a bunch of game developers in the Greater New Orleans area who meet on a monthly basis to network, collaborate, and share knowledge. Our events help the gamedev community present on interesting topics, showcase their projects, and encourage game development in the local area. We meet online on the third Thursday of every month at 7:00 pm. See our website for connecting.",
     "org_url": "http://neworleansgamedev.com/"
   }
 }
