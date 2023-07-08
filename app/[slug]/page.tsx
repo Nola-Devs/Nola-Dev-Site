@@ -27,24 +27,58 @@ export default function Group() {
   const group: string = usePathname().slice(1);
 
   return (
-    <div>
-      <h1>{group}</h1>
-      <h2>About</h2>
-      <p>{organizations[group]?.about}</p>
+    <Container
+      display="flex"
+      justify="center"
+      css={{
+        alignItems: "center",
+        flexDirection: "column",
+        mx: "auto",
+        mw: "41rem",
+        "@sm": { mw: "unset", overflow: "hidden" },
+      }}
+    >
+      <Text h1 weight="extrabold" css={{ mt: "4rem" }}>
+        {group.replace(/-/g, " ")}
+      </Text>
       <Card
-        variant='bordered'
-        css={{ mw: "600px", margin: "50px auto", alignContent: "center" }}
+        variant="bordered"
+        css={{ mw: "50rem", p: "1rem", margin: "2rem auto" }}
+      >
+        <Text h2>About</Text>
+        <Text>{organizations[group]?.about}</Text>
+        <Card.Footer>
+          <Link href={organizations[group]?.org_url} target="_blank">
+            {organizations[group]?.org_url}
+          </Link>
+        </Card.Footer>
+      </Card>
+      <Card
+        variant="bordered"
+        css={{ mw: "50rem", p: "1rem", margin: "2rem auto" }}
       >
         <Card.Header>
           <Text>
           Organizers
           </Text>
         </Card.Header>
-        <Card.Body>
+        <Card.Body
+          css={{
+            display: "flex",
+            overflow: "hidden",
+            flexWrap: "wrap",
+            "@xs": { flexDirection: "column" },
+          }}
+        >
           <Container
             display="flex"
             wrap="nowrap"
-            css={{ justifyContent: "center" }}
+            css={{
+              justifyContent: "center",
+              // "@sm": { flexWrap: "wrap" },
+              "@xs": { flexWrap: "wrap" },
+              "@xsMax": { flexWrap: "wrap", gap: "1rem" },
+            }}
           >
             {organizations[group]?.organizers.map((e: Organizer, i: number) => (
               <Container
@@ -53,8 +87,14 @@ export default function Group() {
                 justify="center"
                 alignContent="center"
                 alignItems="center"
+                css={{ mw: "200px" }}
               >
-                <Row>
+                <Row
+                  css={{
+                    display: "flex",
+                    "@xs": { flexDirection: "column", overflow: "hidden" },
+                  }}
+                >
                   <Col css={{ display: "flex", justifyContent: "center" }}>
                     <Text>{e.name}</Text>
                   </Col>
@@ -106,7 +146,7 @@ export default function Group() {
                         icon = (
                           <Grid>
                             <a
-                              href={Object.values(e)[0]}
+                              href={`mailto:${Object.values(e)[0]}`}
                               target="_blank"
                               key={Object.values(e)[0] + i}
                             >
