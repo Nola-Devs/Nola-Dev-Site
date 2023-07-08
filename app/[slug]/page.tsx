@@ -53,7 +53,9 @@ export default function Group() {
         <Text h2>About</Text>
         <Text>{organizations[group]?.about}</Text>
         <Card.Footer>
-          <Link>{organizations[group]?.org_url}</Link>
+          <Link href={organizations[group]?.org_url} target="_blank">
+            {organizations[group]?.org_url}
+          </Link>
         </Card.Footer>
       </Card>
       <Card
