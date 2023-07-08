@@ -17,7 +17,7 @@ npm run dev
 
 # Contribute
 
-Join our [Discord]([https://discord.gg/NDvA7ryk](https://discord.gg/r4Bpw2cA))
+Join our [Discord](https://discord.gg/NDvA7ryk](https://discord.gg/r4Bpw2cA)
 
 This project is open-source, however, pull and merge requests will be limited to developers limited to the geographic region of Greater New Orleans and surrounding areas. If you reside in or around NOLA please feel free to add whatever supporting information or custom styling you feel would benefit our local community's represenation.
 
