@@ -53,7 +53,7 @@ const darkTheme = createTheme({
       primaryShadow: "$green500",
       gradient:
         "linear-gradient(112deg, $blue100 -25%, $pink500 -10%, $purple500 80%)",
-      link: "#742bcd",
+      link: "#a259fb",
     },
   },
 });
