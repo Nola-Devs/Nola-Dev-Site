@@ -33,6 +33,7 @@ const lightTheme = createTheme({
       gradient:
         "linear-gradient(112deg, $blue100 -25%, $pink500 -10%, $purple500 80%)",
       link: "#5E1DAD",
+      logo: "/logo_light_900x844.png",
     },
   },
 });
@@ -54,6 +55,7 @@ const darkTheme = createTheme({
       gradient:
         "linear-gradient(112deg, $blue100 -25%, $pink500 -10%, $purple500 80%)",
       link: "#a259fb",
+      logo: "/logo-dark_900x844.png",
     },
   },
 });
@@ -86,7 +88,7 @@ export default function RootLayout({
   }, []);
 
   return (
-    <html lang="en">
+    <html lang="en" id="html">
       <body className={inter.className}>
         <NextUIProvider theme={isDark ? darkTheme : lightTheme}>
           <Navbar isBordered variant="floating">
