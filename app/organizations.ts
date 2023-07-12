@@ -54,6 +54,13 @@ export const organizationsStore: Organizations = {
           {"website": "http://www.diamonddata.com/"},
           {"email": "dgaspard@gmail.com"}
         ]
+      },
+      {
+        "name":"Garett Majoue",
+        "pfp": "/organizersPfp/garett.webp",
+        "links":[
+          {"linkedin": "https://www.linkedin.com/in/garett-majoue/"}
+        ]
       }
     ],
     "calendar_id":"d8aef47c1895abb3176ad34577de3c97f1adea91da2169a65e1e1b1c28c56e1c@group.calendar.google.com",
