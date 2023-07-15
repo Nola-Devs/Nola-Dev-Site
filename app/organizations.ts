@@ -99,7 +99,8 @@ export const organizationsStore: Organizations = {
         "name":"Calder",
         "pfp": "https://via.placeholder.com/158x158",
         "links": [
-          {"website": "https://nolagamedev.wordpress.com/contact/"}
+          {"website": "http://neworleansgamedev.com"},
+          {"email": "contact@neworleansgamedev.com"}
         ]
       }
     ],
