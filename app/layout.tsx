@@ -104,7 +104,9 @@ export default function RootLayout({
                 <Dropdown.Menu aria-label="Static Actions">
                   {Object.keys(organizationsStore).map((e, i) => (
                     <Dropdown.Item key={i}>
-                      <Link href={`/${e}`}>{e.replace(/-/g, " ")}</Link>
+                      <Link css={{ minWidth: "100%" }} href={`/${e}`}>
+                        {e.replace(/-/g, " ")}
+                      </Link>
                     </Dropdown.Item>
                   ))}
                 </Dropdown.Menu>
