@@ -62,6 +62,13 @@ export const organizationsStore: Organizations = {
           {"website": "http://www.diamonddata.com/"},
           {"email": "dgaspard@gmail.com"}
         ]
+      },
+      {
+        "name":"Garett Majoue",
+        "pfp": "/organizersPfp/garett.webp",
+        "links":[
+          {"linkedin": "https://www.linkedin.com/in/garett-majoue/"}
+        ]
       }
     ],
     "calendar_id":"d8aef47c1895abb3176ad34577de3c97f1adea91da2169a65e1e1b1c28c56e1c@group.calendar.google.com",
@@ -98,9 +105,12 @@ export const organizationsStore: Organizations = {
   "Nola-Game-Dev":{
     "organizers": [
       {
-        "name":"Some Guy McPlaceholder",
-        "pfp": "/organizersPfp/egg.webp",
-        "links": []
+        "name":"Calder",
+        "pfp": "https://via.placeholder.com/158x158",
+        "links": [
+          {"website": "http://neworleansgamedev.com"},
+          {"email": "contact@neworleansgamedev.com"}
+        ]
       }
     ],
     "calendar_id": "d2ce13d5608aebe0ff7d3bcec5ea581fea8ca24d66e5f65c112e8cc3dabdbec1@group.calendar.google.com",
