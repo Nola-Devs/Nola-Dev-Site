@@ -1,20 +1,28 @@
 import { Organizations } from "./types/Organizations"
 
 export const organizationsStore: Organizations = {
-  "Below-C": {
+  "Below-C-Level": {
     "organizers": [
       {
-        "name":"Ben Eckel",
+        "name":"Benjamin Eckel",
         "pfp": "/organizersPfp/ben.webp",
         "links":[
+          {"github": "https://github.com/bhelx"},
           {"linkedin": "https://www.linkedin.com/in/benjamin-eckel-b025831a3/"},
-          {"email": "benjamin.eckel@gmail.com"}
+          {"email": "bhelx@simst.im"}
         ]
-      }
+      },
+      {
+        "name":"Aaron Lee",
+        "pfp": "/organizersPfp/aaron.webp",
+        "links":[
+          {"github": "https://github.com/wwkeyboard"}
+        ]
+      },
     ],
     "calendar_id":"4a4247e11b25fdce675a32da7252fba0ce728f6ae0ec47616f2de033592e85c9@group.calendar.google.com",
     "about": "We are a group of programmers residing in New Orleans, Louisiana, who gather on a monthly basis for presentations and discussions focused on systems programming. Our aim is to create an open and inclusive environment for individuals eager to delve deeper into the world of systems programming, going beyond surface-level abstractions. While our talks cater to programmers with a few years of professional experience, we encourage participation from all who are interested. In case any concepts or ideas appear perplexing or unclear, we allocate time for group discussions and collaborative learning.",
-    "org_url": "https://www.meetup.com/below-c-level-systems-programming-meetup/",
+    "org_url": "https://belowclevel.org/",
   },
   "Frontend-Party":{
     "organizers": [
@@ -70,11 +78,12 @@ export const organizationsStore: Organizations = {
   "Hacknight":{
     "organizers": [
       {
-        "name":"Ben Eckel",
+        "name":"Benjamin Eckel",
         "pfp": "/organizersPfp/ben.webp",
         "links":[
+          {"github": "https://github.com/bhelx"},
           {"linkedin": "https://www.linkedin.com/in/benjamin-eckel-b025831a3/"},
-          {"email": "benjamin.eckel@gmail.com"}
+          {"email": "bhelx@simst.im"}
         ]
       }
     ],
@@ -86,8 +95,8 @@ export const organizationsStore: Organizations = {
     "organizers": [
       {
         "name":"Blake",
-        "pfp": "https://via.placeholder.com/158x158",
-        "links": []
+        "pfp": "/organizersPfp/egg.webp",
+        "links":[]
       }
     ],
     "calendar_id": "d2ce13d5608aebe0ff7d3bcec5ea581fea8ca24d66e5f65c112e8cc3dabdbec1@group.calendar.google.com",
