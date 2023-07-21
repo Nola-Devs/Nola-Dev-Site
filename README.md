@@ -1,6 +1,6 @@
 # Nola Dev's Site
 
-# This application hosts individual group sites, events, and contact information for the following New Orleans-based Software Development and Design groups:
+## This application hosts individual group sites, events, and contact information for the following New Orleans-based Software Development and Design groups:
 - [Agile Nola](https://www.eventbrite.com/o/agile-nola-59051586693)
 - [Hack Night](https://www.meetup.com/nolahacknight/)
 - [Below C Level](https://www.meetup.com/below-c-level-systems-programming-meetup/)
@@ -8,22 +8,26 @@
 - [Nola Game Devs](http://neworleansgamedev.com/)
 - A.I. Hacking In Nola
 
-# To Start Project
+## To Start Project
 
 ```
 npm i
 npm run dev
 ```
 
-# Contribute
+## UI
 
-Join our [Discord](https://discord.gg/r4Bpw2cA)
+This project uses [NextUI](https://nextui.org/docs/guide/getting-started) for its UI Component Library. For simple UI changes it would be best to follow NextUI conventions and use their components. However, we also want to allow for New Orleans contributors to "sandbox" with this project, so feel free to install dependencies that you want to experiment with. Please document those installations in your PR.
+
+## Contribute
+
+Join our [Discord](https://discord.gg/dQhZ3rgG)
 
 This project is open-source, however, pull and merge requests will be limited to developers limited to the geographic region of Greater New Orleans and surrounding areas. If you reside in or around NOLA please feel free to add whatever supporting information or custom styling you feel would benefit our local community's represenation.
 
 If you reside in or around NOLA consider this community website a deployed sandbox environment. PRs will be scrutinized by one of the four original Contributors: @austinchaet @codingMustache @colinwilliams91 @HeyImKyle
 
-#### Contribution Protocol:
+### Contribution Protocol:
 
 - Star and Fork the repository
 - Create a feature branch
