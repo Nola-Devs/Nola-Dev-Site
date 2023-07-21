@@ -3,7 +3,7 @@
 #Allow: /
 #Disallow: /private/
 
-#Sitemap: https://noladevs.com/sitemap.xml
+#Sitemap: https://noladevs.vercel.app/sitemap.xml
 
 ## Bots should not crawl the `http://example.com/private/` folder or any of its subdirectories.
 
