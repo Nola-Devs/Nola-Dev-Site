@@ -1,5 +1,5 @@
 "use client";
-import { Card, Text, Image } from "@nextui-org/react";
+import { Card, CardBody, Image } from "@nextui-org/react";
 
 import React from "react";
 
@@ -15,11 +15,10 @@ export default function Home() {
         height={400}
         src='/logo_900x844.png'
         alt='default logo'
-        css={{ mt: "1rem" }}
       />
-      <Card variant='bordered' css={{ mw: "41rem", margin: "1rem auto" }}>
-        <Card.Body>
-          <Text>
+      <Card>
+        <CardBody>
+          <p className='underline text-bold text-lg'>
             Welcome to Nola Devs, a vibrant and inclusive software developers
             group nestled in the heart of New Orleans! Immerse yourself in a
             community brimming with passionate developers, all driven by the
@@ -32,8 +31,8 @@ export default function Home() {
             leave a lasting impact on the ever-evolving world of software
             development. Embrace this exciting adventure and join Nola Devs
             today!
-          </Text>
-        </Card.Body>
+          </p>
+        </CardBody>
       </Card>
     </>
   );
