@@ -88,20 +88,20 @@ export default function RootLayout({
   }, []);
 
   return (
-    <html lang="en" id="html">
+    <html lang='en' id='html'>
       <body className={inter.className}>
         <NextUIProvider theme={isDark ? darkTheme : lightTheme}>
-          <Navbar isBordered variant="floating">
-            <Link href="/">
-              <Text size={"20pt"} color="primary">
+          <Navbar isBordered variant='floating'>
+            <Link href='/'>
+              <Text size={"20pt"} color='primary'>
                 Nola Devs
               </Text>
             </Link>
             <Navbar.Content>
-              <Link href="/calendar">Calendar</Link>
+              <Link href='/calendar'>Calendar</Link>
               <Dropdown>
                 <Dropdown.Button flat>Groups</Dropdown.Button>
-                <Dropdown.Menu aria-label="Static Actions">
+                <Dropdown.Menu aria-label='Static Actions'>
                   {Object.keys(organizationsStore).map((e, i) => (
                     <Dropdown.Item key={i}>
                       <Link css={{ minWidth: "100%" }} href={`/${e}`}>
@@ -113,7 +113,7 @@ export default function RootLayout({
               </Dropdown>
               <Switch
                 checked={isDark}
-                size="sm"
+                size='sm'
                 onChange={handleChange}
                 iconOff={"🌞"}
                 iconOn={"🌘"}
