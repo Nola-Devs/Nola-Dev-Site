@@ -9,7 +9,7 @@ import {
 import { url } from "inspector";
 import React, { useState, useEffect } from "react";
 
-export default async function Home() {
+export default function Home() {
   // TODO call getData from the api to fetch
   // TODO fix re-render ad infitum issue
   // TODO grab type or something from theme prop to conditionally render different logos
