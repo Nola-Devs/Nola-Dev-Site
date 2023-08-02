@@ -89,6 +89,7 @@ export default function RootLayout({
 
   return (
     <html lang='en' id='html'>
+
       <body className={inter.className}>
         <NextUIProvider theme={isDark ? darkTheme : lightTheme}>
           <Navbar isBordered variant='floating'>
