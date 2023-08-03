@@ -34,3 +34,5 @@ If you reside in or around NOLA consider this community website a deployed sandb
 - Use [Semantic Commit-Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716) for feature development
 - PR to main
   - We will review <= 48 hours
+
+_if your code has linting errors please run `npm run lint -- --fix` :)_
