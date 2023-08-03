@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from "react";
 
 /**
  * xs <  650px
@@ -38,12 +38,12 @@ export const useMediaQuery = (width: number): boolean => {
 
   useEffect(() => {
     const media = window.matchMedia(`(max-width: ${width}px)`);
-    addEventListener('change', updateTarget);
+    addEventListener("change", updateTarget);
     // Check on mount (callback is not called until a change occurs)
     if (media.matches) {
       setTargetReached(true);
     }
-    return () => media.removeEventListener('change', updateTarget);
+    return () => media.removeEventListener("change", updateTarget);
   }, [updateTarget, width]);
 
   return targetReached;

@@ -28,7 +28,7 @@ export default function RootLayout({
     <html id="html" lang="en">
       <body className={ inter.className }>
         <NextUIProvider>
-          <Navbar shouldHideOnScroll>
+          <Navbar shouldHideOnScroll className="py-4 px-3.5">
             <NavbarBrand>
               <Link href="/">
                 <Image src="logo_light_900x844.png" alt="Logo" width={ 50 } />
