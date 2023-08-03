@@ -1,4 +1,4 @@
-import { Organizations } from "./types/Organizations"
+import { Organizations } from "./types/Organizations";
 
 export const organizationsStore: Organizations = {
   "Below-C-Level": {
@@ -50,6 +50,21 @@ export const organizationsStore: Organizations = {
     "calendar_id":"1c23d7fe14840e320ec0762245bf55cc32a6910417fcf76ca8ba2d1a308110f3@group.calendar.google.com",
     "about": "We are a vibrant community of front-end web developers known as the 'Front-End Party' located in New Orleans, Louisiana. Our group gathers once a month for engaging presentations and insightful discussions centered around front-end web development. Our primary focus is to provide a platform for like-minded individuals interested in exploring the intricacies of front-end development beyond the surface level.",
     "org_url": "http://www.frontendparty.com/",
+  },
+  "Work-In-Tech":{
+    "organizers": [
+      {
+        "name":"Brook Davis",
+        "pfp": "/organizersPfp/brookDavis.webp",
+        "links":[
+          {"linkedin": "https://www.linkedin.com/in/brookbissinger/"},
+          {"twitter": "https://twitter.com/brook5280"}
+        ]
+      },
+    ],
+    "calendar_id":"placeholder",
+    "about": "As someone involved in the tech scene in New Orleans, we are always learning new things, meeting new people and coming up with new ways of accomplishing our goals. This thriving community of smart, entrepreneurial people now has an official way to connect! The Work In Tech group will meet up once a quarter...or so... at a local New Orleans spot. We invite anyone working in Tech in the NOLA area to join us as well as those looking to learn more about the industry and connect with potential future opportunities!",
+    "org_url": "https://linktr.ee/workintech",
   },
   "Agile-Nola":{
     "organizers": [
@@ -117,4 +132,4 @@ export const organizationsStore: Organizations = {
     "about": "We are a bunch of game developers in the Greater New Orleans area who meet on a monthly basis to network, collaborate, and share knowledge. Our events help the gamedev community present on interesting topics, showcase their projects, and encourage game development in the local area. We meet online on the third Thursday of every month at 7:00 pm. See our website for connecting.",
     "org_url": "http://neworleansgamedev.com/"
   }
-}
+};
