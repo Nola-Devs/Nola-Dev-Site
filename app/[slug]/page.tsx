@@ -26,8 +26,8 @@ export default function Group() {
   const group: string = usePathname().slice(1);
 
   return (
-    <>
-      <Card className='m-5'>
+    <div className='flex justify-center items-center flex-col'>
+      <Card className='m-5 max-w-xl '>
         <CardHeader className='font-bold'>
           {group.replace(/-/g, " ")}
         </CardHeader>
@@ -48,7 +48,7 @@ export default function Group() {
           </Link>
         </CardFooter>
       </Card>
-      <Card className='m-5'>
+      <Card className='m-5 max-w-xl'>
         <CardHeader className='font-bold'>Organizers</CardHeader>
         <Divider />
         <div className='flex justify-evenly self-center flex-col sm:flex-row '>
@@ -140,6 +140,6 @@ export default function Group() {
           ))}
         </div>
       </Card>
-    </>
+    </div>
   );
 }
