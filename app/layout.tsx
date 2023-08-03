@@ -25,25 +25,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' id='html'>
-      <body className={inter.className}>
+    <html id="html" lang="en">
+      <body className={ inter.className }>
         <NextUIProvider>
           <Navbar shouldHideOnScroll>
             <NavbarBrand>
-              <Link href='/'>
-                <Image width={50} alt='Logo' src='logo_light_900x844.png' />
+              <Link href="/">
+                <Image src="logo_light_900x844.png" alt="Logo" width={ 50 } />
               </Link>
             </NavbarBrand>
-            <NavbarContent justify='end'>
-              <Link href='/calendar'>Calendar</Link>
+            <NavbarContent justify="end">
+              <Link href="/calendar">Calendar</Link>
               <Dropdown>
                 <DropdownTrigger>
                   <Button>Groups</Button>
                 </DropdownTrigger>
-                <DropdownMenu aria-label='Static Actions'>
+                <DropdownMenu aria-label="Static Actions">
                   {Object.keys(organizationsStore).map((e, i) => (
-                    <DropdownItem key={i}>
-                      <Link className='w-full' href={`/${e}`}>
+                    <DropdownItem key={ i }>
+                      <Link className="w-full" href={ `/${e}` }>
                         {e.replace(/-/g, " ")}
                       </Link>
                     </DropdownItem>
