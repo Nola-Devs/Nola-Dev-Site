@@ -6,11 +6,13 @@ import { organizationsStore } from "./organizations";
 import {
   NextUIProvider,
   Navbar,
+  NavbarBrand,
   Link,
   NavbarContent,
   Dropdown,
   DropdownTrigger,
   Button,
+  Image,
   DropdownMenu,
   DropdownItem,
 } from "@nextui-org/react";
@@ -26,11 +28,13 @@ export default function RootLayout({
     <html lang='en' id='html'>
       <body className={inter.className}>
         <NextUIProvider>
-          <Navbar>
-            <Link href='/'>
-              <p>Nola Devs</p>
-            </Link>
-            <NavbarContent>
+          <Navbar shouldHideOnScroll>
+            <NavbarBrand>
+              <Link href='/'>
+                <Image width={50} alt='Logo' src='logo_light_900x844.png' />
+              </Link>
+            </NavbarBrand>
+            <NavbarContent justify='end'>
               <Link href='/calendar'>Calendar</Link>
               <Dropdown>
                 <DropdownTrigger>
@@ -39,7 +43,9 @@ export default function RootLayout({
                 <DropdownMenu aria-label='Static Actions'>
                   {Object.keys(organizationsStore).map((e, i) => (
                     <DropdownItem key={i}>
-                      <Link href={`/${e}`}>{e.replace(/-/g, " ")}</Link>
+                      <Link className='w-full' href={`/${e}`}>
+                        {e.replace(/-/g, " ")}
+                      </Link>
                     </DropdownItem>
                   ))}
                 </DropdownMenu>
