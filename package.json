@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.1.4",
-    "@nextui-org/react": "^1.0.0-beta.13",
+    "@nextui-org/react": "1.0.0-beta.13",
     "@types/node": "20.3.0",
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
