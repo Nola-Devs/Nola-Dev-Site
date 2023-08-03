@@ -11,3 +11,7 @@
 h1{
   font-family: Saucer, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
 }
+
+html, body{
+  height: 100%
+}
