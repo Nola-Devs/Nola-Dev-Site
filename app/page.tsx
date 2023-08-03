@@ -1,40 +1,17 @@
 "use client";
-import {
-  Card,
-  Text,
-  Image,
-  useTheme,
-  getDocumentTheme,
-} from "@nextui-org/react";
-import { url } from "inspector";
-import React, { useState, useEffect } from "react";
+import { Card, CardBody, CardHeader } from "@nextui-org/react";
 
-export default async function Home() {
-  // TODO call getData from the api to fetch
-  // TODO fix re-render ad infitum issue
-  // TODO grab type or something from theme prop to conditionally render different logos
+import React from "react";
 
-  // const { type, isDark } = useTheme();
-  // console.log("TEST:", type, isDark);
-  // const { type, isDark } = useTheme();
-  // const [isDark, setIsDark] = useState(false);
-
-  // let newTheme = getDocumentTheme(document?.documentElement);
-
-  // console.log(newTheme, isDark, setIsDark);
-
+export default function Home() {
   return (
-    <>
-      <Image
-        width={400}
-        height={400}
-        src="/logo_900x844.png"
-        alt="default logo"
-        css={{ mt: "1rem" }}
-      />
-      <Card variant="bordered" css={{ mw: "41rem", margin: "1rem auto" }}>
-        <Card.Body>
-          <Text>
+    <div className="flex justify-center m-auto mt-2">
+      <Card isBlurred className="m-0 max-w-md sm:m-5" shadow="lg">
+        <CardHeader className="flex justify-center">
+          <h1 className="text-7xl text-center text-blue-500">NOLA Devs</h1>
+        </CardHeader>
+        <CardBody>
+          <p>
             Welcome to Nola Devs, a vibrant and inclusive software developers
             group nestled in the heart of New Orleans! Immerse yourself in a
             community brimming with passionate developers, all driven by the
@@ -47,12 +24,9 @@ export default async function Home() {
             leave a lasting impact on the ever-evolving world of software
             development. Embrace this exciting adventure and join Nola Devs
             today!
-          </Text>
-        </Card.Body>
+          </p>
+        </CardBody>
       </Card>
-    </>
+    </div>
   );
 }
-
-
-// src={isDark ? "/logo-dark_900x844.png" : "/logo_light_900x844.png"}

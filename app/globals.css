@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Saucer;
+  src: url(./SaucerBB.ttf);
+}
+
+
+h1{
+  font-family: Saucer, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+html, body{
+  height: 100%
+}
