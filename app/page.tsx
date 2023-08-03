@@ -5,8 +5,8 @@ import React from "react";
 
 export default function Home() {
   return (
-    <>
-      <Card shadow='lg' className='m-5'>
+    <div className='flex justify-center'>
+      <Card shadow='lg' className='m-0 max-w-md sm:m-5'>
         <CardHeader className='flex justify-center'>
           <h1 className='text-7xl text-center text-blue-500'>NOLA Devs</h1>
         </CardHeader>
@@ -27,6 +27,6 @@ export default function Home() {
           </p>
         </CardBody>
       </Card>
-    </>
+    </div>
   );
 }
