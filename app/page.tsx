@@ -1,24 +1,17 @@
 "use client";
-import { Card, CardBody, Image } from "@nextui-org/react";
+import { Card, CardBody, CardHeader } from "@nextui-org/react";
 
 import React from "react";
 
 export default function Home() {
-  // TODO call getData from the api to fetch
-  // TODO fix re-render ad infitum issue
-  // TODO grab type or something from theme prop to conditionally render different logos
-
   return (
     <>
-      <Image
-        width={400}
-        height={400}
-        src='/logo_900x844.png'
-        alt='default logo'
-      />
-      <Card>
+      <Card shadow='lg' className='m-5'>
+        <CardHeader className='flex justify-center'>
+          <h1 className='text-7xl text-center text-blue-500'>NOLA Devs</h1>
+        </CardHeader>
         <CardBody>
-          <p className='underline text-bold text-lg'>
+          <p>
             Welcome to Nola Devs, a vibrant and inclusive software developers
             group nestled in the heart of New Orleans! Immerse yourself in a
             community brimming with passionate developers, all driven by the
