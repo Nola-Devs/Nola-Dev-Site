@@ -6,7 +6,7 @@ import React from "react";
 export default function Home() {
   return (
     <div className="flex justify-center items-start h-screen p-4">
-      <Card isBlurred className="mt-24 max-w-md p-4" shadow="lg">
+      <Card isBlurred className="mt-24 max-w-md p-4 border border-stone-300" shadow="lg">
         <CardHeader className="flex justify-center">
           <h1 className="text-7xl text-center text-blue-500">NOLA Devs</h1>
         </CardHeader>
