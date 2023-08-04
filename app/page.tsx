@@ -12,7 +12,7 @@ export default function Home() {
         </CardHeader>
         <Divider />
         <CardBody>
-          <p>
+          <p className="text-justify">
             Welcome to Nola Devs, a vibrant and inclusive software developers
             group nestled in the heart of New Orleans! Immerse yourself in a
             community brimming with passionate developers, all driven by the
