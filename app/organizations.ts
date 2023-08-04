@@ -121,7 +121,7 @@ export const organizationsStore: Organizations = {
     "organizers": [
       {
         "name":"Calder",
-        "pfp": "https://via.placeholder.com/158x158",
+        "pfp": "/organizersPfp/calder.webp",
         "links": [
           {"website": "http://neworleansgamedev.com"},
           {"email": "contact@neworleansgamedev.com"}
