@@ -27,7 +27,7 @@ export default function Group() {
 
   return (
     <div className="flex justify-center items-center flex-col pt-4">
-      <Card className="m-5 max-w-xl ">
+      <Card className="m-5 max-w-xl px-4">
         <CardHeader className="font-bold justify-center">
           {group.replace(/-/g, " ")}
         </CardHeader>
@@ -48,7 +48,7 @@ export default function Group() {
           </Link>
         </CardFooter>
       </Card>
-      <Card className="m-5 max-w-xl">
+      <Card className="m-5 max-w-xl px-4">
         <CardHeader className="font-bold justify-center">Organizers</CardHeader>
         <Divider />
         <div className="flex justify-evenly self-center flex-col sm:flex-row ">
