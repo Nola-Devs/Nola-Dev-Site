@@ -7,6 +7,7 @@
 - [#FrontEndParty](http://www.frontendparty.com/)
 - [Nola Game Devs](http://neworleansgamedev.com/)
 - A.I. Hacking In Nola
+- Work In Tech
 
 ## To Start Project
 
