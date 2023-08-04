@@ -1,5 +1,14 @@
 "use client";
-import { Card, CardBody, CardHeader } from "@nextui-org/react";
+import {
+  Card,
+  CardBody,
+  CardHeader,
+  CardFooter,
+  Divider,
+  Link,
+} from "@nextui-org/react";
+
+import { GithubOutlined, MessageOutlined } from "@ant-design/icons";
 
 import React from "react";
 
@@ -26,6 +35,29 @@ export default function Home() {
             today!
           </p>
         </CardBody>
+        <Divider />
+        <CardFooter>
+          <Link
+            isExternal
+            isBlock
+            color="secondary"
+            size="lg"
+            href={"https://github.com/nola-devs"}
+            target="_blank"
+          >
+            <GithubOutlined />
+          </Link>
+          <Link
+            isExternal
+            isBlock
+            color="secondary"
+            size="lg"
+            href={"https://discord.com/invite/bvrS72gaKS"}
+            target="_blank"
+          >
+            <MessageOutlined />
+          </Link>
+        </CardFooter>
       </Card>
     </div>
   );
