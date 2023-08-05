@@ -42,7 +42,7 @@ export default function Home() {
             isBlock
             color="secondary"
             size="lg"
-            href={"https://github.com/nola-devs"}
+            href={ "https://github.com/nola-devs" }
             target="_blank"
           >
             <GithubOutlined />
@@ -52,7 +52,7 @@ export default function Home() {
             isBlock
             color="secondary"
             size="lg"
-            href={"https://discord.com/invite/bvrS72gaKS"}
+            href={ "https://discord.com/invite/bvrS72gaKS" }
             target="_blank"
           >
             <MessageOutlined />
