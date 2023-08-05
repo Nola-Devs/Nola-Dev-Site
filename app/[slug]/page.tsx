@@ -51,25 +51,25 @@ export default function Group() {
       <Card className="m-5 max-w-xl px-4">
         <CardHeader className="font-bold justify-center mt-2">Organizers</CardHeader>
         <Divider />
-        <div className="flex justify-evenly self-center flex-col sm:w-full sm:flex-row flex-wrap">
+        <div className="flex justify-evenly self-center flex-col sm:flex-row ">
           {organizations[group]?.organizers.map((e: Organizer, i: number) => (
             <Card
               isFooterBlurred={ true }
               shadow="md"
-              className="m-5 min-w-fit w-[250px] h-[250px]"
+              className="m-5 min-w-fit"
               key={ `${e}${i}` }
             >
-              <CardBody className="p-0 overflow-hidden">
+              <CardBody className="p-0">
                 <Image
                   shadow="none"
                   className="object-cover"
                   src={ e.pfp }
-                  width="250px"
-                  height="250px"
+                  width="250"
+                  height="250"
                   alt="organizer profile picture"
                 />
               </CardBody>
-              <CardFooter className="absolute bg-white/30 bottom-0 items-center border-t-1 border-zinc-100/50 z-10 justify-between">
+              <CardFooter className="absolute bg-white/30 bottom-0 items-center border-t-1 border-slate-900 z-10 justify-between h-10 text-slate-900 font-bold">
                 <p>{e.name}</p>
                 <div className="flex items-center self-center gap-2">
                   {e.links?.map((e: urlDTO, i: number) => {
