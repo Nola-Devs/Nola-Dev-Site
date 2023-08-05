@@ -28,7 +28,7 @@ export default function Group() {
   return (
     <div className="flex justify-center items-center flex-col pt-4">
       <Card className="m-5 max-w-xl px-4">
-        <CardHeader className="font-bold justify-center mt-2">
+        <CardHeader className="font-bold justify-center mt-2 text-2xl">
           {group.replace(/-/g, " ")}
         </CardHeader>
         <Divider />
@@ -49,7 +49,7 @@ export default function Group() {
         </CardFooter>
       </Card>
       <Card className="m-5 max-w-xl px-4">
-        <CardHeader className="font-bold justify-center mt-2">Organizers</CardHeader>
+        <CardHeader className="font-bold justify-center mt-2 text-xl">Organizers</CardHeader>
         <Divider />
         <div className="flex justify-evenly self-center flex-col sm:flex-row ">
           {organizations[group]?.organizers.map((e: Organizer, i: number) => (
@@ -69,7 +69,7 @@ export default function Group() {
                   alt="organizer profile picture"
                 />
               </CardBody>
-              <CardFooter className="absolute bg-white/30 bottom-0 items-center border-t-1 border-slate-900 z-10 justify-between h-10 text-slate-900 font-bold">
+              <CardFooter className="absolute bg-white/30 bottom-0 items-center border-t-1 border-slate-900 z-10 justify-between h-10 text-slate-900 font-semibold">
                 <p>{e.name}</p>
                 <div className="flex items-center self-center gap-2">
                   {e.links?.map((e: urlDTO, i: number) => {
