@@ -52,7 +52,7 @@ export default function RootLayout({
   }, []);
 
   return (
-    <html id="html" lang="en" className={ localStorage.getItem("themeMode") }>
+    <html id="html" lang="en" className={ localStorage.getItem("themeMode") || undefined }>
       <body className={ inter.className }>
         <NextUIProvider>
           <Navbar shouldHideOnScroll className="py-4 px-3.5">
