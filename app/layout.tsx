@@ -27,28 +27,23 @@ export default function RootLayout({
 }) {
   const [theme, setTheme] = useState<string>("");
 
+  const invertTheme = (t: String) => (t === "dark" ? "light" : "dark");
+
   const changeTheme = () => {
-    if (localStorage.getItem("themeMode") === "dark") {
-      setTheme("light");
-      localStorage.setItem("themeMode", "light");
-    } else {
-      setTheme("dark");
-      localStorage.setItem("themeMode", "dark");
-    }
+    localStorage.setItem("themeMode", invertTheme(localStorage.themeMode));
+    setTheme(localStorage.themeMode);
   };
 
   useEffect(() => {
-    if (localStorage.getItem("themeMode") === "dark") {
-      setTheme("dark");
-    } else if (localStorage.getItem("themeMode") === "light") {
-      setTheme("light");
+    if (localStorage.getItem("themeMode") !== null) {
+      // intentionall empty
     } else if (window.matchMedia("(prefers-color-scheme: dark)")) {
-      setTheme("dark");
       localStorage.setItem("themeMode", "dark");
     } else {
-      setTheme("light");
       localStorage.setItem("themeMode", "light");
     }
+
+    setTheme(localStorage.themeMode);
   }, []);
 
   return (
