@@ -47,13 +47,17 @@ export default function RootLayout({
   }, []);
 
   return (
-    <html id="html" lang="en" className={ localStorage.getItem("themeMode") }>
+    <html id="html" lang="en" className={ theme }>
       <body className={ inter.className }>
         <NextUIProvider>
           <Navbar shouldHideOnScroll className="py-4 px-3.5">
             <NavbarBrand>
               <Link href="/">
-                <Image src={ localStorage.getItem("themeMode") === "dark" ? "logo-dark.webp" : "logo.webp" } alt="Logo" width={ 50 } />
+                <Image
+                  src={ theme === "dark" ? "logo-dark.webp" : "logo.webp" }
+                  alt="Logo"
+                  width={ 50 }
+                />
               </Link>
             </NavbarBrand>
             <NavbarContent justify="end">
