@@ -1,17 +1,18 @@
 "use client";
-import { Card, CardBody, CardHeader } from "@nextui-org/react";
+import { Card, CardBody, CardHeader, Divider } from "@nextui-org/react";
 
 import React from "react";
 
 export default function Home() {
   return (
-    <div className="flex justify-center items-start h-screen">
-      <Card isBlurred className="mt-24 max-w-md" shadow="lg">
+    <div className="flex justify-center items-start p-4">
+      <Card isBlurred className="mt-16 max-w-md p-4 border border-stone-300" shadow="lg">
         <CardHeader className="flex justify-center">
           <h1 className="text-7xl text-center text-blue-500">NOLA Devs</h1>
         </CardHeader>
+        <Divider />
         <CardBody>
-          <p>
+          <p className="text-justify">
             Welcome to Nola Devs, a vibrant and inclusive software developers
             group nestled in the heart of New Orleans! Immerse yourself in a
             community brimming with passionate developers, all driven by the
