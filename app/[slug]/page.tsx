@@ -27,8 +27,8 @@ export default function Group() {
 
   return (
     <div className="flex justify-center items-center flex-col pt-4">
-      <Card className="m-5 max-w-xl ">
-        <CardHeader className="font-bold">
+      <Card className="m-5 max-w-xl px-4">
+        <CardHeader className="font-bold justify-center mt-2">
           {group.replace(/-/g, " ")}
         </CardHeader>
         <Divider />
@@ -48,24 +48,24 @@ export default function Group() {
           </Link>
         </CardFooter>
       </Card>
-      <Card className="m-5 max-w-xl">
-        <CardHeader className="font-bold">Organizers</CardHeader>
+      <Card className="m-5 max-w-xl px-4">
+        <CardHeader className="font-bold justify-center mt-2">Organizers</CardHeader>
         <Divider />
-        <div className="flex justify-evenly self-center flex-col sm:flex-row ">
+        <div className="flex justify-evenly self-center flex-col sm:w-full sm:flex-row flex-wrap">
           {organizations[group]?.organizers.map((e: Organizer, i: number) => (
             <Card
               isFooterBlurred={ true }
               shadow="md"
-              className="m-5 min-w-fit"
+              className="m-5 min-w-fit w-[250px] h-[250px]"
               key={ `${e}${i}` }
             >
-              <CardBody className="p-0">
+              <CardBody className="p-0 overflow-hidden">
                 <Image
                   shadow="none"
                   className="object-cover"
                   src={ e.pfp }
-                  width="250"
-                  height="250"
+                  width="250px"
+                  height="250px"
                   alt="organizer profile picture"
                 />
               </CardBody>
