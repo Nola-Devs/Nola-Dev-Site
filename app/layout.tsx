@@ -27,38 +27,40 @@ export default function RootLayout({
 }) {
   const [theme, setTheme] = useState<string>("");
 
+  const invertTheme = (t: string) => (t === "dark" ? "light" : "dark");
+  
   const changeTheme = () => {
-    if (localStorage.getItem("themeMode") === "dark") {
-      setTheme("light");
-      localStorage.setItem("themeMode", "light");
-    } else {
-      setTheme("dark");
-      localStorage.setItem("themeMode", "dark");
-    }
+    localStorage.setItem("themeMode", invertTheme(localStorage.themeMode));
+    setTheme(localStorage.themeMode);
   };
+  
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    if (localStorage.getItem("themeMode") === "dark") {
-      setTheme("dark");
-    } else if (localStorage.getItem("themeMode") === "light") {
-      setTheme("light");
-    } else if (window.matchMedia("(prefers-color-scheme: dark)")) {
-      setTheme("dark");
+    if (localStorage.getItem("themeMode") !== null) {
+      // intentionall empty
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       localStorage.setItem("themeMode", "dark");
     } else {
-      setTheme("light");
       localStorage.setItem("themeMode", "light");
     }
+
+    setTheme(localStorage.themeMode);
+    setIsMounted(true);
   }, []);
 
   return (
-    <html id="html" lang="en" className={ localStorage.getItem("themeMode") }>
+    <html id="html" lang="en" className={ theme }>
       <body className={ inter.className }>
-        <NextUIProvider>
+        {isMounted ? <NextUIProvider>
           <Navbar shouldHideOnScroll className="py-4 px-3.5">
             <NavbarBrand>
               <Link href="/">
-                <Image src={ localStorage.getItem("themeMode") === "dark" ? "logo-dark.webp" : "logo.webp" } alt="Logo" width={ 50 } />
+                <Image
+                  src={ theme === "dark" ? "logo-dark.webp" : "logo.webp" }
+                  alt="Logo"
+                  width={ 50 }
+                />
               </Link>
             </NavbarBrand>
             <NavbarContent justify="end">
@@ -87,7 +89,8 @@ export default function RootLayout({
             </NavbarContent>
           </Navbar>
           {children}
-        </NextUIProvider>
+        </NextUIProvider> : null
+        }
       </body>
     </html>
   );
