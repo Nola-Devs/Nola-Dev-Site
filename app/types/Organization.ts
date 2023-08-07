@@ -5,4 +5,5 @@ export interface Organization {
     calendar_id: string;
     about: string;
     org_url?: string;
+    icon?: string;
 };

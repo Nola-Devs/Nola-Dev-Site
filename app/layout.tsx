@@ -53,7 +53,7 @@ export default function RootLayout({
     <html id="html" lang="en" className={ theme }>
       <body className={ inter.className }>
         {isMounted ? <NextUIProvider>
-          <Navbar shouldHideOnScroll className="py-4 px-3.5">
+          <Navbar shouldHideOnScroll isBordered className="py-2 px-3.5">
             <NavbarBrand>
               <Link href="/">
                 <Image
@@ -73,7 +73,7 @@ export default function RootLayout({
                   {Object.keys(organizationsStore).map((e, i) => (
                     <DropdownItem key={ i }>
                       <Link className="w-full" href={ `/${e}` }>
-                        {e.replace(/-/g, " ")}
+                        {organizationsStore[e].icon + " " + e.replace(/-/g, " ")}
                       </Link>
                     </DropdownItem>
                   ))}
