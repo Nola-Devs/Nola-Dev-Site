@@ -33,6 +33,8 @@ export default function RootLayout({
     localStorage.setItem("themeMode", invertTheme(localStorage.themeMode));
     setTheme(localStorage.themeMode);
   };
+  
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     if (localStorage.getItem("themeMode") !== null) {
@@ -44,12 +46,13 @@ export default function RootLayout({
     }
 
     setTheme(localStorage.themeMode);
+    setIsMounted(true);
   }, []);
 
   return (
     <html id="html" lang="en" className={ theme }>
       <body className={ inter.className }>
-        <NextUIProvider>
+        {isMounted ? <NextUIProvider>
           <Navbar shouldHideOnScroll className="py-4 px-3.5">
             <NavbarBrand>
               <Link href="/">
@@ -86,7 +89,8 @@ export default function RootLayout({
             </NavbarContent>
           </Navbar>
           {children}
-        </NextUIProvider>
+        </NextUIProvider> : null
+        }
       </body>
     </html>
   );
