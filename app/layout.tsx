@@ -28,12 +28,12 @@ export default function RootLayout({
   const [theme, setTheme] = useState<string>("");
 
   const invertTheme = (t: string) => (t === "dark" ? "light" : "dark");
-  
+
   const changeTheme = () => {
     localStorage.setItem("themeMode", invertTheme(localStorage.themeMode));
     setTheme(localStorage.themeMode);
   };
-  
+
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
