@@ -30,7 +30,7 @@ If you reside in or around NOLA consider this community website a deployed sandb
 
 ### Contribution Protocol:
 
-_we have transitioned away from [a forking workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow) to a [forkless/trunk feature-branch hybrid git workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)_
+_we have transitioned away from [a forking git workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow) to a [forkless/trunk feature-branch hybrid git workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)_
 
 - ~~Star and Fork the repository~~
 - Clone down the organization's repo as your `origin` ("the trunk" | "the org repo" | "org remote" | "origin")
