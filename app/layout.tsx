@@ -37,7 +37,7 @@ export default function RootLayout({
   useEffect(() => {
     if (localStorage.getItem("themeMode") !== null) {
       // intentionall empty
-    } else if (window.matchMedia("(prefers-color-scheme: dark)")) {
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       localStorage.setItem("themeMode", "dark");
     } else {
       localStorage.setItem("themeMode", "light");
