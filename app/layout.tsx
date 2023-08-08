@@ -78,7 +78,7 @@ export default function RootLayout({
                 </DropdownTrigger>
                 <DropdownMenu variant="shadow" aria-label="Static Actions">
                   {Object.keys(organizationsStore).map((e, i) => (
-                    <DropdownItem key={ i } startContent={ organizationsStore[e].icon }>
+                    <DropdownItem key={ i } startContent={ organizationsStore[e]?.icon }>
                       <Link className="w-full" href={ `/${e}` }>
                         {e.replace(/-/g, " ")}
                       </Link>
