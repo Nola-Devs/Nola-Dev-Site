@@ -65,15 +65,21 @@ export default function RootLayout({
             </NavbarBrand>
             <NavbarContent justify="end">
               <Link href="/calendar">Calendar</Link>
-              <Dropdown>
+              <Dropdown
+                showArrow
+                classNames={ {
+                  base: "py-1 px-1 border border-default-200 bg-gradient-to-br from-white to-default-200 dark:from-secondary-50 dark:to-black",
+                  arrow: "bg-secondary",
+                  } }
+              >
                 <DropdownTrigger>
-                  <Button>Groups</Button>
+                  <Button variant="shadow">Groups</Button>
                 </DropdownTrigger>
-                <DropdownMenu aria-label="Static Actions">
+                <DropdownMenu variant="shadow" aria-label="Static Actions">
                   {Object.keys(organizationsStore).map((e, i) => (
-                    <DropdownItem key={ i }>
+                    <DropdownItem key={ i } startContent={ organizationsStore[e].icon }>
                       <Link className="w-full" href={ `/${e}` }>
-                        {organizationsStore[e].icon + " " + e.replace(/-/g, " ")}
+                        {e.replace(/-/g, " ")}
                       </Link>
                     </DropdownItem>
                   ))}
