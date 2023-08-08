@@ -64,6 +64,7 @@ export default function RootLayout({
               </Link>
             </NavbarBrand>
             <NavbarContent justify="end">
+              <Link href="/form">Event Form</Link>
               <Link href="/calendar">Calendar</Link>
               <Dropdown
                 showArrow
