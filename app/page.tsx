@@ -14,8 +14,8 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div className="flex justify-center items-start p-4">
-      <Card isBlurred className="mt-16 max-w-md p-4 border border-stone-300" shadow="lg">
+    <div className="flex justify-center items-start p-4 my-2">
+      <Card isBlurred className="mt-16 max-w-md p-4 border border-stone-300 bg-gradient-to-br from-white to-default-200 dark:from-secondary-50 dark:to-black" shadow="lg">
         <CardHeader className="flex justify-center">
           <h1 className="text-7xl text-center text-blue-500">NOLA Devs</h1>
         </CardHeader>

@@ -17,6 +17,7 @@
     "semantic"
   ],
   "scripts": {
+    "predev": "next lint --fix",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
