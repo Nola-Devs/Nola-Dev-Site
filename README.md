@@ -1,5 +1,7 @@
 # Nola Dev's Site
 
+## MVP is currently live here: [https://noladevs.vercel.app/](https://noladevs.vercel.app/)
+
 ## This application hosts individual group sites, events, and contact information for the following New Orleans-based Software Development and Design groups:
 - [Agile Nola](https://www.eventbrite.com/o/agile-nola-59051586693)
 - [Hack Night](https://www.meetup.com/nolahacknight/)
