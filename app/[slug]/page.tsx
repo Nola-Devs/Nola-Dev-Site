@@ -32,7 +32,7 @@ export default function Group() {
           {group.replace(/-/g, " ")}
         </CardHeader>
         <Divider />
-        <CardBody className="text-justify" >{organizations[group]?.about}</CardBody>
+        <CardBody className="text-justify">{organizations[group]?.about}</CardBody>
         <Divider />
         <CardFooter>
           <Link
@@ -41,7 +41,7 @@ export default function Group() {
             showAnchorIcon
             color="secondary"
             size="sm"
-            href={organizations[group]?.org_url}
+            href={ organizations[group]?.org_url }
             target="_blank"
           >
             {organizations[group]?.org_url}
@@ -57,13 +57,13 @@ export default function Group() {
               isFooterBlurred
               shadow="md"
               className="m-5 min-w-fit w-[250px] h-[250px] border-2 border-slate-500"
-              key={`${e}${i}`}
+              key={ `${e}${i}` }
             >
               <CardBody className="p-0 overflow-hidden">
                 <Image
                   shadow="none"
                   className="object-cover"
-                  src={e.pfp}
+                  src={ e.pfp }
                   width="250"
                   height="250"
                   alt="organizer profile picture"
@@ -79,9 +79,9 @@ export default function Group() {
                       case "linkedin":
                         icon = (
                           <a
-                            href={Object.values(e)[0]}
+                            href={ Object.values(e)[0] }
                             target="_blank"
-                            key={Object.values(e)[0] + i} rel="noreferrer"
+                            key={ Object.values(e)[0] + i } rel="noreferrer"
                           >
                             <LinkedinOutlined />
                           </a>
@@ -90,9 +90,9 @@ export default function Group() {
                       case "github":
                         icon = (
                           <a
-                            href={Object.values(e)[0]}
+                            href={ Object.values(e)[0] }
                             target="_blank"
-                            key={Object.values(e)[0] + i} rel="noreferrer"
+                            key={ Object.values(e)[0] + i } rel="noreferrer"
                           >
                             <GithubOutlined />
                           </a>
@@ -101,9 +101,9 @@ export default function Group() {
                       case "email":
                         icon = (
                           <a
-                            href={`mailto:${Object.values(e)[0]}`}
+                            href={ `mailto:${Object.values(e)[0]}` }
                             target="_blank"
-                            key={Object.values(e)[0] + i} rel="noreferrer"
+                            key={ Object.values(e)[0] + i } rel="noreferrer"
                           >
                             <MailOutlined />
                           </a>
@@ -112,9 +112,9 @@ export default function Group() {
                       case "portfolio":
                         icon = (
                           <a
-                            href={Object.values(e)[0]}
+                            href={ Object.values(e)[0] }
                             target="_blank"
-                            key={Object.values(e)[0] + i} rel="noreferrer"
+                            key={ Object.values(e)[0] + i } rel="noreferrer"
                           >
                             <GlobalOutlined />
                           </a>
@@ -123,9 +123,9 @@ export default function Group() {
                       default:
                         icon = (
                           <a
-                            href={Object.values(e)[0]}
+                            href={ Object.values(e)[0] }
                             target="_blank"
-                            key={Object.values(e)[0] + i} rel="noreferrer"
+                            key={ Object.values(e)[0] + i } rel="noreferrer"
                           >
                             <LinkOutlined />
                           </a>
