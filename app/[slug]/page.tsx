@@ -26,7 +26,7 @@ export default function Group() {
   const group: string = usePathname().slice(1);
 
   return (
-    <div className="flex justify-center max-w-[650px] items-center mx-auto gap-4 flex-col pt-4">
+    <div className="flex justify-center max-w-[650px] items-center mx-auto gap-6 flex-col pt-4">
       <Card className="min-w-full border border-stone-300 bg-gradient-to-br from-white to-default-100 dark:from-secondary-50 dark:to-black p-4">
         <CardHeader className="font-bold justify-center text-2xl">
           {group.replace(/-/g, " ")}
@@ -48,18 +48,18 @@ export default function Group() {
           </Link>
         </CardFooter>
       </Card>
-      <Card className="min-w-full border border-stone-300 bg-gradient-to-br from-white to-default-100 dark:from-secondary-50 dark:to-black p-4">
+      <Card className="min-w-full border border-stone-300 bg-gradient-to-br from-white to-default-100 dark:from-secondary-50 dark:to-black px-4 pt-4">
         <CardHeader className="font-bold justify-center text-xl">Organizers</CardHeader>
         <Divider />
-        <div className="flex justify-evenly self-center flex-col sm:flex-row ">
+        <div className="flex justify-evenly self-center flex-col sm:w-full sm:flex-row flex-wrap">
           {organizations[group]?.organizers.map((e: Organizer, i: number) => (
             <Card
               isFooterBlurred
               shadow="md"
-              className="m-5 min-w-fit border border-slate-500"
+              className="m-5 min-w-fit w-[250px] h-[250px] border-2 border-slate-500"
               key={`${e}${i}`}
             >
-              <CardBody className="p-0">
+              <CardBody className="p-0 overflow-hidden">
                 <Image
                   shadow="none"
                   className="object-cover"
