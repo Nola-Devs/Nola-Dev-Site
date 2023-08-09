@@ -32,7 +32,7 @@ export default function Group() {
           {group.replace(/-/g, " ")}
         </CardHeader>
         <Divider />
-        <CardBody>{organizations[group]?.about}</CardBody>
+        <CardBody className="text-justify" >{organizations[group]?.about}</CardBody>
         <Divider />
         <CardFooter>
           <Link
