@@ -22,7 +22,7 @@ This project uses [NextUI](https://nextui.org/docs/guide/getting-started) for it
 
 ## Contribute
 
-Join our [Discord](https://discord.gg/bvrS72gaKS)
+Join our [Discord](https://discord.gg/Hea5n85VEv)
 
 This project is open-source, however, pull and merge requests will be limited to developers limited to the geographic region of Greater New Orleans and surrounding areas. If you reside in or around NOLA please feel free to add whatever supporting information or custom styling you feel would benefit our local community's represenation.
 
@@ -30,7 +30,7 @@ If you reside in or around NOLA consider this community website a deployed sandb
 
 ### Contribution Protocol:
 
-_we have transitioned away from [a forking workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow) to a [forkless/trunk feature-branch hybrid git workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)_
+_we have transitioned away from [a forking git workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow) to a [forkless/trunk feature-branch hybrid git workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)_
 
 - ~~Star and Fork the repository~~
 - Clone down the organization's repo as your `origin` ("the trunk" | "the org repo" | "org remote" | "origin")

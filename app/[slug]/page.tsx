@@ -26,8 +26,8 @@ export default function Group() {
   const group: string = usePathname().slice(1);
 
   return (
-    <div className="flex justify-center items-center flex-col pt-4">
-      <Card className="m-5 max-w-xl px-4">
+    <div className="flex justify-center max-w-[700px] items-center mx-auto gap-10 mt-4 flex-col pt-4">
+      <Card className="min-w-full">
         <CardHeader className="font-bold justify-center mt-2 text-2xl">
           {group.replace(/-/g, " ")}
         </CardHeader>
@@ -41,29 +41,29 @@ export default function Group() {
             showAnchorIcon
             color="secondary"
             size="sm"
-            href={ organizations[group]?.org_url }
+            href={organizations[group]?.org_url}
             target="_blank"
           >
             {organizations[group]?.org_url}
           </Link>
         </CardFooter>
       </Card>
-      <Card className="m-5 max-w-xl px-4">
+      <Card className="min-w-full">
         <CardHeader className="font-bold justify-center mt-2 text-xl">Organizers</CardHeader>
         <Divider />
         <div className="flex justify-evenly self-center flex-col sm:flex-row ">
           {organizations[group]?.organizers.map((e: Organizer, i: number) => (
             <Card
-              isFooterBlurred={ true }
+              isFooterBlurred
               shadow="md"
               className="m-5 min-w-fit"
-              key={ `${e}${i}` }
+              key={`${e}${i}`}
             >
               <CardBody className="p-0">
                 <Image
                   shadow="none"
                   className="object-cover"
-                  src={ e.pfp }
+                  src={e.pfp}
                   width="250"
                   height="250"
                   alt="organizer profile picture"
@@ -79,9 +79,9 @@ export default function Group() {
                       case "linkedin":
                         icon = (
                           <a
-                            href={ Object.values(e)[0] }
+                            href={Object.values(e)[0]}
                             target="_blank"
-                            key={ Object.values(e)[0] + i } rel="noreferrer"
+                            key={Object.values(e)[0] + i} rel="noreferrer"
                           >
                             <LinkedinOutlined />
                           </a>
@@ -90,9 +90,9 @@ export default function Group() {
                       case "github":
                         icon = (
                           <a
-                            href={ Object.values(e)[0] }
+                            href={Object.values(e)[0]}
                             target="_blank"
-                            key={ Object.values(e)[0] + i } rel="noreferrer"
+                            key={Object.values(e)[0] + i} rel="noreferrer"
                           >
                             <GithubOutlined />
                           </a>
@@ -101,9 +101,9 @@ export default function Group() {
                       case "email":
                         icon = (
                           <a
-                            href={ `mailto:${Object.values(e)[0]}` }
+                            href={`mailto:${Object.values(e)[0]}`}
                             target="_blank"
-                            key={ Object.values(e)[0] + i } rel="noreferrer"
+                            key={Object.values(e)[0] + i} rel="noreferrer"
                           >
                             <MailOutlined />
                           </a>
@@ -112,9 +112,9 @@ export default function Group() {
                       case "portfolio":
                         icon = (
                           <a
-                            href={ Object.values(e)[0] }
+                            href={Object.values(e)[0]}
                             target="_blank"
-                            key={ Object.values(e)[0] + i } rel="noreferrer"
+                            key={Object.values(e)[0] + i} rel="noreferrer"
                           >
                             <GlobalOutlined />
                           </a>
@@ -123,9 +123,9 @@ export default function Group() {
                       default:
                         icon = (
                           <a
-                            href={ Object.values(e)[0] }
+                            href={Object.values(e)[0]}
                             target="_blank"
-                            key={ Object.values(e)[0] + i } rel="noreferrer"
+                            key={Object.values(e)[0] + i} rel="noreferrer"
                           >
                             <LinkOutlined />
                           </a>
