@@ -27,7 +27,7 @@ export default function Group() {
 
   return (
     <div className="flex justify-center max-w-[650px] items-center mx-auto gap-6 flex-col pt-4">
-      <Card className="min-w-full border border-stone-300 bg-gradient-to-br from-white to-default-100 dark:from-secondary-50 dark:to-black p-4">
+      <Card className="min-w-full border border-stone-300 bg-gradient-to-br from-white to-default-100 dark:from-secondary-50 dark:to-black px-4 py-2">
         <CardHeader className="font-bold justify-center text-2xl">
           {group.replace(/-/g, " ")}
         </CardHeader>
@@ -48,7 +48,7 @@ export default function Group() {
           </Link>
         </CardFooter>
       </Card>
-      <Card className="min-w-full border border-stone-300 bg-gradient-to-br from-white to-default-100 dark:from-secondary-50 dark:to-black px-4 pt-4">
+      <Card className="min-w-full border border-stone-300 bg-gradient-to-br from-white to-default-100 dark:from-secondary-50 dark:to-black px-4 py-2">
         <CardHeader className="font-bold justify-center text-xl">Organizers</CardHeader>
         <Divider />
         <div className="flex justify-evenly self-center flex-col sm:w-full sm:flex-row flex-wrap">
