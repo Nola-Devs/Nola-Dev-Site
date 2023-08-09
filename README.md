@@ -22,7 +22,7 @@ This project uses [NextUI](https://nextui.org/docs/guide/getting-started) for it
 
 ## Contribute
 
-Join our [Discord](https://discord.gg/bvrS72gaKS)
+Join our [Discord](https://discord.gg/Hea5n85VEv)
 
 This project is open-source, however, pull and merge requests will be limited to developers limited to the geographic region of Greater New Orleans and surrounding areas. If you reside in or around NOLA please feel free to add whatever supporting information or custom styling you feel would benefit our local community's represenation.
 
