@@ -25,7 +25,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [theme, setTheme] = useState<string>("");
+  const [theme, setTheme] = useState<string>("invisible");
 
   const invertTheme = (t: string) => (t === "dark" ? "light" : "dark");
 
@@ -34,11 +34,9 @@ export default function RootLayout({
     setTheme(localStorage.themeMode);
   };
 
-  const [isMounted, setIsMounted] = useState(false);
-
   useEffect(() => {
     if (localStorage.getItem("themeMode") !== null) {
-      // intentionall empty
+      // intentionally empty
     } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       localStorage.setItem("themeMode", "dark");
     } else {
@@ -46,13 +44,12 @@ export default function RootLayout({
     }
 
     setTheme(localStorage.themeMode);
-    setIsMounted(true);
   }, []);
 
   return (
     <html id="html" lang="en" className={ theme }>
       <body className={ inter.className }>
-        {isMounted ? <NextUIProvider>
+        <NextUIProvider>
           <Navbar shouldHideOnScroll isBordered className="py-2 px-3.5">
             <NavbarBrand>
               <Link href="/">
@@ -96,8 +93,7 @@ export default function RootLayout({
             </NavbarContent>
           </Navbar>
           {children}
-        </NextUIProvider> : null
-        }
+        </NextUIProvider>
       </body>
     </html>
   );
