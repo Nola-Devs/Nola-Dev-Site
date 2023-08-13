@@ -263,7 +263,7 @@ export async function GET(_: Request) {
   }
 
   if (!process.env.CALENDAR_KEY) {
-    return Error("CALENDAR_KEY is not set");
+    throw new Error("CALENDAR_KEY is not set");
   }
 
   const calendarIds = [
