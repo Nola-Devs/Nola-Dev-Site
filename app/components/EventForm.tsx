@@ -28,7 +28,7 @@ export default function EventForm() {
     const res = await fetch("api/", options);
     const result = await res.status;
     result === 200 ? setHideForm(true) : setHideForm(false);
-  }
+  };
 
   return (
     <div className="p-5">
@@ -40,11 +40,12 @@ export default function EventForm() {
           <p>Hosting an event? Fill this out and we can add it to the calendar</p>
           <form
             className=" flex flex-col flex-wrap gap-4 p-5"
-            onSubmit={handleSubmit}
+            onSubmit={ handleSubmit }
           >
             <fieldset className="flex flex-wrap gap-3 w-full">
               <legend>About you:</legend>
               <Input
+                isRequired
                 className=" max-w-sm min-w-50"
                 type="email"
                 label="Email"
