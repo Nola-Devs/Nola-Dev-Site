@@ -26,7 +26,7 @@ export default function EventForm() {
       body: JSONdata,
     };
     const res = await fetch("api/", options);
-    const result = await res.status;
+    const result = res.status;
     result === 200 ? setHideForm(true) : setHideForm(false);
   };
 
@@ -94,6 +94,7 @@ export default function EventForm() {
               </fieldset>
               <fieldset className="flex flex-wrap gap-3 w-full">
                 <Input
+                  isRequired
                   className="max-w-fit"
                   type="date"
                   description="Date"
