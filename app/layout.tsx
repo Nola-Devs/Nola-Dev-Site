@@ -47,36 +47,35 @@ export default function RootLayout({
   }, []);
 
   return (
-    <html id="html" lang="en" className={ theme }>
-      <body className={ inter.className }>
+    <html id="html" lang="en" className={theme}>
+      <body className={inter.className}>
         <NextUIProvider>
           <Navbar shouldHideOnScroll isBordered className="py-2 px-3.5">
             <NavbarBrand>
               <Link href="/">
                 <Image
-                  src={ theme === "dark" ? "logo-dark.webp" : "logo.webp" }
+                  src={theme === "dark" ? "logo-dark.webp" : "logo.webp"}
                   alt="Logo"
-                  width={ 50 }
+                  width={50}
                 />
               </Link>
             </NavbarBrand>
             <NavbarContent justify="end">
-              <Link href="/form">Event Form</Link>
               <Link href="/calendar">Calendar</Link>
               <Dropdown
                 showArrow
-                classNames={ {
+                classNames={{
                   base: "py-1 px-1 border border-default-200 bg-gradient-to-br from-white to-default-200 dark:from-secondary-50 dark:to-black",
                   arrow: "bg-secondary",
-                  } }
+                }}
               >
                 <DropdownTrigger>
                   <Button variant="shadow">Groups</Button>
                 </DropdownTrigger>
                 <DropdownMenu variant="shadow" aria-label="Static Actions">
                   {Object.keys(organizationsStore).map((e, i) => (
-                    <DropdownItem key={ i } startContent={ organizationsStore[e]?.icon }>
-                      <Link className="w-full" href={ `/${e}` }>
+                    <DropdownItem key={i} startContent={organizationsStore[e]?.icon}>
+                      <Link className="w-full" href={`/${e}`}>
                         {e.replace(/-/g, " ")}
                       </Link>
                     </DropdownItem>
@@ -85,10 +84,10 @@ export default function RootLayout({
               </Dropdown>
               <Switch
                 size="sm"
-                isSelected={ theme === "light" }
-                startContent={ <p>🌞</p> }
-                endContent={ <p>🌒</p> }
-                onChange={ changeTheme }
+                isSelected={theme === "light"}
+                startContent={<p>🌞</p>}
+                endContent={<p>🌒</p>}
+                onChange={changeTheme}
               />
             </NavbarContent>
           </Navbar>
