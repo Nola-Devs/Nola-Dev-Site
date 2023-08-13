@@ -1,6 +1,110 @@
 import { NextResponse } from "next/server";
+import { Event } from "../types/Event";
 
 
+// Get the latest week
+export async function GET(_: Request) {
+
+  if (process.env.NODE_ENV == "development") {
+
+    const dummyEvents: Event[] = dummyJSON.flatMap((item) =>
+      item.items.map((event: any) => {
+        return {
+          htmlLink: event.htmlLink,
+          summary: event.summary,
+          description: event.description,
+          location: event.location,
+          start: {
+            dateTime: event.start.dateTime,
+          },
+          end: {
+            dateTime: event.end.dateTime,
+          },
+        };
+      })
+    );
+
+    return NextResponse.json(dummyEvents, {
+      status: 200,
+    });
+  }
+
+  if (!process.env.CALENDAR_KEY) {
+    return Error("CALENDAR_KEY is not set");
+  }
+
+  const calendarIds = [
+    // Hacknight
+    "d2ce13d5608aebe0ff7d3bcec5ea581fea8ca24d66e5f65c112e8cc3dabdbec1@group.calendar.google.com",
+    // Agile Nola
+    "d8aef47c1895abb3176ad34577de3c97f1adea91da2169a65e1e1b1c28c56e1c@group.calendar.google.com",
+    // Below C Level
+    "4a4247e11b25fdce675a32da7252fba0ce728f6ae0ec47616f2de033592e85c9@group.calendar.google.com",
+    // Front End Party
+    "1c23d7fe14840e320ec0762245bf55cc32a6910417fcf76ca8ba2d1a308110f3@group.calendar.google.com",
+    // New Orleans Game Developers
+    "c_817psp5emlgh8vgg432udrtv20@group.calendar.google.com",
+  ];
+
+  const today = new Date();
+
+  const start = new Date(today);
+  start.setDate(today.getDate() - today.getDay());
+
+  const end = new Date(today);
+  end.setDate(today.getDate() + (6 - today.getDay()));
+
+  const calendarResponses: Response[] = await Promise.all(
+    calendarIds.map(async (id) => {
+      return await fetch(
+        `https://www.googleapis.com/calendar/v3/calendars/${id}/events&singleEvents=true&timeMax=${end.toISOString()}&timeMin=${start.toISOString()}&key=${
+          process.env.CALENDAR_KEY
+        }`,
+        {
+          headers: {
+            Accept: "application/json",
+          },
+        }
+      );
+    })
+  );
+
+  const calendarEvents: { items: Event[] }[] = await Promise.all(
+    calendarResponses.map(async (res: Response) => {
+      if (!res.ok) {
+        return null;
+      }
+
+      const jsonResponse = await res.json();
+
+      return jsonResponse.items;
+    })
+  );
+
+  const events: Event[] = calendarEvents.flatMap((item) =>
+    item.items.map((event: any) => {
+      return {
+        htmlLink: event.htmlLink,
+        summary: event.summary,
+        description: event.description,
+        location: event.location,
+        start: {
+          dateTime: event.start.dateTime,
+        },
+        end: {
+          dateTime: event.end.dateTime,
+        },
+      };
+    })
+  );
+
+  return NextResponse.json(
+    { json: events },
+    {
+      status: 200,
+    }
+  );
+}
 export async function POST(req: Request) {
 
   const data = await req.json();
