@@ -62,14 +62,13 @@ export default function RootLayout({
               </Link>
             </NavbarBrand>
             <NavbarContent justify="end">
-              <Link href="/form">Event Form</Link>
               <Link href="/calendar">Calendar</Link>
               <Dropdown
                 showArrow
                 classNames={ {
                   base: "py-1 px-1 border border-default-200 bg-gradient-to-br from-white to-default-200 dark:from-secondary-50 dark:to-black",
                   arrow: "bg-secondary",
-                  } }
+                } }
               >
                 <DropdownTrigger>
                   <Button variant="shadow">Groups</Button>
