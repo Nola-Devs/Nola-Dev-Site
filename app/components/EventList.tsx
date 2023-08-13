@@ -60,10 +60,6 @@ function Event({ event }: { event: Event }) {
   const toggleTruncateCard = () => setTruncateCard(!truncateCard);
 
   const truncateString = (str: string) => {
-    if (str == undefined) {
-      return "No Description";
-    }
-
     if (str.length <= maxDescriptionLength) {
       return str;
     }
@@ -110,8 +106,8 @@ function Event({ event }: { event: Event }) {
               onClick={ toggleTruncateDescription }
             >
               {truncateDescription
-                ? truncateString(event.description)
-                : event.description}
+                ? truncateString(event.description || "No description")
+                : event.description || "No description"}
             </button>
           </CardBody>
           <Divider />
