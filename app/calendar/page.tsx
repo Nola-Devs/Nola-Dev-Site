@@ -14,7 +14,7 @@ export default function Calendar() {
           />
         </CardBody>
       </Card>
-      <Card className="max-w-7xl w-full">
+      <Card className="max-w-7xl w-full mb-8">
         <EventForm />
       </Card>
     </div>
