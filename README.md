@@ -17,7 +17,6 @@
 npm i
 npm run dev
 ```
-
 ## UI
 
 This project uses [NextUI](https://nextui.org/docs/guide/getting-started) for its UI Component Library. For simple UI changes it would be best to follow NextUI conventions and use their components. However, we also want to allow for New Orleans contributors to "sandbox" with this project, so feel free to install dependencies that you want to experiment with. Please document those installations in your PR.
