@@ -20,7 +20,7 @@ export async function POST(req: Request) {
             value: data.email,
           },{
             name: "Name",
-            value: data.name, 
+            value: data.name,
           },{
             name: "Organization",
             value: data.organization,
