@@ -1,6 +1,7 @@
 "use client";
 import "./globals.css";
 import React, { useEffect, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 import { organizationsStore } from "./organizations";
 import {
@@ -93,6 +94,7 @@ export default function RootLayout({
             </NavbarContent>
           </Navbar>
           {children}
+          <Analytics />
         </NextUIProvider>
       </body>
     </html>
