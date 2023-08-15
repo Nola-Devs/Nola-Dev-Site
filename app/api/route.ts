@@ -330,13 +330,11 @@ export async function GET(_: Request) {
       };
     })
   );
+  
 
-  return NextResponse.json(
-    { json: events },
-    {
-      status: 200,
-    }
-  );
+  return NextResponse.json(events, {
+    status: 200,
+  });
 }
 export async function POST(req: Request) {
 
