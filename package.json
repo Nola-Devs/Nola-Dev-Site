@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "5.1.4",
+    "@googleapis/calendar": "^9.1.1",
     "@nextui-org/react": "2.0.1",
     "@types/node": "20.3.0",
     "@types/react": "18.2.12",
@@ -40,6 +41,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
+    "encoding": "^0.1.13",
     "postcss": "^8.4.27",
     "tailwindcss": "^3.3.3"
   }

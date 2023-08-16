@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { Event } from "../types/Event";
 
+import { calendar_v3 } from "@googleapis/calendar";
+
 const dummyJSON = [
     {
       kind: "calendar#events",
@@ -234,12 +236,15 @@ const dummyJSON = [
       ],
     },
   ];
+let cal: calendar_v3.Calendar;
+
+if (process.env.NODE_ENV == "production") {
+  cal = new calendar_v3.Calendar({ auth: process.env.CALENDAR_KEY });
+}
 
 // Get the latest week
 export async function GET(_: Request) {
-
   if (process.env.NODE_ENV == "development") {
-
     const dummyEvents: Event[] = dummyJSON.flatMap((item) =>
       item.items.map((event: any) => {
         return {
@@ -279,6 +284,7 @@ export async function GET(_: Request) {
     "c_817psp5emlgh8vgg432udrtv20@group.calendar.google.com",
   ];
 
+  // Get first and last day of week
   const today = new Date();
 
   const start = new Date(today);
@@ -287,50 +293,41 @@ export async function GET(_: Request) {
   const end = new Date(today);
   end.setDate(today.getDate() + (6 - today.getDay()));
 
-  const calendarResponses: Response[] = await Promise.all(
+  const calendarEvents = await Promise.all(
     calendarIds.map(async (id) => {
-      return await fetch(
-        `https://www.googleapis.com/calendar/v3/calendars/${id}/events&singleEvents=true&timeMax=${end.toISOString()}&timeMin=${start.toISOString()}&key=${
-          process.env.CALENDAR_KEY
-        }`,
-        {
-          headers: {
-            Accept: "application/json",
+      return cal.events
+        .list({
+          calendarId: id,
+          maxResults: 10,
+          timeMax: end.toISOString(),
+          timeMin: start.toISOString(),
+          singleEvents: true, // Include automatically-repeating events
+          showDeleted: false,
+        })
+        .then((res) => {
+          return res.data.items;
+        });
+    })
+  );
+
+  const events: Event[] = calendarEvents
+    .filter((e) => e !== undefined && e !== null)
+    .flatMap((item) =>
+      item!.map((event: any) => {
+        return {
+          htmlLink: event.htmlLink,
+          summary: event.organizer.displayName + "\n" + event.summary,
+          description: event.description,
+          location: event.location,
+          start: {
+            dateTime: event.start.dateTime,
           },
-        }
-      );
-    })
-  );
-
-  const calendarEvents: { items: Event[] }[] = await Promise.all(
-    calendarResponses.map(async (res: Response) => {
-      if (!res.ok) {
-        return null;
-      }
-
-      const jsonResponse = await res.json();
-
-      return jsonResponse.items;
-    })
-  );
-
-  const events: Event[] = calendarEvents.flatMap((item) =>
-    item.items.map((event: any) => {
-      return {
-        htmlLink: event.htmlLink,
-        summary: event.summary,
-        description: event.description,
-        location: event.location,
-        start: {
-          dateTime: event.start.dateTime,
-        },
-        end: {
-          dateTime: event.end.dateTime,
-        },
-      };
-    })
-  );
-  
+          end: {
+            dateTime: event.end.dateTime,
+          },
+        };
+      })
+    );
 
   return NextResponse.json(events, {
     status: 200,
