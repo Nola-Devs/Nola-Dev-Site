@@ -1,8 +1,15 @@
 # Nola Dev's Site
 
-## MVP is currently live here: [https://noladevs.vercel.app/](https://noladevs.vercel.app/)
+## What Is This?
 
-## This application hosts individual group sites, events, and contact information for the following New Orleans-based Software Development and Design groups:
+This is a website for Nola Devs, an organization made up of New Orleanian Software Developers.
+It serves as a hub for many other local organizations and meetups.
+
+MVP is currently live here: [https://noladevs.vercel.app/](https://noladevs.vercel.app/).
+
+## What Is This For?
+
+This application hosts individual group sites, events, and contact information for the following New Orleans-based Software Development and Design groups:
 - [Agile Nola](https://www.eventbrite.com/o/agile-nola-59051586693)
 - [Hack Night](https://www.meetup.com/nolahacknight/)
 - [Below C Level](https://www.meetup.com/below-c-level-systems-programming-meetup/)
@@ -12,16 +19,46 @@
 - Work In Tech
 
 ---
-## To Start Project
+## Setup Development Environment 
+
+Just install all of the dependencies in any NPM-equivalent package manager, and then run the dev script.
+
+This will run the web app under a "development" node environment, meaning that it will not load any external resources which may require secrets (API Keys, etc).
 
 ```
 npm i
 npm run dev
 ```
+
+## Setup Production Environment
+
+Make sure you have both your Google Calendar API Key and your Discord Webhook URL.
+Once you have both created and added to your `.env.local` file (or any other equivalent environment variable system), you can actually deploy it.
+
+Instead of just running in the development environment, now the site is built and than served (which is how it would run on Vercel).
+
+To run the production environment, simply run these commands (and have environment variables populated).
+
+```
+npm i
+npm run build
+npm run serve
+```
+
+### Google Calendar API Key
+
+(TODO)
+
+### Discord Webhook URL
+
+(TODO)
+
+---
 ## UI
 
 This project uses [NextUI](https://nextui.org/docs/guide/getting-started) for its UI Component Library. For simple UI changes it would be best to follow NextUI conventions and use their components. However, we also want to allow for New Orleans contributors to "sandbox" with this project, so feel free to install dependencies that you want to experiment with. Please document those installations in your PR.
 
+---
 ## Contribute
 
 Join our [Discord](https://discord.gg/Hea5n85VEv)
