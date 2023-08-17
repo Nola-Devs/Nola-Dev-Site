@@ -33,7 +33,7 @@ npm run dev
 ## Setup Production Environment
 
 Make sure you have both your Google Calendar API Key and your Discord Webhook URL.
-Once you have both created and added to your `.env.local` file (or any other equivalent environment variable system), you can actually deploy it.
+Once you have both created (copy `.env.example`) and added to your `.env.local` file (or any other equivalent environment variable system), you can actually deploy it.
 
 Instead of just running in the development environment, now the site is built and than served (which is how it would run on Vercel).
 
@@ -47,11 +47,21 @@ npm run serve
 
 ### Google Calendar API Key
 
-(TODO)
+Basic Abridged Guide:
+1. Go to Google Cloud Console
+2. Create new project (call it anything you want)
+3. Navigate to API -> Library
+4. Search for Google Calendar API -> Enable it.
+5. Go to "Credentials", click "Create Credentials".
+6. Click API Key, fill out all of the required fields.
+7. Now put that API Key into your `.env.local` as CALENDAR_KEY
 
 ### Discord Webhook URL
 
-(TODO)
+Follow this guide:
+[https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)
+
+Then add the URL to your .env.local file with the DISCORD_WEBHOOK value being set to the URL.
 
 ---
 ## UI
