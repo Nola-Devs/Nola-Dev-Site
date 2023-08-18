@@ -17,7 +17,7 @@ import {
   GlobalOutlined,
   LinkOutlined,
 } from "@ant-design/icons";
-import { organizationsStore } from "../organizations";
+import { organizationsStore } from "../data/organizations";
 import { Organizer } from "../types/Organizer";
 
 const organizations: Organizations = organizationsStore;

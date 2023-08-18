@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { organizationsStore } from "./organizations";
+import { organizationsStore } from "./data/organizations";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const url = "https://noladevs.vercel.app";
