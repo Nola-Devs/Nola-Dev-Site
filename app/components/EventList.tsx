@@ -6,10 +6,8 @@ import {
   Divider,
   Link,
 } from "@nextui-org/react";
-import { useState } from "react";
-
+import React, { useEffect, useState } from "react";
 import { CalendarOutlined, CompassOutlined } from "@ant-design/icons";
-
 import { Event } from "../types/Event";
 
 async function getData() {
@@ -26,8 +24,12 @@ async function getData() {
   return res.json();
 }
 
-export default async function EventList() {
-  const events: Event[] = await getData();
+export default function EventList() {
+  const [events, setEvents] = useState<Event[]>();
+
+  useEffect(() => {
+    (async () => setEvents(await getData()))();
+  }, []);
 
   return (
     <Card
@@ -41,7 +43,7 @@ export default async function EventList() {
       </CardHeader>
       <Divider />
       <CardBody className="gap-4">
-        {events.map((e: Event, i: number) => (
+        {events?.map((e: Event, i: number) => (
           <Event event={ e } key={ i } />
         ))}
       </CardBody>
