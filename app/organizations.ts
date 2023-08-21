@@ -154,5 +154,22 @@ export const organizationsStore: Organizations = {
     "about": "We are a bunch of game developers in the Greater New Orleans area who meet on a monthly basis to network, collaborate, and share knowledge. Our events help the gamedev community present on interesting topics, showcase their projects, and encourage game development in the local area. We meet online on the third Thursday of every month at 7:00 pm. See our website for connecting.",
     "org_url": "http://neworleansgamedev.com/",
     "icon": "🎮",
+  },
+  "BRSSUG":{
+    "organizers": [
+      {
+        "name":"Kenny",
+        "pfp": "/organizersPfp/egg.webp",
+        "links": [
+          {"website": "https://www.brssug.org/"},
+          {"email": "sqlpassbr@gmail.com"},
+          {"twitter": "http://www.twitter.com/BRSSUG/"}
+        ]
+      }
+    ],
+    "calendar_id": "placeholder@group.calendar.google.com",
+    "about": "The Baton Rouge SQL Server User Group is a free, no-registration required user group for professionals and students in the broad field of Microsoft SQL Server. The group aims provide a platform for growing your skillset in Information Technology and your professional network, and work closely with local and regional partners to make our monthly meetings interesting and informative. We meet every second Wednesday of the month on a wide range of topics from Business Intelligence, Disaster Recovery, SQL Server performance and monitoring, and SQL server development. The following links to our meetup calendar: https://www.meetup.com/baton-rouge-net-and-sql-server-user-groups/",
+    "org_url": "https://www.brssug.org/",
+    "icon": "🛢",
   }
 };

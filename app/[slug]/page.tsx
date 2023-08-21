@@ -16,6 +16,7 @@ import {
   GithubOutlined,
   GlobalOutlined,
   LinkOutlined,
+  TwitterOutlined,
 } from "@ant-design/icons";
 import { organizationsStore } from "../organizations";
 import { Organizer } from "../types/Organizer";
@@ -117,6 +118,17 @@ export default function Group() {
                             key={ Object.values(e)[0] + i } rel="noreferrer"
                           >
                             <GlobalOutlined />
+                          </a>
+                        );
+                        break;
+                      case "twitter":
+                        icon = (
+                          <a
+                            href={ Object.values(e)[0] }
+                            target="_blank"
+                            key={ Object.values(e)[0] + i } rel="noreferrer"
+                          >
+                            <TwitterOutlined />
                           </a>
                         );
                         break;
