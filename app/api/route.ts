@@ -96,8 +96,8 @@ export async function GET(req: NextRequest) {
   // If ?group=_ is not set, just return default all data
   const org = req.nextUrl.searchParams.get("group");
 
-  if (org) {
-    return NextResponse.json(fetchEvent(org), {
+  if (org && org != "all") {
+    return NextResponse.json(await fetchEvent(org), {
       status: 200,
     });
   }

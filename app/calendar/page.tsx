@@ -6,7 +6,7 @@ import EventList from "../components/EventList";
 export default function Calendar() {
   return (
     <div className="flex justify-center items-center my-auto flex-col">
-      <EventList />
+      <EventList group="all" />
       <Card className="max-w-7xl w-full mb-8">
         <EventForm />
       </Card>
