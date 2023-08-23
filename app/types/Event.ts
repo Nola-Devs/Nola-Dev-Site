@@ -3,6 +3,7 @@ export interface Event {
   summary: string;
   description: string;
   location: string;
+  orgEmoji?: string;
   start: {
     dateTime: string;
   };
