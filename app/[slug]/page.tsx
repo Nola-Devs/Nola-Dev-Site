@@ -12,8 +12,8 @@ import {
 import { Organizations, urlDTO } from "../types/index";
 import { organizationsStore } from "../data/organizations";
 import IconParser from "../components/IconParser";
+import EventList from "../components/EventList";
 import { Organizer } from "../types/Organizer";
-
 
 const organizations: Organizations = organizationsStore;
 
@@ -27,7 +27,9 @@ export default function Group() {
           {group.replace(/-/g, " ")}
         </CardHeader>
         <Divider />
-        <CardBody className="text-justify">{organizations[group]?.about}</CardBody>
+        <CardBody className="text-justify">
+          {organizations[group]?.about}
+        </CardBody>
         <Divider />
         <CardFooter>
           <Link
@@ -44,7 +46,9 @@ export default function Group() {
         </CardFooter>
       </Card>
       <Card className="min-w-full border border-stone-300 bg-gradient-to-br from-white to-default-200/60 dark:from-secondary-50 dark:to-black px-4 py-2">
-        <CardHeader className="font-bold justify-center text-xl">Organizers</CardHeader>
+        <CardHeader className="font-bold justify-center text-xl">
+          Organizers
+        </CardHeader>
         <Divider />
         <div className="flex justify-evenly self-center flex-col sm:w-full sm:flex-row flex-wrap">
           {organizations[group]?.organizers.map((e: Organizer, i: number) => (
@@ -70,15 +74,21 @@ export default function Group() {
                   {e.links?.map((e: urlDTO, i: number) => {
                     const icon = Object.keys(e)[0];
                     const linkToIcon = Object.values(e)[0];
-                    return <IconParser icon={ icon } linkToIcon={ linkToIcon } key={ linkToIcon + i } /> ;
-                  }
-                  )}
+                    return (
+                      <IconParser
+                        icon={ icon }
+                        linkToIcon={ linkToIcon }
+                        key={ linkToIcon + i }
+                      />
+                    );
+                  })}
                 </div>
               </CardFooter>
             </Card>
           ))}
         </div>
       </Card>
+      <EventList group={ group } />
     </div>
   );
 }

@@ -8,10 +8,10 @@ import {
 } from "@nextui-org/react";
 import React, { useEffect, useState } from "react";
 import { CalendarOutlined, CompassOutlined } from "@ant-design/icons";
-import { Event } from "../types/Event";
+import { Event, eventListProps } from "../types/Event";
 
-async function getData() {
-  const res = await fetch("http://localhost:3000/api", {
+async function getData(group: string) {
+  const res = await fetch(`http://localhost:3000/api?group=${group}`, {
     method: "GET",
     headers: { Accept: "application/json" },
     cache: "force-cache",
@@ -24,12 +24,12 @@ async function getData() {
   return res.json();
 }
 
-export default function EventList() {
+export default function EventList({ group }: eventListProps) {
   const [events, setEvents] = useState<Event[]>();
 
   useEffect(() => {
-    (async () => setEvents(await getData()))();
-  }, []);
+    (async () => setEvents(await getData(group)))();
+  }, [group]);
 
   return (
     <Card
@@ -37,9 +37,7 @@ export default function EventList() {
       shadow="lg"
     >
       <CardHeader className="flex justify-center">
-        <h1 className="text-7xl text-center text-blue-500">
-          This Week In NOLA
-        </h1>
+        <h1 className="text-7xl text-center text-blue-500">Events</h1>
       </CardHeader>
       <Divider />
       <CardBody className="gap-4">
@@ -84,7 +82,11 @@ function Event({ event }: { event: Event }) {
       <CardHeader>
         <button className="w-full" onClick={ toggleTruncateCard }>
           <div className="flex flex-col items-start">
-            <strong>{event.summary}</strong>
+            <strong>
+              {event.orgEmoji} 
+              {" "}
+              {event.summary}
+            </strong>
             {new Date(event.start.dateTime).toDateString() +
               ": " +
               new Date(event.start.dateTime).toLocaleTimeString([], {
