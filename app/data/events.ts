@@ -1,8 +1,8 @@
-export const mockEventJSON  = [
+export const mockEventJSON = [
   {
     kind: "calendar#events",
     etag: '"p33k8p7fdufao00o"',
-    summary: "Hack Night (Dummy data)",
+    summary: "Hack Night",
     description: "",
     updated: "2023-08-12T00:52:17.169Z",
     timeZone: "America/Chicago",
@@ -18,7 +18,7 @@ export const mockEventJSON  = [
           "https://www.google.com/calendar/event?eid=XzhkMTMwaGhpNmgyMzJiYTI2MTFqMGI5azZwMmpnYjlwNjhxajRiOW84Y3NqZ2c5bzg4cGs4aDlnNjggZDJjZTEzZDU2MDhhZWJlMGZmN2QzYmNlYzVlYTU4MWZlYThjYTI0ZDY2ZTVmNjVjMTEyZThjYzNkYWJkYmVjMUBn",
         created: "2023-07-06T16:31:45.000Z",
         updated: "2023-07-06T16:31:45.532Z",
-        summary: "Hack Night (Fake Data)",
+        summary: "Hack Night",
         description:
           "New Orleans Hack Night occurs around 7pm every Tuesday at The Rusty Nail. It's an unstructured, social meetup with no organizers and no agenda.\n\nJoin the Nola Devs Slack for more information. Feel free to ask questions about Hack Night in the #hacknight channel.\n\nWe typically convene on the street. If it's raining we may be inside or in the courtyard. We'll do our best to notice and greet you, but there is no hack night uniform. So if you see a group of nerds arguing in the street just ask \"Is this Hack Night?\" and they will greet you and introduce you to people.",
         location:
@@ -125,107 +125,6 @@ export const mockEventJSON  = [
         },
         iCalUID: "393r8cdip9pt24qfp7rii6dqj7@google.com",
         sequence: 0,
-        eventType: "default",
-      },
-    ],
-  },
-  {
-    kind: "calendar#events",
-    etag: '"p33gffp7gkn8800o"',
-    summary: "NOGD Events",
-    description:
-      "Calendar of events for the New Orleans Game Developer Community",
-    updated: "2023-08-09T19:20:07.980Z",
-    timeZone: "America/Chicago",
-    accessRole: "reader",
-    defaultReminders: [],
-    nextPageToken:
-      "EjYKK25tbXVpN2J0cjJoNXVxcGdwbTAzMHRqbmtwXzIwMjMwODE3VDAwMzAwMFoYgLyZkvXhgAMiBwgFEPfKtDY=",
-    items: [
-      {
-        kind: "calendar#event",
-        etag: '"3383181570646000"',
-        id: "1t6ian0r9kg4v6ruoog37df6js_20230719T000000Z",
-        status: "confirmed",
-        htmlLink:
-          "https://www.google.com/calendar/event?eid=MXQ2aWFuMHI5a2c0djZydW9vZzM3ZGY2anNfMjAyMzA3MTlUMDAwMDAwWiBjXzgxN3BzcDVlbWxnaDh2Z2c0MzJ1ZHJ0djIwQGc",
-        created: "2021-03-25T21:39:51.000Z",
-        updated: "2023-08-09T14:19:45.323Z",
-        summary: "Hack Night ",
-        description:
-          'Join the fun on discord&nbsp;\u003cbr\u003e\u003ca href="http://discord.gg/A2Ngs4w" id="ow3188" __is_owner="true"\u003ehttp://discord.gg/A2Ngs4w\u003c/a\u003e',
-        location: "http://discord.gg/A2Ngs4w",
-        creator: {
-          email: "a@neworleansgamedev.com",
-        },
-        organizer: {
-          email: "c_817psp5emlgh8vgg432udrtv20@group.calendar.google.com",
-          displayName: "NOGD Events",
-          self: true,
-        },
-        start: {
-          dateTime: "2023-07-18T19:00:00-05:00",
-          timeZone: "America/Chicago",
-        },
-        end: {
-          dateTime: "2023-07-18T21:00:00-05:00",
-          timeZone: "America/Chicago",
-        },
-        recurringEventId: "1t6ian0r9kg4v6ruoog37df6js_R20230315T000000",
-        originalStartTime: {
-          dateTime: "2023-07-18T19:00:00-05:00",
-          timeZone: "America/Chicago",
-        },
-        iCalUID: "1t6ian0r9kg4v6ruoog37df6js_R20230315T000000@google.com",
-        sequence: 0,
-        extendedProperties: {
-          private: {
-            "X-MOZ-LASTACK": "20230815T225900Z",
-          },
-        },
-        eventType: "default",
-      },
-      {
-        kind: "calendar#event",
-        etag: '"3383036282414000"',
-        id: "nmmui7btr2h5uqpgpm030tjnkp_20230720T003000Z",
-        status: "confirmed",
-        htmlLink:
-          "https://www.google.com/calendar/event?eid=bm1tdWk3YnRyMmg1dXFwZ3BtMDMwdGpua3BfMjAyMzA3MjBUMDAzMDAwWiBjXzgxN3BzcDVlbWxnaDh2Z2c0MzJ1ZHJ0djIwQGc",
-        created: "2022-11-06T17:37:22.000Z",
-        updated: "2023-08-08T18:09:01.207Z",
-        summary: "SHO' & TELL",
-        description:
-          "It is time to Show and Tell!, hosted tonight by @thechamber69 grab the hdmi cable and show off what you've been up to! What you're working on isn't digital? WHO CARES, come by and show it off anyways!\u003cbr /\u003e\u003cbr /\u003e\u003cbr /\u003e\u003cbr /\u003eStarts at 7:30pm, hosted at Sea Cave, 3000 St. Claude.",
-        location: "Sea Cave, 3000 St Claude Ave, New Orleans, LA 70117, USA",
-        creator: {
-          email: "a@neworleansgamedev.com",
-        },
-        organizer: {
-          email: "c_817psp5emlgh8vgg432udrtv20@group.calendar.google.com",
-          displayName: "NOGD Events",
-          self: true,
-        },
-        start: {
-          dateTime: "2023-07-19T19:30:00-05:00",
-          timeZone: "America/Chicago",
-        },
-        end: {
-          dateTime: "2023-07-19T21:00:00-05:00",
-          timeZone: "America/Chicago",
-        },
-        recurringEventId: "nmmui7btr2h5uqpgpm030tjnkp",
-        originalStartTime: {
-          dateTime: "2023-07-19T19:30:00-05:00",
-          timeZone: "America/Chicago",
-        },
-        iCalUID: "nmmui7btr2h5uqpgpm030tjnkp@google.com",
-        sequence: 3,
-        extendedProperties: {
-          private: {
-            "X-MOZ-LASTACK": "20230816T232900Z",
-          },
-        },
         eventType: "default",
       },
     ],
