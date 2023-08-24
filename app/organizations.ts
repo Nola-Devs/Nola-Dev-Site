@@ -155,6 +155,26 @@ export const organizationsStore: Organizations = {
     "org_url": "http://neworleansgamedev.com/",
     "icon": "🎮",
   },
+  "Ethical-Hacking":{
+    "organizers": [
+      {
+        "name":"Logan Hochwald",
+        "pfp": "/organizersPfp/egg.webp",
+        "links":[
+          {"github": "https://github.com/loganhochwald"},
+          {"linkedin": "https://www.linkedin.com/in/loganhochwald/"},
+          {"email": "loganhochwald@gmail.com"}
+        ]
+      },
+      {
+        "name":"Rene Mercadel",
+        "pfp": "/organizersPfp/egg.webp",
+      }
+    ],
+    "calendar_id":"placeholder",
+    "about": "Do you ever lie awake at night, pondering questions like, \"Is someone hacking into my WiFi right now?\" Or perhaps, \"What is the Deep Dark Web and why do they need onions??\" In those moments, consider our group, Ethical Hacking; we specialize in elucidating these concepts and more.\n\nEvery third Tuesday of the month, we come together to delve into various hacking subjects via presentations, demonstrations, and interactive Q&A sessions. Our goal is to demystify cyber security and shed light on the potential threats of the internet; slap on your white hat, maybe grab an onion, and join us!",
+    "icon": "💀",
+  },
   "BRSSUG":{
     "organizers": [
       {
@@ -171,5 +191,5 @@ export const organizationsStore: Organizations = {
     "about": "The Baton Rouge SQL Server User Group is a free, no-registration required user group for professionals and students in the broad field of Microsoft SQL Server. The group aims provide a platform for growing your skillset in Information Technology and your professional network, and work closely with local and regional partners to make our monthly meetings interesting and informative. We meet every second Wednesday of the month on a wide range of topics from Business Intelligence, Disaster Recovery, SQL Server performance and monitoring, and SQL server development. The following links to our meetup calendar: https://www.meetup.com/baton-rouge-net-and-sql-server-user-groups/",
     "org_url": "https://www.brssug.org/",
     "icon": "🛢",
-  }
+  },
 };
