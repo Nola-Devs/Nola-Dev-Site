@@ -3,14 +3,6 @@ import { Event } from "../types/Event";
 import { mockEventJSON } from "../data/events";
 import { organizationsStore } from "../data/organizations";
 
-import { calendar_v3 } from "@googleapis/calendar";
-
-let cal: calendar_v3.Calendar;
-
-if (process.env.NODE_ENV == "production") {
-  cal = new calendar_v3.Calendar({ auth: process.env.CALENDAR_KEY });
-}
-
 async function fetchEvent(organization: string) {
   // Make sure it's a real organization
   if (!(organization in organizationsStore)) {
@@ -25,7 +17,7 @@ async function fetchEvent(organization: string) {
     return [];
   }
 
-  // If it's in development or an invalid page, just return dummy content
+  // If it's in development, just return dummy content
   if (process.env.NODE_ENV == "development") {
     const mockEvents: Event[] = mockEventJSON.flatMap((item) =>
       item.items.map((event: any) => {
@@ -52,21 +44,33 @@ async function fetchEvent(organization: string) {
     throw new Error("CALENDAR_KEY is not set");
   }
 
-  const end = new Date();
-  const start = new Date();
+  const today = new Date();
 
-  const event = await cal.events
-    .list({
-      calendarId: organizationsStore[organization].calendar_id,
-      maxResults: 10,
-      timeMax: end.toISOString(),
-      timeMin: start.toISOString(),
-      singleEvents: true,
-      showDeleted: false,
-    })
-    .then((res) => {
-      return res.data.items;
-    });
+  // 3 weeks
+  // |------|-----|------|
+  //          ^ today
+
+  const start = new Date(today);
+  start.setDate(today.getDate() - today.getDay() - 7);
+
+  const end = new Date(today);
+  end.setDate(today.getDate() + (6 - today.getDay()) + 7);
+
+  const url = `https://www.googleapis.com/calendar/v3/calendars/${
+    organizationsStore[organization].calendar_id
+  }/events?maxResults=10&timeMax=${end.toISOString()}&timeMin=${start.toISOString()}&singleEvents=true&showDeleted=false&key=${
+    process.env.CALENDAR_KEY
+  }`;
+
+  const e = await fetch(url, {
+    method: "GET",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  const event = (await e.json())["items"];
 
   if (event == null) {
     return [];
