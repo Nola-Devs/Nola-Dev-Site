@@ -47,14 +47,14 @@ async function fetchEvent(organization: string) {
   const today = new Date();
 
   // 3 weeks
-  // |------|-----|------|
-  //          ^ today
+  // |-----|------|-----|
+  //   ^ today
 
   const start = new Date(today);
-  start.setDate(today.getDate() - today.getDay() - 7);
+  start.setDate(today.getDate() - today.getDay());
 
   const end = new Date(today);
-  end.setDate(today.getDate() + (6 - today.getDay()) + 7);
+  end.setDate(today.getDate() + (6 - today.getDay()) + 14);
 
   const url = `https://www.googleapis.com/calendar/v3/calendars/${
     organizationsStore[organization].calendar_id
