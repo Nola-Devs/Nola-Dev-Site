@@ -37,7 +37,7 @@ export default function EventList({ group }: eventListProps) {
   
   return (
     <Card
-      className="mt-16 max-w-xl p-4 border border-stone-300 bg-gradient-to-br from-white to-default-200 dark:from-secondary-50 dark:to-black"
+      className="mt-16 max-w-xl p-4 border border-stone-300 bg-gradient-to-br from-white to-default-200 dark:from-secondary-50 dark:to-black w-full"
       shadow="lg"
     >
       <CardHeader className="flex justify-center">
@@ -48,6 +48,16 @@ export default function EventList({ group }: eventListProps) {
         {events?.sort(sortEventsByDate).map((e: Event, i: number) => (
           <Event event={ e } key={ i } />
         ))}
+
+        <Card>
+          <CardHeader className="justify-center">
+            <strong>You&apos;ve reached the bottom!</strong>
+          </CardHeader>
+          <Divider/>
+          <CardBody className="text-center">
+            Check in here again for more events!
+          </CardBody>
+        </Card>
       </CardBody>
     </Card>
   );
