@@ -159,20 +159,24 @@ export const organizationsStore: Organizations = {
     "organizers": [
       {
         "name":"Logan Hochwald",
-        "pfp": "/organizersPfp/egg.webp",
+        "pfp": "/organizersPfp/logan.webp",
         "links":[
-          {"github": "https://github.com/loganhochwald"},
           {"linkedin": "https://www.linkedin.com/in/loganhochwald/"},
-          {"email": "loganhochwald@gmail.com"}
+          {"email": "loganhochwald@gmail.com"},
+          {"github": "https://github.com/loganhochwald"}
         ]
       },
       {
         "name":"Rene Mercadel",
-        "pfp": "/organizersPfp/egg.webp",
+        "pfp": "/organizersPfp/rene.webp",
+        "links":[
+          {"linkedin": "https://www.linkedin.com/in/rene-mercadel-76718423a"},
+          {"email": "renemercadel@gmail.com"}
+        ]
       }
     ],
     "calendar_id":"placeholder",
-    "about": "Do you ever lie awake at night, pondering questions like, \"Is someone hacking into my WiFi right now?\" Or perhaps, \"What is the Deep Dark Web and why do they need onions??\" In those moments, consider our group, Ethical Hacking; we specialize in elucidating these concepts and more.\nEvery third Tuesday of the month, we come together to delve into various hacking subjects via presentations, demonstrations, and interactive Q&A sessions. Our goal is to demystify cyber security and shed light on the potential threats of the internet; slap on your white hat, maybe grab an onion, and join us!",
+    "about": "Do you ever lie awake at night, pondering questions such as, \"Is someone hacking into my WiFi right now?\" Or perhaps, \"What is the Deep Dark Web and why do they need onions??\" In those moments, consider our group, Ethical Hacking; we specialize in elucidating these concepts and more.\nEvery third Tuesday of the month, we come together to delve into various hacking subjects via presentations, demonstrations, and interactive Q&A sessions. Our goal is to demystify cyber security and shed light on the potential threats of the internet; slap on your white hat, maybe grab an onion, and join us!",
     "icon": "💀",
   },
   "BRSSUG":{
