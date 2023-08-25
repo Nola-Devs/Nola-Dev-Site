@@ -1,6 +1,43 @@
 import { Organizations } from "./types/Organizations";
 
 export const organizationsStore: Organizations = {
+  "Agile-Nola":{
+    "organizers": [
+      {
+        "name":"Dustin Gaspard",
+        "pfp": "/organizersPfp/dustin.webp",
+        "links":[
+          {"twitter": "https://twitter.com/dgaspard"},
+          {"linkedin": "https://www.linkedin.com/in/dustin-gaspard"},
+          {"website": "http://www.diamonddata.com/"},
+          {"email": "dgaspard@gmail.com"}
+        ]
+      },
+      {
+        "name":"Garett Majoue",
+        "pfp": "/organizersPfp/garett.webp",
+        "links":[
+          {"linkedin": "https://www.linkedin.com/in/garett-majoue/"}
+        ]
+      }
+    ],
+    "calendar_id":"d8aef47c1895abb3176ad34577de3c97f1adea91da2169a65e1e1b1c28c56e1c@group.calendar.google.com",
+    "about": "Agile Nola is a group for connecting the New Orleans software development community, marrying modern Agile methodologies with trends of the tech ecosystem at large. Many esteemed, national speakers gather monthly to provide unique insights into many different avenues in the software world. All are welcome and encouraged to come to the events with beer and food provided! Come network, learn, and laugh with the Agile User Group.",
+    "org_url": "https://www.eventbrite.com/o/agile-nola-59051586693",
+    "icon": "💼",
+  },
+  "AI-Hacking-in-Nola":{
+    "organizers": [
+      {
+        "name":"Blake",
+        "pfp": "/organizersPfp/egg.webp",
+        "links":[]
+      }
+    ],
+    "calendar_id": "d2ce13d5608aebe0ff7d3bcec5ea581fea8ca24d66e5f65c112e8cc3dabdbec1@group.calendar.google.com",
+    "about": "AI hackers hang at 'The Prototype House' - 3110 Royal Street. Starting at 4:44PM and going till around 7:30 or whenever we wonder to Markey's. It's a chance to just keep engaging with the wild west of LLMs/image models/... feel free to bring your laptops if you wanna demo anything.",
+    "icon": "🤖",
+  },
   "Below-C-Level": {
     "organizers": [
       {
@@ -24,6 +61,47 @@ export const organizationsStore: Organizations = {
     "about": "We are a group of programmers residing in New Orleans, Louisiana, who gather on a monthly basis for presentations and discussions focused on systems programming. Our aim is to create an open and inclusive environment for individuals eager to delve deeper into the world of systems programming, going beyond surface-level abstractions. While our talks cater to programmers with a few years of professional experience, we encourage participation from all who are interested. In case any concepts or ideas appear perplexing or unclear, we allocate time for group discussions and collaborative learning.",
     "org_url": "https://belowclevel.org/",
     "icon": "🌊",
+  },
+  "BRSSUG":{
+    "organizers": [
+      {
+        "name":"Kenny",
+        "pfp": "/organizersPfp/egg.webp",
+        "links": [
+          {"website": "https://www.brssug.org/"},
+          {"email": "sqlpassbr@gmail.com"},
+          {"twitter": "http://www.twitter.com/BRSSUG/"}
+        ]
+      }
+    ],
+    "calendar_id": "placeholder@group.calendar.google.com",
+    "about": "The Baton Rouge SQL Server User Group is a free, no-registration required user group for professionals and students in the broad field of Microsoft SQL Server. The group aims provide a platform for growing your skillset in Information Technology and your professional network, and work closely with local and regional partners to make our monthly meetings interesting and informative. We meet every second Wednesday of the month on a wide range of topics from Business Intelligence, Disaster Recovery, SQL Server performance and monitoring, and SQL server development. The following links to our meetup calendar: https://www.meetup.com/baton-rouge-net-and-sql-server-user-groups/",
+    "org_url": "https://www.brssug.org/",
+    "icon": "🛢",
+  },
+  "Ethical-Hacking":{
+    "organizers": [
+      {
+        "name":"Logan Hochwald",
+        "pfp": "/organizersPfp/logan.webp",
+        "links":[
+          {"linkedin": "https://www.linkedin.com/in/loganhochwald/"},
+          {"email": "loganhochwald@gmail.com"},
+          {"github": "https://github.com/loganhochwald"}
+        ]
+      },
+      {
+        "name":"Rene Mercadel",
+        "pfp": "/organizersPfp/rene.webp",
+        "links":[
+          {"linkedin": "https://www.linkedin.com/in/rene-mercadel-76718423a"},
+          {"email": "renemercadel@gmail.com"}
+        ]
+      }
+    ],
+    "calendar_id":"b0278c6dd5bcdb70e7f97d4e50d979f54a05337b332d4582ed280217222009c2@group.calendar.google.com",
+    "about": "Do you ever lie awake at night, pondering questions such as, \"Is someone hacking into my WiFi right now?\" Or perhaps, \"What is the Deep Dark Web and why do they need onions??\" In those moments, consider our group, Ethical Hacking; we specialize in elucidating these concepts and more.\nEvery third Tuesday of the month, we come together to delve into various hacking subjects via presentations, demonstrations, and interactive Q&A sessions. Our goal is to demystify cyber security and shed light on the potential threats of the internet; slap on your white hat, maybe grab an onion, and join us!",
+    "icon": "💀",
   },
   "Frontend-Party":{
     "organizers": [
@@ -53,47 +131,6 @@ export const organizationsStore: Organizations = {
     "org_url": "http://www.frontendparty.com/",
     "icon": "🎉",
   },
-  "Work-In-Tech":{
-    "organizers": [
-      {
-        "name":"Brook Davis",
-        "pfp": "/organizersPfp/brookDavis.webp",
-        "links":[
-          {"linkedin": "https://www.linkedin.com/in/brookbissinger/"},
-          {"twitter": "https://twitter.com/brook5280"}
-        ]
-      },
-    ],
-    "calendar_id":"placeholder",
-    "about": "As someone involved in the tech scene in New Orleans, we are always learning new things, meeting new people and coming up with new ways of accomplishing our goals. This thriving community of smart, entrepreneurial people now has an official way to connect! The Work In Tech group will meet up once a quarter...or so... at a local New Orleans spot. We invite anyone working in Tech in the NOLA area to join us as well as those looking to learn more about the industry and connect with potential future opportunities!",
-    "org_url": "https://linktr.ee/workintech",
-    "icon": "💻",
-  },
-  "Agile-Nola":{
-    "organizers": [
-      {
-        "name":"Dustin Gaspard",
-        "pfp": "/organizersPfp/dustin.webp",
-        "links":[
-          {"twitter": "https://twitter.com/dgaspard"},
-          {"linkedin": "https://www.linkedin.com/in/dustin-gaspard"},
-          {"website": "http://www.diamonddata.com/"},
-          {"email": "dgaspard@gmail.com"}
-        ]
-      },
-      {
-        "name":"Garett Majoue",
-        "pfp": "/organizersPfp/garett.webp",
-        "links":[
-          {"linkedin": "https://www.linkedin.com/in/garett-majoue/"}
-        ]
-      }
-    ],
-    "calendar_id":"d8aef47c1895abb3176ad34577de3c97f1adea91da2169a65e1e1b1c28c56e1c@group.calendar.google.com",
-    "about": "Agile Nola is a group for connecting the New Orleans software development community, marrying modern Agile methodologies with trends of the tech ecosystem at large. Many esteemed, national speakers gather monthly to provide unique insights into many different avenues in the software world. All are welcome and encouraged to come to the events with beer and food provided! Come network, learn, and laugh with the Agile User Group.",
-    "org_url": "https://www.eventbrite.com/o/agile-nola-59051586693",
-    "icon": "💼",
-  },
   "Hacknight":{
     "organizers": [
       {
@@ -110,18 +147,6 @@ export const organizationsStore: Organizations = {
     "about": "Hacknight is the end destination for the defacto 'Tech-Night' events hosted at 7pm every Tuesday at the Rusty Nail. Dozens of developers and designers alike come to unwind in the casual atmosphere of the bar and exchange fun thoughts regarding tech or otherwise. If you see a group of nerds arguing in the street just ask 'Is this Hack Night?' and they will greet you and introduce you to people.",
     "org_url": "https://www.meetup.com/nolahacknight/",
     "icon": "🍻",
-  },
-  "AI-Hacking-in-Nola":{
-    "organizers": [
-      {
-        "name":"Blake",
-        "pfp": "/organizersPfp/egg.webp",
-        "links":[]
-      }
-    ],
-    "calendar_id": "d2ce13d5608aebe0ff7d3bcec5ea581fea8ca24d66e5f65c112e8cc3dabdbec1@group.calendar.google.com",
-    "about": "AI hackers hang at 'The Prototype House' - 3110 Royal Street. Starting at 4:44PM and going till around 7:30 or whenever we wonder to Markey's. It's a chance to just keep engaging with the wild west of LLMs/image models/... feel free to bring your laptops if you wanna demo anything.",
-    "icon": "🤖",
   },
   "Nola-Game-Dev":{
     "organizers": [
@@ -155,45 +180,20 @@ export const organizationsStore: Organizations = {
     "org_url": "http://neworleansgamedev.com/",
     "icon": "🎮",
   },
-  "Ethical-Hacking":{
+  "Work-In-Tech":{
     "organizers": [
       {
-        "name":"Logan Hochwald",
-        "pfp": "/organizersPfp/logan.webp",
+        "name":"Brook Davis",
+        "pfp": "/organizersPfp/brookDavis.webp",
         "links":[
-          {"linkedin": "https://www.linkedin.com/in/loganhochwald/"},
-          {"email": "loganhochwald@gmail.com"},
-          {"github": "https://github.com/loganhochwald"}
+          {"linkedin": "https://www.linkedin.com/in/brookbissinger/"},
+          {"twitter": "https://twitter.com/brook5280"}
         ]
       },
-      {
-        "name":"Rene Mercadel",
-        "pfp": "/organizersPfp/rene.webp",
-        "links":[
-          {"linkedin": "https://www.linkedin.com/in/rene-mercadel-76718423a"},
-          {"email": "renemercadel@gmail.com"}
-        ]
-      }
     ],
-    "calendar_id":"b0278c6dd5bcdb70e7f97d4e50d979f54a05337b332d4582ed280217222009c2@group.calendar.google.com",
-    "about": "Do you ever lie awake at night, pondering questions such as, \"Is someone hacking into my WiFi right now?\" Or perhaps, \"What is the Deep Dark Web and why do they need onions??\" In those moments, consider our group, Ethical Hacking; we specialize in elucidating these concepts and more.\nEvery third Tuesday of the month, we come together to delve into various hacking subjects via presentations, demonstrations, and interactive Q&A sessions. Our goal is to demystify cyber security and shed light on the potential threats of the internet; slap on your white hat, maybe grab an onion, and join us!",
-    "icon": "💀",
-  },
-  "BRSSUG":{
-    "organizers": [
-      {
-        "name":"Kenny",
-        "pfp": "/organizersPfp/egg.webp",
-        "links": [
-          {"website": "https://www.brssug.org/"},
-          {"email": "sqlpassbr@gmail.com"},
-          {"twitter": "http://www.twitter.com/BRSSUG/"}
-        ]
-      }
-    ],
-    "calendar_id": "placeholder@group.calendar.google.com",
-    "about": "The Baton Rouge SQL Server User Group is a free, no-registration required user group for professionals and students in the broad field of Microsoft SQL Server. The group aims provide a platform for growing your skillset in Information Technology and your professional network, and work closely with local and regional partners to make our monthly meetings interesting and informative. We meet every second Wednesday of the month on a wide range of topics from Business Intelligence, Disaster Recovery, SQL Server performance and monitoring, and SQL server development. The following links to our meetup calendar: https://www.meetup.com/baton-rouge-net-and-sql-server-user-groups/",
-    "org_url": "https://www.brssug.org/",
-    "icon": "🛢",
+    "calendar_id":"placeholder",
+    "about": "As someone involved in the tech scene in New Orleans, we are always learning new things, meeting new people and coming up with new ways of accomplishing our goals. This thriving community of smart, entrepreneurial people now has an official way to connect! The Work In Tech group will meet up once a quarter...or so... at a local New Orleans spot. We invite anyone working in Tech in the NOLA area to join us as well as those looking to learn more about the industry and connect with potential future opportunities!",
+    "org_url": "https://linktr.ee/workintech",
+    "icon": "💻",
   },
 };
