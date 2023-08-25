@@ -24,13 +24,17 @@ async function getData(group: string) {
   return res.json();
 }
 
+const sortEventsByDate = (a: Event, b: Event) => {
+  return new Date(a.start.dateTime).getTime() - new Date(b.start.dateTime).getTime()
+}
+
 export default function EventList({ group }: eventListProps) {
   const [events, setEvents] = useState<Event[]>();
 
   useEffect(() => {
     (async () => setEvents(await getData(group)))();
   }, [group]);
-
+  
   return (
     <Card
       className="mt-16 max-w-xl p-4 border border-stone-300 bg-gradient-to-br from-white to-default-200 dark:from-secondary-50 dark:to-black"
@@ -41,7 +45,7 @@ export default function EventList({ group }: eventListProps) {
       </CardHeader>
       <Divider />
       <CardBody className="gap-4">
-        {events?.map((e: Event, i: number) => (
+        {events?.sort(sortEventsByDate).map((e: Event, i: number) => (
           <Event event={ e } key={ i } />
         ))}
       </CardBody>
