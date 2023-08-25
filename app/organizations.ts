@@ -175,7 +175,7 @@ export const organizationsStore: Organizations = {
         ]
       }
     ],
-    "calendar_id":"placeholder",
+    "calendar_id":"b0278c6dd5bcdb70e7f97d4e50d979f54a05337b332d4582ed280217222009c2@group.calendar.google.com",
     "about": "Do you ever lie awake at night, pondering questions such as, \"Is someone hacking into my WiFi right now?\" Or perhaps, \"What is the Deep Dark Web and why do they need onions??\" In those moments, consider our group, Ethical Hacking; we specialize in elucidating these concepts and more.\nEvery third Tuesday of the month, we come together to delve into various hacking subjects via presentations, demonstrations, and interactive Q&A sessions. Our goal is to demystify cyber security and shed light on the potential threats of the internet; slap on your white hat, maybe grab an onion, and join us!",
     "icon": "💀",
   },
