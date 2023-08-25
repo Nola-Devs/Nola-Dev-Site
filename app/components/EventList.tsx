@@ -25,8 +25,10 @@ async function getData(group: string) {
 }
 
 const sortEventsByDate = (a: Event, b: Event) => {
-  return new Date(a.start.dateTime).getTime() - new Date(b.start.dateTime).getTime()
-}
+  return (
+    new Date(a.start.dateTime).getTime() - new Date(b.start.dateTime).getTime()
+  );
+};
 
 export default function EventList({ group }: eventListProps) {
   const [events, setEvents] = useState<Event[]>();
@@ -34,7 +36,7 @@ export default function EventList({ group }: eventListProps) {
   useEffect(() => {
     (async () => setEvents(await getData(group)))();
   }, [group]);
-  
+
   return (
     <Card
       className="mt-16 max-w-xl p-4 border border-stone-300 bg-gradient-to-br from-white to-default-200 dark:from-secondary-50 dark:to-black w-full"
@@ -53,7 +55,7 @@ export default function EventList({ group }: eventListProps) {
           <CardHeader className="justify-center">
             <strong>You&apos;ve reached the bottom!</strong>
           </CardHeader>
-          <Divider/>
+          <Divider />
           <CardBody className="text-center">
             Check in here again for more events!
           </CardBody>
