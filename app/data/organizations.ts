@@ -90,8 +90,7 @@ export const organizationsStore: Organizations = {
         links: [{ linkedin: "https://www.linkedin.com/in/garett-majoue/" }],
       },
     ],
-    calendar_id:
-      "d8aef47c1895abb3176ad34577de3c97f1adea91da2169a65e1e1b1c28c56e1c@group.calendar.google.com",
+    calendar_id: "dgaspard@gmail.com",
     about:
       "Agile Nola is a group for connecting the New Orleans software development community, marrying modern Agile methodologies with trends of the tech ecosystem at large. Many esteemed, national speakers gather monthly to provide unique insights into many different avenues in the software world. All are welcome and encouraged to come to the events with beer and food provided! Come network, learn, and laugh with the Agile User Group.",
     org_url: "https://www.eventbrite.com/o/agile-nola-59051586693",
@@ -156,8 +155,7 @@ export const organizationsStore: Organizations = {
         ],
       },
     ],
-    calendar_id:
-      "d2ce13d5608aebe0ff7d3bcec5ea581fea8ca24d66e5f65c112e8cc3dabdbec1@group.calendar.google.com",
+    calendar_id: "c_817psp5emlgh8vgg432udrtv20@group.calendar.google.com",
     about:
       "We are a bunch of game developers in the Greater New Orleans area who meet on a monthly basis to network, collaborate, and share knowledge. Our events help the gamedev community present on interesting topics, showcase their projects, and encourage game development in the local area. We meet online on the third Thursday of every month at 7:00 pm. See our website for connecting.",
     org_url: "http://neworleansgamedev.com/",
@@ -175,7 +173,7 @@ export const organizationsStore: Organizations = {
         ],
       },
     ],
-    calendar_id: "",
+    calendar_id: "sqlpassbr@gmail.com",
     about:
       "The Baton Rouge SQL Server User Group is a free, no-registration required user group for professionals and students in the broad field of Microsoft SQL Server. The group aims provide a platform for growing your skillset in Information Technology and your professional network, and work closely with local and regional partners to make our monthly meetings interesting and informative. We meet every second Wednesday of the month on a wide range of topics from Business Intelligence, Disaster Recovery, SQL Server performance and monitoring, and SQL server development. The following links to our meetup calendar: https://www.meetup.com/baton-rouge-net-and-sql-server-user-groups/",
     org_url: "https://www.brssug.org/",
