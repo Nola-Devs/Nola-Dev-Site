@@ -10,15 +10,12 @@ import {
   CardHeader,
 } from "@nextui-org/react";
 import { Organizations, urlDTO } from "../types/index";
-import {
-  LinkedinOutlined,
-  MailOutlined,
-  GithubOutlined,
-  GlobalOutlined,
-  LinkOutlined,
-} from "@ant-design/icons";
+import IconParser from "../components/IconParser";
+
+
 import { organizationsStore } from "../organizations";
 import { Organizer } from "../types/Organizer";
+
 
 const organizations: Organizations = organizationsStore;
 
@@ -32,7 +29,11 @@ export default function Group() {
           {group.replace(/-/g, " ")}
         </CardHeader>
         <Divider />
-        <CardBody className="text-justify">{organizations[group]?.about}</CardBody>
+        <CardBody className="text-justify">
+          {organizations[group]?.about.split("\n").map((paragraph, index) => (
+            <p key={ index } className="mb-4">{paragraph}</p>
+          ))}
+        </CardBody>
         <Divider />
         <CardFooter>
           <Link
@@ -73,67 +74,11 @@ export default function Group() {
                 <p>{e.name}</p>
                 <div className="flex items-center self-center gap-2">
                   {e.links?.map((e: urlDTO, i: number) => {
-                    const linked = Object.keys(e)[0];
-                    let icon;
-                    switch (linked) {
-                      case "linkedin":
-                        icon = (
-                          <a
-                            href={ Object.values(e)[0] }
-                            target="_blank"
-                            key={ Object.values(e)[0] + i } rel="noreferrer"
-                          >
-                            <LinkedinOutlined />
-                          </a>
-                        );
-                        break;
-                      case "github":
-                        icon = (
-                          <a
-                            href={ Object.values(e)[0] }
-                            target="_blank"
-                            key={ Object.values(e)[0] + i } rel="noreferrer"
-                          >
-                            <GithubOutlined />
-                          </a>
-                        );
-                        break;
-                      case "email":
-                        icon = (
-                          <a
-                            href={ `mailto:${Object.values(e)[0]}` }
-                            target="_blank"
-                            key={ Object.values(e)[0] + i } rel="noreferrer"
-                          >
-                            <MailOutlined />
-                          </a>
-                        );
-                        break;
-                      case "portfolio":
-                        icon = (
-                          <a
-                            href={ Object.values(e)[0] }
-                            target="_blank"
-                            key={ Object.values(e)[0] + i } rel="noreferrer"
-                          >
-                            <GlobalOutlined />
-                          </a>
-                        );
-                        break;
-                      default:
-                        icon = (
-                          <a
-                            href={ Object.values(e)[0] }
-                            target="_blank"
-                            key={ Object.values(e)[0] + i } rel="noreferrer"
-                          >
-                            <LinkOutlined />
-                          </a>
-                        );
-                        break;
-                    }
-                    return icon;
-                  })}
+                    const icon = Object.keys(e)[0];
+                    const linkToIcon = Object.values(e)[0];
+                    return <IconParser icon={ icon } linkToIcon={ linkToIcon } key={ linkToIcon + i } /> ;
+                  }
+                  )}
                 </div>
               </CardFooter>
             </Card>
