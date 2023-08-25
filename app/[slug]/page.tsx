@@ -30,8 +30,8 @@ export default function Group() {
         </CardHeader>
         <Divider />
         <CardBody className="text-justify">
-          {organizations[group]?.about.split('\n').map((paragraph, index) => (
-          <p key={index} className="mb-4">{paragraph}</p>
+          {organizations[group]?.about.split("\n").map((paragraph, index) => (
+            <p key={ index } className="mb-4">{paragraph}</p>
           ))}
         </CardBody>
         <Divider />
