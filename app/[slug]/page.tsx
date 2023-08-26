@@ -10,9 +10,9 @@ import {
   CardHeader,
 } from "@nextui-org/react";
 import { Organizations, urlDTO } from "../types/index";
-import { organizationsStore } from "../data/organizations";
 import IconParser from "../components/IconParser";
 import EventList from "../components/EventList";
+import { organizationsStore } from "../data/organizations";
 import { Organizer } from "../types/Organizer";
 
 const organizations: Organizations = organizationsStore;
@@ -28,7 +28,11 @@ export default function Group() {
         </CardHeader>
         <Divider />
         <CardBody className="text-justify">
-          {organizations[group]?.about}
+          {organizations[group]?.about.split("\n").map((paragraph, index) => (
+            <p key={ index } className="mb-4">
+              {paragraph}
+            </p>
+          ))}
         </CardBody>
         <Divider />
         <CardFooter>

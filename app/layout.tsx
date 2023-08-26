@@ -49,6 +49,35 @@ export default function RootLayout({
 
   return (
     <html id="html" lang="en" className={ theme }>
+      <head>
+        <title>NOLA Devs</title>
+        <link rel="icon" type="image/x-icon" href="./head-assets/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="./head-assets/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="./head-assets/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="./head-assets/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./head-assets/site.webmanifest" />
+        <link
+          rel="mask-icon"
+          href="./head-assets/safari-pinned-tab.svg"
+          color="#5bbad5"
+        />
+        <meta name="msapplication-TileColor" content="#ffc40d" />
+        <meta name="theme-color" content="#ffffff" />
+      </head>
       <body className={ inter.className }>
         <NextUIProvider>
           <Navbar shouldHideOnScroll isBordered className="py-2 px-3.5">
@@ -75,7 +104,10 @@ export default function RootLayout({
                 </DropdownTrigger>
                 <DropdownMenu variant="shadow" aria-label="Static Actions">
                   {Object.keys(organizationsStore).map((e, i) => (
-                    <DropdownItem key={ i } startContent={ organizationsStore[e]?.icon }>
+                    <DropdownItem
+                      key={ i }
+                      startContent={ organizationsStore[e]?.icon }
+                    >
                       <Link className="w-full" href={ `/${e}` }>
                         {e.replace(/-/g, " ")}
                       </Link>
