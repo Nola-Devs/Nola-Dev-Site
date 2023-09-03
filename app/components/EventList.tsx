@@ -38,10 +38,7 @@ export default function EventList({ group }: eventListProps) {
   }, [group]);
 
   return (
-    <Card
-      className="mt-16 max-w-xl p-4 border border-stone-300 bg-gradient-to-br from-white to-default-200 dark:from-secondary-50 dark:to-black w-full"
-      shadow="lg"
-    >
+    <>
       <CardHeader className="flex justify-center">
         <h1 className="text-7xl text-center text-blue-500">Events</h1>
       </CardHeader>
@@ -61,7 +58,7 @@ export default function EventList({ group }: eventListProps) {
           </CardBody>
         </Card>
       </CardBody>
-    </Card>
+    </>
   );
 }
 

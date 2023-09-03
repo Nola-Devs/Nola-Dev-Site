@@ -92,7 +92,9 @@ export default function Group() {
           ))}
         </div>
       </Card>
-      <EventList group={ group } />
+      <Card className="min-w-full border border-stone-300 bg-gradient-to-br from-white to-default-200/60 dark:from-secondary-50 dark:to-black px-4 py-2">
+        <EventList group={ group } />
+      </Card>
     </div>
   );
 }
