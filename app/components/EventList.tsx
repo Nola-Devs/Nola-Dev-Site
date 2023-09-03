@@ -11,7 +11,7 @@ import { CalendarOutlined, CompassOutlined } from "@ant-design/icons";
 import { Event, eventListProps } from "../types/Event";
 
 async function getData(group: string) {
-  const res = await fetch(`http://localhost:3000/api?group=${group}`, {
+  const res = await fetch(`/api?group=${group}`, {
     method: "GET",
     headers: { Accept: "application/json" },
     cache: "force-cache",
