@@ -77,7 +77,7 @@ export const organizationsStore: Organizations = {
     "calendar_id": "placeholder@group.calendar.google.com",
     "about": "The Baton Rouge SQL Server User Group is a free, no-registration required user group for professionals and students in the broad field of Microsoft SQL Server. The group aims provide a platform for growing your skillset in Information Technology and your professional network, and work closely with local and regional partners to make our monthly meetings interesting and informative. We meet every second Wednesday of the month on a wide range of topics from Business Intelligence, Disaster Recovery, SQL Server performance and monitoring, and SQL server development. The following links to our meetup calendar: https://www.meetup.com/baton-rouge-net-and-sql-server-user-groups/",
     "org_url": "https://www.brssug.org/",
-    "icon": "🛢",
+    "icon": "📊",
   },
   "Ethical-Hacking":{
     "organizers": [
@@ -127,7 +127,7 @@ export const organizationsStore: Organizations = {
       }
     ],
     "calendar_id":"1c23d7fe14840e320ec0762245bf55cc32a6910417fcf76ca8ba2d1a308110f3@group.calendar.google.com",
-    "about": "We are a vibrant community of front-end web developers known as the 'Front-End Party' located in New Orleans, Louisiana. Our group gathers once a month for engaging presentations and insightful discussions centered around front-end web development. Our primary focus is to provide a platform for like-minded individuals interested in exploring the intricacies of front-end development beyond the surface level.",
+    "about": "We are a vibrant community of front-end web developers known as the 'Front-End Party' located in New Orleans, Louisiana. Our group gathers once a month for engaging presentations and insightful discussions centered around front-end web development. Our primary focus is to provide a platform for like-minded individuals interested in exploring the intricacies of front-end development beyond the surface level.\nEvery second Tuesday of each month join us for 5:30pm at the beautiful Scale New Orleans. 612 Andrew Higgins Dr 2nd floor, New Orleans, LA 70130",
     "org_url": "http://www.frontendparty.com/",
     "icon": "🎉",
   },
