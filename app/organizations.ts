@@ -180,6 +180,23 @@ export const organizationsStore: Organizations = {
     "org_url": "http://neworleansgamedev.com/",
     "icon": "🎮",
   },
+  "Startup-Grind-Nola": {
+    "organizers": [
+      {
+        "name": "Jim Guenther",
+        "pfp": "/organizersPfp/JGuenther.webp",
+        "links": [
+          {"linkedin": "https://www.linkedin.com/in/james-guenther-37797745/"},
+          {"website": "https://twitter.com/startupgrindno"},
+          {"email": "jguenther@startupgrind.com"}
+        ]
+      },
+    ],
+    "calendar_id": "c_7e8a9ec64b4dd754da815cc9b48e3b1a773af669d00a8472360999dd17883ad0@group.calendar.google.com",
+    "about": "Startup Grind is the world's largest community of startups, founders, innovators, and creators. We host 1000's of events, but more than that Startup Grind is a community. We bring like-minded yet diverse individuals together to connect, learn, teach, help, build, and belong. We do this daily through our local events, flagship conferences, startup program, and online media content collectively reaching over 3.5 million individuals worldwide.\nDr. James Guenther, the Chief Science Officer at Mariposa Technology, specializes in developing AI algorithms, conducting research, and developing funding proposals. He is the Chapter Director for Startup Grind New Orleans and offers consultation services to both academic and private industry clients, with a focus on securing SBIR funding",
+    "org_url": "https://www.startupgrind.com/new-orleans/",
+    "icon": "🛹",
+  },
   "Work-In-Tech":{
     "organizers": [
       {
