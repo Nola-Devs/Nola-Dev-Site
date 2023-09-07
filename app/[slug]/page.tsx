@@ -28,13 +28,11 @@ export default function Group() {
         <CardHeader className="font-bold justify-center text-2xl">
           {group.replace(/-/g, " ")}
         </CardHeader>
-        <Divider />
         <CardBody className="text-justify">
           {organizations[group]?.about.split("\n").map((paragraph, index) => (
             <p key={ index } className="mb-4">{paragraph}</p>
           ))}
         </CardBody>
-        <Divider />
         <CardFooter>
           <Link
             isExternal
