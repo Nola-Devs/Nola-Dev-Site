@@ -1,4 +1,4 @@
-import { Organizations } from "./types/Organizations";
+import { Organizations } from "../types/Organizations";
 
 export const organizationsStore: Organizations = {
   "Agile-Nola":{

@@ -11,11 +11,9 @@ import {
 } from "@nextui-org/react";
 import { Organizations, urlDTO } from "../types/index";
 import IconParser from "../components/IconParser";
-
-
-import { organizationsStore } from "../organizations";
+import EventList from "../components/EventList";
+import { organizationsStore } from "../data/organizations";
 import { Organizer } from "../types/Organizer";
-
 
 const organizations: Organizations = organizationsStore;
 
@@ -30,7 +28,9 @@ export default function Group() {
         </CardHeader>
         <CardBody className="text-justify">
           {organizations[group]?.about.split("\n").map((paragraph, index) => (
-            <p key={ index } className="mb-4">{paragraph}</p>
+            <p key={ index } className="mb-4">
+              {paragraph}
+            </p>
           ))}
         </CardBody>
         <CardFooter>
@@ -48,7 +48,9 @@ export default function Group() {
         </CardFooter>
       </Card>
       <Card className="min-w-full border border-stone-300 bg-gradient-to-br from-white to-default-200/60 dark:from-secondary-50 dark:to-black px-4 py-2">
-        <CardHeader className="font-bold justify-center text-xl">Organizers</CardHeader>
+        <CardHeader className="font-bold justify-center text-xl">
+          Organizers
+        </CardHeader>
         <Divider />
         <div className="flex justify-evenly self-center flex-col sm:w-full sm:flex-row flex-wrap">
           {organizations[group]?.organizers.map((e: Organizer, i: number) => (
@@ -74,14 +76,22 @@ export default function Group() {
                   {e.links?.map((e: urlDTO, i: number) => {
                     const icon = Object.keys(e)[0];
                     const linkToIcon = Object.values(e)[0];
-                    return <IconParser icon={ icon } linkToIcon={ linkToIcon } key={ linkToIcon + i } /> ;
-                  }
-                  )}
+                    return (
+                      <IconParser
+                        icon={ icon }
+                        linkToIcon={ linkToIcon }
+                        key={ linkToIcon + i }
+                      />
+                    );
+                  })}
                 </div>
               </CardFooter>
             </Card>
           ))}
         </div>
+      </Card>
+      <Card className="min-w-full border border-stone-300 bg-gradient-to-br from-white to-default-200/60 dark:from-secondary-50 dark:to-black px-4 py-2">
+        <EventList group={ group } />
       </Card>
     </div>
   );
