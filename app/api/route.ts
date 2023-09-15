@@ -18,27 +18,27 @@ async function fetchEvent(organization: string) {
   }
 
   // If it's in development, just return dummy content
-  if (process.env.NODE_ENV == "development") {
-    const mockEvents: Event[] = mockEventJSON.flatMap((item) =>
-      item.items.map((event: any) => {
-        return {
-          htmlLink: event.htmlLink,
-          summary: "FAKE " + organization + " - " + event.summary,
-          description: event.description,
-          location: event.location,
-          orgEmoji: "⁉️",
-          start: {
-            dateTime: event.start.dateTime,
-          },
-          end: {
-            dateTime: event.end.dateTime,
-          },
-        };
-      })
-    );
+  // if (process.env.NODE_ENV == "development") {
+  //   const mockEvents: Event[] = mockEventJSON.flatMap((item) =>
+  //     item.items.map((event: any) => {
+  //       return {
+  //         htmlLink: event.htmlLink,
+  //         summary: "FAKE " + organization + " - " + event.summary,
+  //         description: event.description,
+  //         location: event.location,
+  //         orgEmoji: "⁉️",
+  //         start: {
+  //           dateTime: event.start.dateTime,
+  //         },
+  //         end: {
+  //           dateTime: event.end.dateTime,
+  //         },
+  //       };
+  //     })
+  //   );
 
-    return mockEvents;
-  }
+  //   return mockEvents;
+  // }
 
   if (!process.env.CALENDAR_KEY) {
     throw new Error("CALENDAR_KEY is not set");
