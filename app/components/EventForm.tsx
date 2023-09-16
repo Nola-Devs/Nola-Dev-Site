@@ -19,7 +19,7 @@ export default function EventForm() {
       description: e.target.description.value
     };
     const JSONdata = JSON.stringify(data);
-    console.log(JSONdata);
+    
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
