@@ -213,7 +213,7 @@ export const organizationsStore: Organizations = {
     "org_url": "https://linktr.ee/workintech",
     "icon": "💻",
   },
-  "NOLA Sec":{
+  "NOLA-Sec":{
   "organizers": [
     {
       "name":"David Whelen",
