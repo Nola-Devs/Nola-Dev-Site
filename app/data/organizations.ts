@@ -213,4 +213,21 @@ export const organizationsStore: Organizations = {
     "org_url": "https://linktr.ee/workintech",
     "icon": "💻",
   },
+  "NOLA Sec":{
+  "organizers": [
+    {
+      "name":"David Whelen",
+      "pfp": "/organizersPfp/davidWhelen.webp",
+      "links":[
+        {"twitter": "https://twitter.com/WhelenDavid"},
+        {"linkedin": "https://www.linkedin.com/in/david-whelen-21361a99/"},
+        {"email": "dwhelen@teksystems.com"}
+      ]
+    },
+  ],    "calendar_id": "7c851f32b1efaa8c73ef1fab80f4177ad3e3e630cf9ba4c989dbfe43788eebcb@group.calendar.google.com",
+  "about": 
+    "NOLA Sec is New Orleans' premier cybersecurity community. We bring together experts and enthusiasts to explore the ever-changing world of cybersecurity. Our monthly events feature top national speakers, offering unique insights and networking opportunities. All are welcome to join us for learning and laughter, with refreshments provided. Connect with us and be part of the thriving NOLA Sec community today",
+  "org_url": "https://www.eventbrite.com/o/the-cyber-security-and-technology-community-of-new-orleans-67934786843",
+  "icon": "🔒",
+}
 };
