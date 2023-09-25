@@ -1,9 +1,9 @@
 import TwitterOutlined from "@ant-design/icons/TwitterOutlined";
-import LinkOutlined from '@ant-design/icons/LinkOutlined'
-import GlobalOutlined from '@ant-design/icons/GlobalOutlined'
-import GithubOutlined from '@ant-design/icons/GithubOutlined'
-import LinkedinOutlined from '@ant-design/icons/LinkedinOutlined'
-import MailOutlined from '@ant-design/icons/MailOutlined'
+import LinkOutlined from "@ant-design/icons/LinkOutlined";
+import GlobalOutlined from "@ant-design/icons/GlobalOutlined";
+import GithubOutlined from "@ant-design/icons/GithubOutlined";
+import LinkedinOutlined from "@ant-design/icons/LinkedinOutlined";
+import MailOutlined from "@ant-design/icons/MailOutlined";
 import { iconProps } from "../types/index";
 
 export default function IconParser({ icon, linkToIcon }: iconProps) {

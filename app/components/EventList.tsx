@@ -8,7 +8,7 @@ import {
 } from "@nextui-org/react";
 import React, { useEffect, useState } from "react";
 import CalendarOutlined from "@ant-design/icons/CalendarOutlined";
-import CompassOutlined from '@ant-design/icons/CompassOutlined'
+import CompassOutlined from "@ant-design/icons/CompassOutlined";
 import { Event, eventListProps } from "../types/Event";
 
 async function getData(group: string) {
