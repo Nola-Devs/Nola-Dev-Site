@@ -47,7 +47,6 @@ export default function EventList({ group }: eventListProps) {
         {events?.sort(sortEventsByDate).map((e: Event, i: number) => (
           <Event event={ e } key={ i } />
         ))}
-
         <Card>
           <CardHeader className="justify-center">
             <strong>You&apos;ve reached the bottom!</strong>
