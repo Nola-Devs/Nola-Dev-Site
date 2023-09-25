@@ -118,7 +118,7 @@ export async function GET(req: NextRequest) {
 export async function POST(req: Request) {
   const data = await req.json();
   const webHookURL: string = process.env["DISCORD_WEBHOOK"] || "";
-  const sendData = await fetch(webHookURL, {
+  await fetch(webHookURL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
