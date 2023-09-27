@@ -208,7 +208,7 @@ export const organizationsStore: Organizations = {
         ]
       },
     ],
-    "calendar_id":"placeholder",
+    "calendar_id":"a879bdb86944017b5aa1756c6b31b3f87a55e3ffca183114c9baff3008423925@group.calendar.google.com",
     "about": "As someone involved in the tech scene in New Orleans, we are always learning new things, meeting new people and coming up with new ways of accomplishing our goals. This thriving community of smart, entrepreneurial people now has an official way to connect! The Work In Tech group will meet up once a quarter...or so... at a local New Orleans spot. We invite anyone working in Tech in the NOLA area to join us as well as those looking to learn more about the industry and connect with potential future opportunities!",
     "org_url": "https://linktr.ee/workintech",
     "icon": "💻",
