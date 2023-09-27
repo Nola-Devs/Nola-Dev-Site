@@ -87,6 +87,7 @@ export default function RootLayout({
                   src={ theme === "dark" ? "logo-dark.webp" : "logo.webp" }
                   alt="Logo"
                   width={ 50 }
+                  height={ 50 }
                 />
               </Link>
             </NavbarBrand>
