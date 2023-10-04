@@ -8,7 +8,8 @@ import {
   Link,
 } from "@nextui-org/react";
 
-import { GithubOutlined, MessageOutlined } from "@ant-design/icons";
+import GithubOutlined from "@ant-design/icons/GithubOutlined";
+import MessageOutlined from "@ant-design/icons/MessageOutlined";
 
 import React from "react";
 

@@ -7,7 +7,8 @@ import {
   Link,
 } from "@nextui-org/react";
 import React, { useEffect, useState } from "react";
-import { CalendarOutlined, CompassOutlined } from "@ant-design/icons";
+import CalendarOutlined from "@ant-design/icons/CalendarOutlined";
+import CompassOutlined from "@ant-design/icons/CompassOutlined";
 import { Event, eventListProps } from "../types/Event";
 
 async function getData(group: string) {
@@ -47,7 +48,6 @@ export default function EventList({ group }: eventListProps) {
         {events?.sort(sortEventsByDate).map((e: Event, i: number) => (
           <Event event={ e } key={ i } />
         ))}
-
         <Card>
           <CardHeader className="justify-center">
             <strong>You&apos;ve reached the bottom!</strong>
