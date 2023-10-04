@@ -21,7 +21,7 @@ export const organizationsStore: Organizations = {
         ]
       }
     ],
-    "calendar_id":"d8aef47c1895abb3176ad34577de3c97f1adea91da2169a65e1e1b1c28c56e1c@group.calendar.google.com",
+    "calendar_id":"4a4d1054b6f65221f9afffe5e9d1e42b8dba4f83bd241d48faca0cab50ee478d@group.calendar.google.com",
     "about": "Agile Nola is a group for connecting the New Orleans software development community, marrying modern Agile methodologies with trends of the tech ecosystem at large. Many esteemed, national speakers gather monthly to provide unique insights into many different avenues in the software world. All are welcome and encouraged to come to the events with beer and food provided! Come network, learn, and laugh with the Agile User Group.",
     "org_url": "https://www.eventbrite.com/o/agile-nola-59051586693",
     "icon": "💼",
