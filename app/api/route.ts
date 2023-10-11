@@ -54,7 +54,7 @@ async function fetchEvent(organization: string) {
   start.setDate(today.getDate() - today.getDay());
 
   const end = new Date(today);
-  end.setDate(today.getDate() + (6 - today.getDay()) + 14);
+  end.setDate(today.getDate() + (6 - today.getDay()) + 30);
 
   const url = `https://www.googleapis.com/calendar/v3/calendars/${
     organizationsStore[organization].calendar_id
