@@ -44,11 +44,11 @@ export default function EventList({ group }: eventListProps) {
         <h1 className="text-7xl text-center text-blue-500">Events</h1>
       </CardHeader>
       <Divider />
-      <CardBody className="gap-4">
+      <CardBody className="flex flex-wrap flex-row gap-1 justify-center p-2">
         {events?.sort(sortEventsByDate).map((e: Event, i: number) => (
           <Event event={ e } key={ i } />
         ))}
-        <Card>
+        <Card className="w-full">
           <CardHeader className="justify-center">
             <strong>You&apos;ve reached the bottom!</strong>
           </CardHeader>
@@ -91,12 +91,12 @@ function Event({ event }: { event: Event }) {
   };
 
   return (
-    <Card>
+    <Card className="w-80 max-sm:w-full">
       <CardHeader>
         <button className="w-full" onClick={ toggleTruncateCard }>
           <div className="flex flex-col items-start">
             <strong>
-              {event.orgEmoji} 
+              {event.orgEmoji}
               {" "}
               {event.summary}
             </strong>
