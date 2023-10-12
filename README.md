@@ -5,7 +5,7 @@
 This is a website for Nola Devs, an organization made up of New Orleanian Software Developers.
 It serves as a hub for many other local organizations and meetups.
 
-MVP is currently live here: [https://noladevs.vercel.app/](https://noladevs.vercel.app/).
+MVP is currently live here: [https://www.noladevs.org/](https://www.noladevs.org/).
 
 ## What Is This For?
 
