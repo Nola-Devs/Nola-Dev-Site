@@ -214,20 +214,36 @@ export const organizationsStore: Organizations = {
     "icon": "💻",
   },
   "NOLA-Sec":{
-    "organizers": [
-      {
-        "name":"David Whelen",
-        "pfp": "/organizersPfp/davidWhelen.webp",
-        "links":[
-          {"twitter": "https://twitter.com/WhelenDavid"},
-          {"linkedin": "https://www.linkedin.com/in/david-whelen-21361a99/"},
-          {"email": "dwhelen@teksystems.com"}
-        ]
-      },
-    ],    "calendar_id": "7c851f32b1efaa8c73ef1fab80f4177ad3e3e630cf9ba4c989dbfe43788eebcb@group.calendar.google.com",
-    "about": 
-      "NOLA Sec is New Orleans' premier cybersecurity community. We bring together experts and enthusiasts to explore the ever-changing world of cybersecurity. Our monthly events feature top national speakers, offering unique insights and networking opportunities. All are welcome to join us for learning and laughter, with refreshments provided. Connect with us and be part of the thriving NOLA Sec community today",
-    "org_url": "https://www.eventbrite.com/o/the-cyber-security-and-technology-community-of-new-orleans-67934786843",
-    "icon": "🔒",
+  "organizers": [
+    {
+      "name":"David Whelen",
+      "pfp": "/organizersPfp/davidWhelen.webp",
+      "links":[
+        {"twitter": "https://twitter.com/WhelenDavid"},
+        {"linkedin": "https://www.linkedin.com/in/david-whelen-21361a99/"},
+        {"email": "dwhelen@teksystems.com"}
+      ]
+    },
+  ],    "calendar_id": "7c851f32b1efaa8c73ef1fab80f4177ad3e3e630cf9ba4c989dbfe43788eebcb@group.calendar.google.com",
+  "about": 
+    "NOLA Sec is New Orleans' premier cybersecurity community. We bring together experts and enthusiasts to explore the ever-changing world of cybersecurity. Our monthly events feature top national speakers, offering unique insights and networking opportunities. All are welcome to join us for learning and laughter, with refreshments provided. Connect with us and be part of the thriving NOLA Sec community today",
+  "org_url": "https://www.eventbrite.com/o/the-cyber-security-and-technology-community-of-new-orleans-67934786843",
+  "icon": "🔒",
+},
+  "NOLA-Women-in-Tech":{
+  "organizers": [
+    {
+      "name":"Lucia Berliner",
+      "pfp": "/organizersPfp/Lucia.webp",
+      "links":[
+        {"linkedin": "https://www.linkedin.com/in/luciaberliner/"},
+        {"email": "lucia.berliner@gmail.com"}
+      ]
+    },
+  ],    "calendar_id": "b85e18cbc5a2d1b3948c0fe9e6f27de409da19ea571bdea00d3e2456fc067f2e@group.calendar.google.com",
+  "about": 
+    "Connecting those who identify as women within the Greater New Orleans tech ecosystem. Mostly social (for now)!",
+  "org_url": "https://www.linkedin.com/groups/12554672/",
+  "icon": "👩‍💻",
 }
 };
