@@ -16,7 +16,7 @@ async function getData(group: string) {
     method: "GET",
     headers: { Accept: "application/json" },
     cache: "no-store",
-    //next: { revalidate: 3600 }
+    next: { revalidate: 3600 }
   });
 
   if (!res.ok) {
