@@ -15,8 +15,7 @@ async function getData(group: string) {
   const res = await fetch(`/api?group=${group}`, {
     method: "GET",
     headers: { Accept: "application/json" },
-    cache: "no-store",
-    next: { revalidate: 3600 }
+    cache: "force-cache",
   });
 
   if (!res.ok) {
