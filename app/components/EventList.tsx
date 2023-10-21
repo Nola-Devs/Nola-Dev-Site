@@ -15,7 +15,8 @@ async function getData(group: string) {
   const res = await fetch(`/api?group=${group}`, {
     method: "GET",
     headers: { Accept: "application/json" },
-    cache: "force-cache",
+    cache: "no-store",
+    next: { revalidate: 3600 }
   });
 
   if (!res.ok) {
@@ -46,7 +47,7 @@ export default function EventList({ group }: eventListProps) {
       <Divider />
       <CardBody className="flex flex-wrap flex-row gap-1 justify-center p-2">
         {events?.sort(sortEventsByDate).map((e: Event, i: number) => (
-          <Event event={ e } key={ i } />
+          <Event event={e} key={i} />
         ))}
         <Card className="w-full">
           <CardHeader className="justify-center">
@@ -93,7 +94,7 @@ function Event({ event }: { event: Event }) {
   return (
     <Card className="w-80 max-sm:w-full">
       <CardHeader>
-        <button className="w-full" onClick={ toggleTruncateCard }>
+        <button className="w-full" onClick={toggleTruncateCard}>
           <div className="flex flex-col items-start">
             <strong>
               {event.orgEmoji}
@@ -120,7 +121,7 @@ function Event({ event }: { event: Event }) {
           <CardBody className="whitespace-pre-wrap">
             <button
               className="text-justify break-words"
-              onClick={ toggleTruncateDescription }
+              onClick={toggleTruncateDescription}
             >
               {truncateDescription
                 ? truncateString(event.description || "No description")
@@ -136,7 +137,7 @@ function Event({ event }: { event: Event }) {
               isBlock
               color="secondary"
               size="lg"
-              href={ event.htmlLink }
+              href={event.htmlLink}
               target="_blank"
             >
               <CalendarOutlined />
