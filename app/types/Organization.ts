@@ -1,7 +1,7 @@
 import { Organizer } from "./Organizer";
 
 export interface Organization {
-    organizers: Organizer[];
+    organizers?: Organizer[];
     calendar_id: string;
     about: string;
     org_url?: string;
