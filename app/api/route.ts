@@ -3,6 +3,7 @@ import { Event } from "../types/Event";
 import { mockEventJSON } from "../data/events";
 import { organizationsStore } from "../data/organizations";
 
+
 async function fetchEvent(organization: string) {
   // Make sure it's a real organization
   if (!(organization in organizationsStore)) {
@@ -92,6 +93,8 @@ async function fetchEvent(organization: string) {
     };
   });
 
+
+
   return events;
 }
 
@@ -105,10 +108,14 @@ export async function GET(req: NextRequest) {
       status: 200,
     });
   }
-
+  
   const events: Event[] = (
     await Promise.all(Object.keys(organizationsStore).map(fetchEvent))
-  ).flat();
+  ).flat().filter(e =>
+    !(e.orgEmoji !== '🍻' && e.summary === "Hack Night") &&
+    !(e.start.dateTime === undefined || e.end.dateTime === undefined)
+  )
+
 
   return NextResponse.json(events, {
     status: 200,
