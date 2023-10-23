@@ -112,9 +112,9 @@ export async function GET(req: NextRequest) {
   const events: Event[] = (
     await Promise.all(Object.keys(organizationsStore).map(fetchEvent))
   ).flat().filter(e =>
-    !(e.orgEmoji !== '🍻' && e.summary === "Hack Night") &&
+    !(e.orgEmoji !== "🍻" && e.summary === "Hack Night") &&
     !(e.start.dateTime === undefined || e.end.dateTime === undefined)
-  )
+  );
 
 
   return NextResponse.json(events, {

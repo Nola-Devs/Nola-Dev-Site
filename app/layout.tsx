@@ -48,7 +48,7 @@ export default function RootLayout({
   }, []);
 
   return (
-    <html id="html" lang="en" className={theme}>
+    <html id="html" lang="en" className={ theme }>
       <head>
         <title>NOLA Devs</title>
         <link rel="icon" type="image/x-icon" href="./head-assets/favicon.ico" />
@@ -78,7 +78,7 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#ffc40d" />
         <meta name="theme-color" content="#ffffff" />
       </head>
-      <body className={inter.className}>
+      <body className={ inter.className }>
         <NextUIProvider>
           <Navbar shouldHideOnScroll isBordered className="py-2 px-3.5">
             <NavbarBrand>
@@ -86,8 +86,8 @@ export default function RootLayout({
                 <Image
                   src="logo.webp"
                   alt="Logo"
-                  width={50}
-                  height={50}
+                  width={ 50 }
+                  height={ 50 }
                 />
               </Link>
             </NavbarBrand>
@@ -95,21 +95,21 @@ export default function RootLayout({
               <Link href="/calendar">Calendar</Link>
               <Dropdown
                 showArrow
-                classNames={{
+                classNames={ {
                   base: "py-1 px-1 border border-default-200 bg-gradient-to-br from-white to-default-200 dark:from-secondary-50 dark:to-black",
                   arrow: "bg-secondary",
-                }}
+                } }
               >
                 <DropdownTrigger>
                   <Button variant="shadow">Groups</Button>
                 </DropdownTrigger>
                 <DropdownMenu variant="shadow" aria-label="Static Actions">
-                  {Object.keys(organizationsStore).filter(e => e !== 'One-Off-Events').map((e, i) => (
+                  {Object.keys(organizationsStore).filter(e => e !== "One-Off-Events").map((e, i) => (
                     <DropdownItem
-                      key={i}
-                      startContent={organizationsStore[e]?.icon}
+                      key={ i }
+                      startContent={ organizationsStore[e]?.icon }
                     >
-                      <Link className="w-full" href={`/${e}`}>
+                      <Link className="w-full" href={ `/${e}` }>
                         {e.replace(/-/g, " ")}
                       </Link>
                     </DropdownItem>
@@ -118,10 +118,10 @@ export default function RootLayout({
               </Dropdown>
               <Switch
                 size="sm"
-                isSelected={theme === "light"}
-                startContent={<p>🌞</p>}
-                endContent={<p>🌒</p>}
-                onChange={changeTheme}
+                isSelected={ theme === "light" }
+                startContent={ <p>🌞</p> }
+                endContent={ <p>🌒</p> }
+                onChange={ changeTheme }
               />
             </NavbarContent>
           </Navbar>
