@@ -246,7 +246,17 @@ export const organizationsStore: Organizations = {
   "org_url": "https://www.linkedin.com/groups/12554672/",
   "icon": "👩‍💻",
 },
-  "One-Off-Events":{
+  "One-Off-Events": {
+    "organizers": [
+    {
+      "name":"Lucia Berliner",
+      "pfp": "/organizersPfp/Lucia.webp",
+      "links":[
+        {"linkedin": "https://www.linkedin.com/in/luciaberliner/"},
+        {"email": "lucia.berliner@gmail.com"}
+      ]
+    },
+  ],   
   "calendar_id": "398883a70f5e08ce0f331225accf6a4f9103dca6a2fe6e5f1f670cbc833652b0@group.calendar.google.com",
   "about": 
     "Some events not affiliated with a meetup group will not show up anywhere",

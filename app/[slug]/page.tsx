@@ -28,7 +28,7 @@ export default function Group() {
         </CardHeader>
         <CardBody className="text-justify">
           {organizations[group]?.about.split("\n").map((paragraph, index) => (
-            <p key={ index } className="mb-4">
+            <p key={index} className="mb-4">
               {paragraph}
             </p>
           ))}
@@ -40,7 +40,7 @@ export default function Group() {
             showAnchorIcon
             color="secondary"
             size="sm"
-            href={ organizations[group]?.org_url }
+            href={organizations[group]?.org_url}
             target="_blank"
           >
             {organizations[group]?.org_url}
@@ -58,13 +58,13 @@ export default function Group() {
               isFooterBlurred
               shadow="md"
               className="m-5 min-w-fit w-[250px] h-[250px] border-2 border-slate-500"
-              key={ `${e}${i}` }
+              key={`${e}${i}`}
             >
               <CardBody className="p-0 overflow-hidden">
                 <Image
                   shadow="none"
                   className="object-cover"
-                  src={ e.pfp }
+                  src={e.pfp}
                   width="250"
                   height="250"
                   alt="organizer profile picture"
@@ -78,9 +78,9 @@ export default function Group() {
                     const linkToIcon = Object.values(e)[0];
                     return (
                       <IconParser
-                        icon={ icon }
-                        linkToIcon={ linkToIcon }
-                        key={ linkToIcon + i }
+                        icon={icon}
+                        linkToIcon={linkToIcon}
+                        key={linkToIcon + i}
                       />
                     );
                   })}
@@ -91,7 +91,7 @@ export default function Group() {
         </div>
       </Card>
       <Card className="min-w-full border border-stone-300 bg-gradient-to-br from-white to-default-200/60 dark:from-secondary-50 dark:to-black px-4 py-2">
-        <EventList group={ group } />
+        <EventList group={group} />
       </Card>
     </div>
   );
