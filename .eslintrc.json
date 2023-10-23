@@ -1,33 +1,31 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:react/jsx-runtime"],
-  "rules": {
-    "react/no-unknown-property": 1,
-    "react/self-closing-comp": 1,
-    "react/jsx-wrap-multilines": 1,
-    "react/jsx-props-no-multi-spaces": 2,
-    "react/jsx-no-target-blank": 1,
-    "react/jsx-no-leaked-render": 1,
-    "react/jsx-indent": [1, 2],
-    "react/jsx-closing-bracket-location": [1, "tag-aligned"],
-    "react/jsx-equals-spacing": [1, "never"],
-    "react/destructuring-assignment": [ 1, "always" ],
-    "react/jsx-curly-spacing": [ 2, "always" ],
-    "react/jsx-sort-props": [ 1, { "shorthandFirst": true, "callbacksLast": true, "noSortAlphabetically": true } ],
-    "react/jsx-no-useless-fragment": [ 1, { "allowExpressions": true } ],
-    "react/jsx-one-expression-per-line": [ 1, { "allow": "single-child" } ],
-    "react/jsx-tag-spacing": [
-      1, {
-        "closingSlash": "never",
-        "beforeSelfClosing": "always",
-        "afterOpening": "never",
-        "beforeClosing": "never"
-      }
-    ],
-    "jsx-quotes": [2, "prefer-double"],
-    // <-- end react -->
-    "semi": ["warn", "always"],
-    "quotes": [
-      1, "double", { "avoidEscape": true, "allowTemplateLiterals": true }
-    ]
-  }
+	"extends": ["next/core-web-vitals", "plugin:react/jsx-runtime"],
+	"rules": {
+		"react/no-unknown-property": 1,
+		"react/self-closing-comp": 1,
+		"react/jsx-wrap-multilines": 1,
+		"react/jsx-props-no-multi-spaces": 2,
+		"react/jsx-no-target-blank": 1,
+		"react/jsx-no-leaked-render": 1,
+		"react/jsx-indent": [1, 2],
+		"react/jsx-closing-bracket-location": [1, "tag-aligned"],
+		"react/jsx-equals-spacing": [1, "never"],
+		"react/destructuring-assignment": [1, "always"],
+		"react/jsx-sort-props": [1, { "shorthandFirst": true, "callbacksLast": true, "noSortAlphabetically": true }],
+		"react/jsx-no-useless-fragment": [1, { "allowExpressions": true }],
+		"react/jsx-one-expression-per-line": [1, { "allow": "single-child" }],
+		"react/jsx-tag-spacing": [
+			1,
+			{
+				"closingSlash": "never",
+				"beforeSelfClosing": "always",
+				"afterOpening": "never",
+				"beforeClosing": "never"
+			}
+		],
+		"jsx-quotes": [2, "prefer-double"],
+		// <-- end react -->
+		"semi": ["warn", "always"],
+		"quotes": [1, "double", { "avoidEscape": true, "allowTemplateLiterals": true }]
+	}
 }

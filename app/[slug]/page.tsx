@@ -75,17 +75,17 @@ export default function Group() {
                 <CardFooter className="absolute bg-white/30 bottom-0 items-center border-t-1 border-slate-900 z-10 justify-between h-10 text-slate-900 font-semibold">
                   <p>{e.name}</p>
                   <div className="flex items-center self-center gap-2">
-                    {e.links?.map((e: urlDTO, i: number) => {
+                    { e.links?.map((e: urlDTO, i: number) => {
                       const icon = Object.keys(e)[0];
                       const linkToIcon = Object.values(e)[0];
                       return (
                         <IconParser
                           icon={icon}
-                          linkToIcon={linkToIcon}
-                          key={linkToIcon + i}
+                          linkToIcon={ linkToIcon }
+                          key={ linkToIcon + i }
                         />
                       );
-                    })}
+                    }) }
                   </div>
                 </CardFooter>
               </Card>
@@ -94,7 +94,7 @@ export default function Group() {
           </div>
         </Card>
         <Card className="min-w-full border border-stone-300 bg-gradient-to-br from-white to-default-200/60 dark:from-secondary-50 dark:to-black px-4 py-2">
-          <EventList group={group} />
+          <EventList group={ group } />
         </Card>
       </div >
     </>
