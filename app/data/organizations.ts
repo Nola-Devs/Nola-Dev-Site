@@ -195,7 +195,7 @@ export const organizationsStore: Organizations = {
 		],
 		calendar_id: '398883a70f5e08ce0f331225accf6a4f9103dca6a2fe6e5f1f670cbc833652b0@group.calendar.google.com',
 		about: "The New Orleans Startup Ecosystem is a dynamic and vibrant community of innovators, entrepreneurs, and visionaries who are driving innovation and economic growth in the heart of the Big Easy. Fostering collaboration, creativity, and opportunity, this group is dedicated to supporting and nurturing the city's emerging businesses and startups, making New Orleans a thriving hub for innovation and entrepreneurship.",
-		org_url: 'http://gnoinc.org/',
+		org_url: 'https://startupnola.com',
 		icon: '🌎'
 	},
 	'One-Off-Events': {
