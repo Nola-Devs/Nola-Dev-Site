@@ -11,12 +11,14 @@ import {
 import GithubOutlined from "@ant-design/icons/GithubOutlined";
 import MessageOutlined from "@ant-design/icons/MessageOutlined";
 
+import EventList from "./components/EventList";
+
 import React from "react";
 
 export default function Home() {
   return (
-    <div className="flex justify-center items-start p-4 my-2">
-      <Card isBlurred className="mt-16 max-w-md p-4 border border-stone-300 bg-gradient-to-br from-white to-default-200 dark:from-secondary-50 dark:to-black" shadow="lg">
+    <div className="flex flex-col justify-center items-center p-4 my-2 gap-5 ">
+      <Card isBlurred className="mt-16 max-w-xl p-4 border border-stone-300 bg-gradient-to-br from-white to-default-200 dark:from-secondary-50 dark:to-black" shadow="lg">
         <CardHeader className="flex justify-center">
           <h1 className="text-7xl text-center text-blue-500">NOLA Devs</h1>
         </CardHeader>
@@ -44,7 +46,7 @@ export default function Home() {
             isBlock
             color="secondary"
             size="lg"
-            href={ "https://github.com/nola-devs" }
+            href={"https://github.com/nola-devs"}
             target="_blank"
           >
             <GithubOutlined />
@@ -54,12 +56,15 @@ export default function Home() {
             isBlock
             color="secondary"
             size="lg"
-            href={ "https://discord.com/invite/bvrS72gaKS" }
+            href={"https://discord.com/invite/bvrS72gaKS"}
             target="_blank"
           >
             <MessageOutlined />
           </Link>
         </CardFooter>
+      </Card>
+      <Card className='w-full border border-stone-300 bg-gradient-to-br from-white to-default-200/60 dark:from-secondary-50 dark:to-black px-4 py-2 max-w-xl'>
+        <EventList group="all" />
       </Card>
     </div>
   );

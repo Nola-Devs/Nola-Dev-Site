@@ -19,7 +19,7 @@ export default function EventForm() {
       description: e.target.description.value
     };
     const JSONdata = JSON.stringify(data);
-    
+
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -31,7 +31,7 @@ export default function EventForm() {
   };
 
   return (
-    <div className="p-5">
+    <div className="p-5 ">
       {hideForm ? (
         <h2 className="text-6xl text-center m-5">Event Sent</h2>
       ) :
@@ -40,7 +40,7 @@ export default function EventForm() {
           <p>Hosting an event? Fill this out and we can add it to the calendar</p>
           <form
             className=" flex flex-col flex-wrap gap-4 p-5"
-            onSubmit={ handleSubmit }
+            onSubmit={handleSubmit}
           >
             <fieldset className="flex flex-wrap gap-3 w-full">
               <legend>About you:</legend>
