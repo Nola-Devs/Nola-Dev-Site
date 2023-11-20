@@ -26,26 +26,20 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [theme, setTheme] = useState<string>("invisible");
+  const [theme, setTheme] = useState<string>(
+    localStorage.getItem("themeMode") ??
+      (window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light")
+  );
 
   const invertTheme = (t: string) => (t === "dark" ? "light" : "dark");
 
   const changeTheme = () => {
-    localStorage.setItem("themeMode", invertTheme(localStorage.themeMode));
-    setTheme(localStorage.themeMode);
+    localStorage.setItem("themeMode", invertTheme(localStorage.themeMode) ?? invertTheme(theme));
+    setTheme(localStorage.themeMode);  
   };
 
-  useEffect(() => {
-    if (localStorage.getItem("themeMode") !== null) {
-      // intentionally empty
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      localStorage.setItem("themeMode", "dark");
-    } else {
-      localStorage.setItem("themeMode", "light");
-    }
-
-    setTheme(localStorage.themeMode);
-  }, []);
 
   return (
     <html id="html" lang="en" className={ theme }>
