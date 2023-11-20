@@ -9,6 +9,8 @@ import {
 import React, { useEffect, useState } from "react";
 import CalendarOutlined from "@ant-design/icons/CalendarOutlined";
 import CompassOutlined from "@ant-design/icons/CompassOutlined";
+import ClockCircleOutlined from '@ant-design/icons/ClockCircleOutlined'
+import InfoCircleOutlined from '@ant-design/icons/InfoCircleOutlined'
 import { Event, eventListProps } from "../types/Event";
 
 async function getData(group: string) {
@@ -47,7 +49,7 @@ export default function EventList({ group }: eventListProps) {
       <Divider />
       <CardBody className="flex flex-wrap flex-row gap-1 justify-center p-2">
         {events?.sort(sortEventsByDate).map((e: Event, i: number) => (
-          <Event event={ e } key={ i } />
+          <Event event={e} key={i} />
         ))}
         <Card className="w-full">
           <CardHeader className="justify-center">
@@ -64,13 +66,12 @@ export default function EventList({ group }: eventListProps) {
 }
 
 function Event({ event }: { event: Event }) {
-  const [truncateDescription, setTruncateDescription] = useState<boolean>(true);
+
   const [truncateCard, setTruncateCard] = useState<boolean>(false);
 
-  const maxDescriptionLength: number = 200;
+  const maxDescriptionLength: number = 20;
 
-  const toggleTruncateDescription = () =>
-    setTruncateDescription(!truncateDescription);
+
   const toggleTruncateCard = () => setTruncateCard(!truncateCard);
 
   const truncateString = (str: string) => {
@@ -92,26 +93,35 @@ function Event({ event }: { event: Event }) {
   };
 
   return (
-    <Card className="w-80 max-sm:w-full">
+    <Card className="w-full max-sm:w-full">
       <CardHeader>
-        <button className="w-full" onClick={ toggleTruncateCard }>
-          <div className="flex flex-col items-start">
-            <strong>
+        <button className="w-full" onClick={toggleTruncateCard}>
+          <div className="flex flex-col items-start ">
+            <strong className="text-xl">
               {event.orgEmoji}
               {" "}
               {event.summary}
             </strong>
-            {new Date(event.start.dateTime).toDateString() +
-              ": " +
-              new Date(event.start.dateTime).toLocaleTimeString([], {
-                hour: "2-digit",
-                minute: "2-digit",
-              }) +
-              " — " +
-              new Date(event.end.dateTime).toLocaleTimeString([], {
-                hour: "2-digit",
-                minute: "2-digit",
-              })}
+            <div className="flex items-center gap-3">
+              <CalendarOutlined />
+              <p>
+                {new Date(event.start.dateTime).toDateString()}
+              </p>
+            </div>
+            <div className="flex items-center gap-3">
+              <ClockCircleOutlined />
+              <p>
+                {new Date(event.start.dateTime).toLocaleTimeString([], {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                }) +
+                  " — " +
+                  new Date(event.end.dateTime).toLocaleTimeString([], {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                  })}
+              </p>
+            </div>
           </div>
         </button>
       </CardHeader>
@@ -119,29 +129,15 @@ function Event({ event }: { event: Event }) {
         <>
           <Divider />
           <CardBody className="whitespace-pre-wrap">
-            <button
-              className="text-justify break-words"
-              onClick={ toggleTruncateDescription }
-            >
-              {truncateDescription
-                ? truncateString(event.description || "No description")
-                : event.description || "No description"}
-            </button>
+            <details>
+              <summary>
+                &#9432; Details
+              </summary>
+              {event.description !== null ? event.description : "No Description"}
+            </details>
           </CardBody>
           <Divider />
-          <CardFooter>{event.location || "Somewhere"}</CardFooter>
-          <Divider />
           <CardFooter>
-            <Link
-              isExternal
-              isBlock
-              color="secondary"
-              size="lg"
-              href={ event.htmlLink }
-              target="_blank"
-            >
-              <CalendarOutlined />
-            </Link>
             {event.location ? (
               <Link
                 isExternal
@@ -157,7 +153,20 @@ function Event({ event }: { event: Event }) {
               >
                 <CompassOutlined />
               </Link>
-            ) : null}
+            ) : null}{event.location || "Somewhere"}</CardFooter>
+          <Divider />
+          <CardFooter>
+            <Link
+              isExternal
+              isBlock
+              color="secondary"
+              size="lg"
+              href={event.htmlLink}
+              target="_blank"
+            >
+              <CalendarOutlined />
+            </Link>
+            See Event on Calendar
           </CardFooter>
         </>
       )}
