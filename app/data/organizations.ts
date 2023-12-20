@@ -206,7 +206,8 @@ export const organizationsStore: Organizations = {
 				links: [{ linkedin: "" }, { email: "" }]
 			}
 		],
-		calendar_id: "545d217a064ce6f846e820045fccdaae17db65ee1b53dc14ea249833b94d0f70@group.calendar.google.com",
-		about: "Some events not affiliated with a meetup group will not show up anywhere"
+		calendar_id: '545d217a064ce6f846e820045fccdaae17db65ee1b53dc14ea249833b94d0f70@group.calendar.google.com',
+		about: 'Some events not affiliated with a meetup group will not show up anywhere',
+		icon: '📆'
 	}
 };
