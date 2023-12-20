@@ -11,7 +11,7 @@ export default function IconParser({ icon, linkToIcon }: iconProps) {
     case "linkedin":
       return (
         <a
-          href={ linkToIcon }
+          href={linkToIcon}
           target="_blank"
           rel="noreferrer"
         >
@@ -21,7 +21,7 @@ export default function IconParser({ icon, linkToIcon }: iconProps) {
     case "github":
       return (
         <a
-          href={ linkToIcon }
+          href={linkToIcon}
           target="_blank"
           rel="noreferrer"
         >
@@ -31,7 +31,7 @@ export default function IconParser({ icon, linkToIcon }: iconProps) {
     case "twitter":
       return (
         <a
-          href={ linkToIcon }
+          href={linkToIcon}
           target="_blank"
           rel="noreferrer"
         >
@@ -41,7 +41,7 @@ export default function IconParser({ icon, linkToIcon }: iconProps) {
     case "email":
       return (
         <a
-          href={ `mailto:${linkToIcon}` }
+          href={`mailto:${linkToIcon}`}
           target="_blank"
           rel="noreferrer"
         >
@@ -51,7 +51,7 @@ export default function IconParser({ icon, linkToIcon }: iconProps) {
     case "portfolio":
       return (
         <a
-          href={ linkToIcon }
+          href={linkToIcon}
           target="_blank"
           rel="noreferrer"
         >
@@ -61,7 +61,7 @@ export default function IconParser({ icon, linkToIcon }: iconProps) {
     default:
       return (
         <a
-          href={ linkToIcon }
+          href={linkToIcon}
           target="_blank"
           rel="noreferrer"
         >
