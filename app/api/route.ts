@@ -1,17 +1,17 @@
-import { NextRequest, NextResponse } from 'next/server'
-import { Event } from '../types/Event'
-import { mockEventJSON } from '../data/events'
-import { organizationsStore } from '../data/organizations'
+import { NextRequest, NextResponse } from "next/server";
+import { Event } from "../types/Event";
+import { mockEventJSON } from "../data/events";
+import { organizationsStore } from "../data/organizations";
 
 async function fetchEvent(organization: string) {
 	// Make sure it's a real organization
 	if (!(organization in organizationsStore)) {
-		return []
+		return [];
 	}
 
 	// Make sure it has a real calendar_id
-	if (!organizationsStore[organization].hasOwnProperty('calendar_id') || organizationsStore[organization].calendar_id == '') {
-		return []
+	if (!organizationsStore[organization].hasOwnProperty("calendar_id") || organizationsStore[organization].calendar_id == "") {
+		return [];
 	}
 
 	// If it's in development, just return dummy content
@@ -38,37 +38,37 @@ async function fetchEvent(organization: string) {
 	// }
 
 	if (!process.env.CALENDAR_KEY) {
-		throw new Error('CALENDAR_KEY is not set')
+		throw new Error("CALENDAR_KEY is not set");
 	}
 
-	const today = new Date()
+	const today = new Date();
 
 	// 3 weeks
 	// |-----|------|-----|
 	//   ^ today
 
-	const start = new Date(today)
-	start.setDate(today.getDate() - today.getDay())
+	const start = new Date(today);
+	start.setDate(today.getDate() - today.getDay());
 
-	const end = new Date(today)
-	end.setDate(today.getDate() + (6 - today.getDay()) + 30)
+	const end = new Date(today);
+	end.setDate(today.getDate() + (6 - today.getDay()) + 30);
 
-	const url = `https://www.googleapis.com/calendar/v3/calendars/${organizationsStore[organization].calendar_id}/events?maxResults=10&timeMax=${end.toISOString()}&timeMin=${start.toISOString()}&singleEvents=true&showDeleted=false&key=${process.env.CALENDAR_KEY}`
+	const url = `https://www.googleapis.com/calendar/v3/calendars/${organizationsStore[organization].calendar_id}/events?maxResults=10&timeMax=${end.toISOString()}&timeMin=${start.toISOString()}&singleEvents=true&showDeleted=false&key=${process.env.CALENDAR_KEY}`;
 
 	const e = await fetch(url, {
-		method: 'GET',
-		credentials: 'include',
+		method: "GET",
+		credentials: "include",
 		headers: {
-			'Content-Type': 'application/json'
+			"Content-Type": "application/json"
 		}
-	})
+	});
 
-	const event = (await e.json())['items']
+	const event = (await e.json())["items"];
 
 	if (event == null) {
-		return []
+		return [];
 	}
-	console.log(event)
+	console.log(event);
 	const events: Event[] = event.map((e: any) => {
 		return {
 			htmlLink: e.htmlLink,
@@ -82,38 +82,38 @@ async function fetchEvent(organization: string) {
 			end: {
 				dateTime: e.end.dateTime
 			}
-		}
-	})
+		};
+	});
 
-	return events
+	return events;
 }
 
 // Fetch data depending on ?group=
 export async function GET(req: NextRequest) {
 	// If ?group=_ is not set, just return default all data
-	const org = req.nextUrl.searchParams.get('group')
+	const org = req.nextUrl.searchParams.get("group");
 
-	if (org && org != 'all') {
+	if (org && org != "all") {
 		return NextResponse.json(await fetchEvent(org), {
 			status: 200
-		})
+		});
 	}
 
-	const events: Event[] = (await Promise.all(Object.keys(organizationsStore).map(fetchEvent))).flat().filter((e) => !(e.orgEmoji !== '🍻' && e.summary === 'Hack Night') && !(e.start.dateTime === undefined || e.end.dateTime === undefined))
+	const events: Event[] = (await Promise.all(Object.keys(organizationsStore).map(fetchEvent))).flat().filter((e) => !(e.orgEmoji !== "🍻" && e.summary === "Hack Night") && !(e.start.dateTime === undefined || e.end.dateTime === undefined));
 
 	return NextResponse.json(events, {
 		status: 200
-	})
+	});
 }
 
 export async function POST(req: Request) {
-	const data = await req.json()
-	const webHookURL: string = process.env['DISCORD_WEBHOOK'] || ''
+	const data = await req.json();
+	const webHookURL: string = process.env["DISCORD_WEBHOOK"] || "";
 	await fetch(webHookURL, {
-		method: 'POST',
-		headers: { 'Content-Type': 'application/json' },
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
 		body: JSON.stringify({
-			username: 'Event Bot',
+			username: "Event Bot",
 			// the avatar to be displayed
 			// avatar_url: "https://sgpoppers.com/wp-content/uploads/2018/05/originalrush.png",
 			//content: "@all @everyone",
@@ -122,52 +122,52 @@ export async function POST(req: Request) {
 					color: 11730954,
 					fields: [
 						{
-							name: 'Email',
+							name: "Email",
 							value: data.email
 						},
 						{
-							name: 'Name',
+							name: "Name",
 							value: data.name
 						},
 						{
-							name: 'Organization',
+							name: "Organization",
 							value: data.organization
 						},
 						{
-							name: 'Event',
+							name: "Event",
 							value: data.event
 						},
 						{
-							name: 'Location',
+							name: "Location",
 							value: data.location
 						},
 						{
-							name: 'Link',
+							name: "Link",
 							value: data.link
 						},
 						{
-							name: 'Date',
+							name: "Date",
 							value: data.date
 						},
 						{
-							name: 'Time Start',
+							name: "Time Start",
 							value: data.startTime
 						},
 						{
-							name: 'Time End',
+							name: "Time End",
 							value: data.endTime
 						},
 						{
-							name: 'Description',
+							name: "Description",
 							value: data.description
 						}
 					]
 				}
 			]
 		})
-	})
+	});
 
-	return NextResponse.json('sent', {
+	return NextResponse.json("sent", {
 		status: 200
-	})
+	});
 }

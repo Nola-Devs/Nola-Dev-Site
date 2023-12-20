@@ -63,7 +63,7 @@ export default function Home() {
           </Link>
         </CardFooter>
       </Card>
-      <Card className='w-full border border-stone-300 bg-gradient-to-br from-white to-default-200/60 dark:from-secondary-50 dark:to-black px-4 py-2 max-w-xl'>
+      <Card className="w-full border border-stone-300 bg-gradient-to-br from-white to-default-200/60 dark:from-secondary-50 dark:to-black px-4 py-2 max-w-xl">
         <EventList group="all" />
       </Card>
     </div>

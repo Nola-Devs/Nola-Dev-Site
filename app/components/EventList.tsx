@@ -9,8 +9,8 @@ import {
 import React, { useEffect, useState } from "react";
 import CalendarOutlined from "@ant-design/icons/CalendarOutlined";
 import CompassOutlined from "@ant-design/icons/CompassOutlined";
-import ClockCircleOutlined from '@ant-design/icons/ClockCircleOutlined'
-import InfoCircleOutlined from '@ant-design/icons/InfoCircleOutlined'
+import ClockCircleOutlined from "@ant-design/icons/ClockCircleOutlined";
+import InfoCircleOutlined from "@ant-design/icons/InfoCircleOutlined";
 import { Event, eventListProps } from "../types/Event";
 
 async function getData(group: string) {
@@ -153,7 +153,9 @@ function Event({ event }: { event: Event }) {
               >
                 <CompassOutlined />
               </Link>
-            ) : null}{event.location || "Somewhere"}</CardFooter>
+            ) : null}
+            {event.location || "Somewhere"}
+          </CardFooter>
           <Divider />
           <CardFooter>
             <Link
