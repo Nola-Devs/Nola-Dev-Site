@@ -185,12 +185,12 @@ export const organizationsStore: Organizations = {
 		org_url: 'https://www.linkedin.com/groups/12554672/',
 		icon: '👩‍💻'
 	},
-	'StartUp-EcoSystem': {
+	'StartUp-Nola-Now': {
 		organizers: [
 			{
 				name: 'Evie Poitevent Sanders',
-				pfp: '/organizersPfp/evie.webp',
-				links: [{ linkedin: 'https://www.linkedin.com/in/eviepoitevent/' }, { email: 'epoitevent@gnoinc.org' }]
+				pfp: '/organizersPfp/startupnola.webp',
+				links: [{ linkedin: 'https://www.linkedin.com/showcase/startup-nola/' }, { email: 'epoitevent@gnoinc.org' }]
 			}
 		],
 		calendar_id: '398883a70f5e08ce0f331225accf6a4f9103dca6a2fe6e5f1f670cbc833652b0@group.calendar.google.com',
