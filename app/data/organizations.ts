@@ -172,12 +172,17 @@ export const organizationsStore: Organizations = {
 		org_url: 'https://www.eventbrite.com/o/the-cyber-security-and-technology-community-of-new-orleans-67934786843',
 		icon: '🔒'
 	},
-	'NOLA-Women-in-Tech': {
+	'NOLA-Womxn-in-Tech': {
 		organizers: [
 			{
 				name: 'Lucia Berliner',
 				pfp: '/organizersPfp/Lucia.webp',
 				links: [{ linkedin: 'https://www.linkedin.com/in/luciaberliner/' }, { email: 'lucia.berliner@gmail.com' }]
+			},
+			{
+				name: 'Manuela VanDerWerken',
+				pfp: '/organizersPfp/ManuelV.webp',
+				links: [{ linkedin: 'https://www.linkedin.com/in/manuelavanderwerken/' }, { email: 'manualrovanderwerken@icloud.com' }]
 			}
 		],
 		calendar_id: 'b85e18cbc5a2d1b3948c0fe9e6f27de409da19ea571bdea00d3e2456fc067f2e@group.calendar.google.com',
