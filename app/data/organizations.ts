@@ -181,7 +181,7 @@ export const organizationsStore: Organizations = {
 			},
 			{
 				name: 'Manuela VanDerWerken',
-				pfp: '/organizersPfp/ManuelV.webp',
+				pfp: '/organizersPfp/ManuelaV.webp',
 				links: [{ linkedin: 'https://www.linkedin.com/in/manuelavanderwerken/' }, { email: 'manualrovanderwerken@icloud.com' }]
 			}
 		],
