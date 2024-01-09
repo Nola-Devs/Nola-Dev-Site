@@ -214,5 +214,17 @@ export const organizationsStore: Organizations = {
 		calendar_id: '545d217a064ce6f846e820045fccdaae17db65ee1b53dc14ea249833b94d0f70@group.calendar.google.com',
 		about: 'Some events not affiliated with a meetup group will not show up anywhere',
 		icon: '📆'
+	},
+	'One-Off-Events2': {
+		organizers: [
+			{
+				name: '',
+				pfp: '',
+				links: [{ linkedin: '' }, { email: '' }]
+			}
+		],
+		calendar_id: 'c_nv4bpskokdjmj68qofag0s0e8g@group.calendar.google.com',
+		about: 'Some events not affiliated with a meetup group will not show up anywhere',
+		icon: '📆'
 	}
 }
