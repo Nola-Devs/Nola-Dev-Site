@@ -203,6 +203,19 @@ export const organizationsStore: Organizations = {
 		org_url: 'https://startupnola.com',
 		icon: '🌎'
 	},
+	'NOLAvate-Black': {
+		organizers: [
+			{
+				name: 'Sabrina Short',
+				pfp: '/organizersPfp/sabrinaShort.webp',
+				links: [{ linkedin: 'https://www.linkedin.com/in/sabrinanshort' }, { email: 'sabrina@nolavateblack.com' }]
+			}
+		],
+		calendar_id: '',
+		about: 'New Orleans Black Tech Network connecting entry level talent to jobs, resources and events to help you get hired.',
+		org_url: 'http://nolavateblack.com/',
+		icon: '✊🏾'
+	},
 	'One-Off-Events': {
 		organizers: [
 			{
