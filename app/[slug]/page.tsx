@@ -22,7 +22,7 @@ export default function Group() {
 
   return (
     <div className="flex justify-center max-w-[650px] items-center mx-auto gap-6 flex-col pt-4 mt-4">
-      <Card className=" min-w-full max-w-xl border border-stone-300 bg-gradient-to-br from-white to-default-200/60 dark:from-secondary-50 dark:to-black px-4 py-2">
+      <Card className="min-w-full max-w-xl border border-stone-300 bg-gradient-to-br from-white to-default-200/60 dark:from-secondary-50 dark:to-black px-4 py-2">
         <CardHeader className="font-bold justify-center text-2xl">
           {group.replace(/-/g, " ")}
         </CardHeader>
