@@ -93,7 +93,7 @@ function Event({ event }: { event: Event }) {
   };
 
   return (
-    <Card className="w-full max-sm:w-full">
+    <Card className="w-full max-sm:w-full my-1">
       <CardHeader>
         <button className="w-full" onClick={toggleTruncateCard}>
           <div className="flex flex-col items-start ">
