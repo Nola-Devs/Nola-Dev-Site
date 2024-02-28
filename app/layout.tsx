@@ -104,7 +104,7 @@ export default function RootLayout({
                   <Button variant="shadow">Groups</Button>
                 </DropdownTrigger>
                 <DropdownMenu variant="shadow" aria-label="Static Actions">
-                  {Object.keys(organizationsStore).filter(e => e !== "One-Off-Events").map((e, i) => (
+                  {Object.keys(organizationsStore).filter(e => !e.match("One-Off-Events")).map((e, i) => (
                     <DropdownItem
                       key={i}
                       startContent={organizationsStore[e]?.icon}

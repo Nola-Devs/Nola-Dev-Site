@@ -172,12 +172,17 @@ export const organizationsStore: Organizations = {
 		org_url: 'https://www.eventbrite.com/o/the-cyber-security-and-technology-community-of-new-orleans-67934786843',
 		icon: '🔒'
 	},
-	'NOLA-Women-in-Tech': {
+	'NOLA-Womxn-in-Tech': {
 		organizers: [
 			{
 				name: 'Lucia Berliner',
 				pfp: '/organizersPfp/Lucia.webp',
 				links: [{ linkedin: 'https://www.linkedin.com/in/luciaberliner/' }, { email: 'lucia.berliner@gmail.com' }]
+			},
+			{
+				name: 'Manuela VanDerWerken',
+				pfp: '/organizersPfp/ManuelaV.webp',
+				links: [{ linkedin: 'https://www.linkedin.com/in/manuelavanderwerken/' }, { email: 'manualrovanderwerken@icloud.com' }]
 			}
 		],
 		calendar_id: 'b85e18cbc5a2d1b3948c0fe9e6f27de409da19ea571bdea00d3e2456fc067f2e@group.calendar.google.com',
@@ -198,6 +203,19 @@ export const organizationsStore: Organizations = {
 		org_url: 'https://startupnola.com',
 		icon: '🌎'
 	},
+	'NOLAvate-Black': {
+		organizers: [
+			{
+				name: 'Sabrina Short',
+				pfp: '/organizersPfp/sabrinaShort.webp',
+				links: [{ linkedin: 'https://www.linkedin.com/in/sabrinanshort' }, { email: 'sabrina@nolavateblack.com' }]
+			}
+		],
+		calendar_id: '',
+		about: 'New Orleans Black Tech Network connecting entry level talent to jobs, resources and events to help you get hired.',
+		org_url: 'http://nolavateblack.com/',
+		icon: '✊🏾'
+	},
 	'One-Off-Events': {
 		organizers: [
 			{
@@ -207,6 +225,18 @@ export const organizationsStore: Organizations = {
 			}
 		],
 		calendar_id: '545d217a064ce6f846e820045fccdaae17db65ee1b53dc14ea249833b94d0f70@group.calendar.google.com',
+		about: 'Some events not affiliated with a meetup group will not show up anywhere',
+		icon: '📆'
+	},
+	'One-Off-Events2': {
+		organizers: [
+			{
+				name: '',
+				pfp: '',
+				links: [{ linkedin: '' }, { email: '' }]
+			}
+		],
+		calendar_id: 'c_nv4bpskokdjmj68qofag0s0e8g@group.calendar.google.com',
 		about: 'Some events not affiliated with a meetup group will not show up anywhere',
 		icon: '📆'
 	}

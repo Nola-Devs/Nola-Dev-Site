@@ -22,10 +22,10 @@
 				"afterOpening": "never",
 				"beforeClosing": "never"
 			}
-		],
-		"jsx-quotes": [2, "prefer-double"],
+		]
+		//"jsx-quotes": [2, "prefer-double"]
 		// <-- end react -->
-		"semi": ["warn", "always"],
-		"quotes": [1, "double", { "avoidEscape": true, "allowTemplateLiterals": true }]
+		//"semi": ["warn", "always"]
+		//"quotes": [1, "double", { "avoidEscape": true, "allowTemplateLiterals": true }]
 	}
 }
